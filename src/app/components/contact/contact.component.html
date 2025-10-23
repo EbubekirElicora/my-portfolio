@@ -1,25 +1,28 @@
-<div class="contact container">
-  <aside class="vertical">Contact me</aside>
+<section class="contact">
+  <aside class="vertical-label">Contact me</aside>
 
-  <form class="contact__form" (submit)="$event.preventDefault()">
-    <input placeholder="Your name"/>
-    <input placeholder="Your e-mail"/>
-    <textarea rows="6" placeholder="Your message"></textarea>
+  <div class="form-side">
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <input formControlName="name" placeholder="Your name">
+      <input formControlName="email" placeholder="Your e-mail">
+      <textarea formControlName="message" rows="6" placeholder="Your message"></textarea>
 
-    <label class="check">
-      <input type="checkbox"/> <span>I read the privacy policy and agree…</span>
-    </label>
+      <label class="policy">
+        <input type="checkbox" formControlName="policy">
+        <span>I’ve read the privacy policy …</span>
+      </label>
 
-    <button class="send" disabled>Send</button>
-  </form>
-
-  <div class="contact__aside">
-    <h4>Let us work together.</h4>
-    <p>Kurzer motivierender Text …</p>
-
-    <p class="info">
-      <span class="mi">email</span> m.hubergmail.com<br/>
-      <span class="mi">call</span> 0157 123 456 68
-    </p>
+      <button type="submit" [disabled]="contactForm.invalid">Send</button>
+    </form>
   </div>
-</div>
+
+  <div class="info-side">
+    <p class="lead">Let us work together.</p>
+    <p class="muted">Encourage people to contact you …</p>
+
+    <ul class="contacts">
+      <li><img src="assets/img/icons/contact/eMail.png" alt=""><span>m.hubergmail.com</span></li>
+      <li><img src="assets/img/icons/contact/phone_contact.png" alt=""><span>0157 123 456 68</span></li>
+    </ul>
+  </div>
+</section>

@@ -1,82 +1,46 @@
 .hero {
   height: 100vh;
+  position: relative;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(60% 60% at 70% 30%, rgba(181, 233, 59, .08), transparent 60%), var(--bg-alt);
+  padding: clamp(1rem, 3vw, 2rem);
+}
+
+.hero__grid {
   width: 100%;
-  background: linear-gradient(135deg, #050607 0%, #0a0c0f 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
+  max-width: 1200px;
+  display: grid;
+  gap: clamp(1rem, 3vw, 3rem);
+  grid-template-columns: 1.1fr .9fr;
 
-  .hero-content {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
-    max-width: 1200px;
-    width: 100%;
-  }
-
-  .hero-text {
-    flex: 1;
-    text-align: left;
-    min-width: 320px;
-
-    h1 {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 4vw, 4rem);
-      font-weight: 700;
-      color: var(--color-text);
-      margin-bottom: 0.5rem;
-
-      .accent {
-        color: var(--color-accent);
-      }
-    }
-
-    .subtitle {
-      color: var(--color-text-muted);
-      font-size: 1.25rem;
-      margin-bottom: 2rem;
-    }
-
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-
-      button.outline {
-        background: transparent;
-        border: 2px solid var(--color-accent);
-        color: var(--color-accent);
-        transition: all var(--transition-normal);
-
-        &:hover {
-          background: var(--color-accent);
-          color: #000;
-        }
-      }
-    }
-  }
-
-  .hero-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    img {
-      width: 320px;
-      max-width: 100%;
-      border-radius: 50%;
-      object-fit: cover;
-      box-shadow: 0 0 25px rgba(181, 233, 59, 0.35);
-      animation: float 4s ease-in-out infinite;
-    }
+  @media (max-width:900px) {
+    grid-template-columns: 1fr;
+    text-align: center;
   }
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+.display {
+  font-size: clamp(2.5rem, 5vw, 4.25rem);
+  margin: 0 0 .25rem;
+  color: var(--accent);
+}
+
+.subtitle {
+  color: var(--text);
+  font-family: 'Quantico';
+  text-shadow: 0 0 6px rgba(181, 233, 59, .25);
+}
+
+.hero__image {
+  display: grid;
+  place-items: center;
+}
+
+.hero__image img {
+  width: clamp(240px, 28vw, 380px);
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 26px rgba(181, 233, 59, .35);
 }
