@@ -1,38 +1,60 @@
+/* styles.scss */
+
 :root {
-  --bg-dark: #0b0e11;
-  --bg-darker: #07090b;
-  --panel: #182213;
-  /* oliv-grün Panel für Projects */
-  --panel-2: #121914;
-  --accent: #86e955;
-  /* Neon-Grün */
-  --accent-2: #a4f270;
-  --text: #e6e9ed;
-  --muted: #9faeb5;
-  --shadow: 0 8px 28px rgba(0, 0, 0, .25);
+  --color-bg: #050607;
+  --color-bg-alt: #0a0c0f;
+  --color-text: #e6e9ed;
+  --color-text-muted: #9faeb5;
+  --color-accent: rgba(181, 233, 59, 1);
+  --color-accent-hover: rgba(200, 255, 90, 1);
 
-  --container: 1240px;
-  --gutter: 24px;
-  --sidebar: 88px;
-  /* linke grüne Leiste */
-  --radius-xl: 22px;
+  --font-primary: 'Inter', sans-serif;
+  --font-display: 'Orbitron', sans-serif;
 
-  --t-fast: 75ms;
-  --t: 100ms;
-  --t-slow: 125ms;
+  --transition-fast: 75ms;
+  --transition-normal: 120ms;
+  --transition-slow: 180ms;
 }
 
-/* Hilfs-Container */
-.container {
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: 0 var(--gutter);
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-primary);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
-/* Headlines beim Anscrollen nie abschneiden (wichtige Figma-Note) */
-h1,
-h2,
-h3,
-[data-anchor="true"] {
-  scroll-margin-left: calc(var(--sidebar) + var(--gutter));
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color var(--transition-normal) ease;
+}
+a:hover {
+  color: var(--color-accent-hover);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  background-color: var(--color-accent);
+  border: none;
+  color: #000;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color var(--transition-normal);
+}
+button:hover {
+  background-color: var(--color-accent-hover);
+}
+
+.section {
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
