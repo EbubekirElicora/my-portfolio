@@ -1,0 +1,45 @@
+.why {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 28px;
+    align-items: center;
+}
+
+.vertical {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.why__facts {
+    display: flex;
+    gap: 22px;
+    padding: 0;
+    margin: 10px 0 18px;
+    list-style: none;
+}
+
+.why__facts img {
+    width: 26px;
+    height: 26px;
+}
+
+.why__facts li {
+    color: var(--text);
+}
+
+.why__text {
+    color: var(--muted);
+    max-width: 60ch;
+}
+
+@media (max-width: 900px) {
+    .why {
+        grid-template-columns: 1fr;
+    }
+
+    .vertical {
+        display: none;
+    }
+}

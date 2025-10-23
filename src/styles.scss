@@ -1,1 +1,38 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --bg-dark: #0b0e11;
+  --bg-darker: #07090b;
+  --panel: #182213;
+  /* oliv-grün Panel für Projects */
+  --panel-2: #121914;
+  --accent: #86e955;
+  /* Neon-Grün */
+  --accent-2: #a4f270;
+  --text: #e6e9ed;
+  --muted: #9faeb5;
+  --shadow: 0 8px 28px rgba(0, 0, 0, .25);
+
+  --container: 1240px;
+  --gutter: 24px;
+  --sidebar: 88px;
+  /* linke grüne Leiste */
+  --radius-xl: 22px;
+
+  --t-fast: 75ms;
+  --t: 100ms;
+  --t-slow: 125ms;
+}
+
+/* Hilfs-Container */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+/* Headlines beim Anscrollen nie abschneiden (wichtige Figma-Note) */
+h1,
+h2,
+h3,
+[data-anchor="true"] {
+  scroll-margin-left: calc(var(--sidebar) + var(--gutter));
+}

@@ -1,0 +1,25 @@
+<div class="contact container">
+  <aside class="vertical">Contact me</aside>
+
+  <form class="contact__form" (submit)="$event.preventDefault()">
+    <input placeholder="Your name"/>
+    <input placeholder="Your e-mail"/>
+    <textarea rows="6" placeholder="Your message"></textarea>
+
+    <label class="check">
+      <input type="checkbox"/> <span>I read the privacy policy and agree…</span>
+    </label>
+
+    <button class="send" disabled>Send</button>
+  </form>
+
+  <div class="contact__aside">
+    <h4>Let us work together.</h4>
+    <p>Kurzer motivierender Text …</p>
+
+    <p class="info">
+      <span class="mi">email</span> m.hubergmail.com<br/>
+      <span class="mi">call</span> 0157 123 456 68
+    </p>
+  </div>
+</div>

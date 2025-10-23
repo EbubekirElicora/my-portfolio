@@ -1,0 +1,19 @@
+.side-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem .5rem;
+}
+
+.nav-link {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color var(--anim-fast);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--accent);
+}
