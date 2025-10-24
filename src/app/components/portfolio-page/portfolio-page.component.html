@@ -1,38 +1,13 @@
+<!-- linke, fixe grüne Seitenleiste mit vertikaler Navigation -->
 <app-side-nav class="side-nav"></app-side-nav>
 
-<div #sectionsContainer class="sections">
-  <section id="hero" class="section hero">
-    <app-about></app-about>
-    <button class="next-arrow" data-target="#why-me" aria-label="Next section"></button>
-  </section>
-
-  <section id="why-me" class="section why">
-    <app-why-me></app-why-me>
-    <button class="next-arrow" data-target="#skills" aria-label="Next section"></button>
-  </section>
-
-  <section id="skills" class="section skills-section">
-    <app-skills></app-skills>
-    <button class="next-arrow" data-target="#my-work" aria-label="Next section"></button>
-  </section>
-
-  <section id="my-work" class="section work-section">
-    <app-my-projects></app-my-projects>
-    <button class="next-arrow" data-target="#references" aria-label="Next section"></button>
-  </section>
-
-  <section id="references" class="section references-section">
-    <app-references></app-references>
-    <button class="next-arrow" data-target="#contact" aria-label="Next section"></button>
-  </section>
-
-  <section id="contact" class="section contact-section">
-    <app-contact></app-contact>
-    <button class="next-arrow" data-target="#legal" aria-label="Next section"></button>
-  </section>
-
-  <section id="legal" class="section legal-section">
-    <app-legal></app-legal>
-    <button class="next-arrow" data-target="#hero" aria-label="Next section"></button>
-  </section>
+<!-- horizontale Bühne mit Sektionen (100vw/100vh) -->
+<div #sectionsContainer class="sections" aria-label="Horizontal Sections">
+  <section id="home" class="section"><app-about></app-about></section>
+  <section id="why-me" class="section"><app-why-me></app-why-me></section>
+  <section id="skills" class="section"><app-skills></app-skills></section>
+  <section id="my-work" class="section"><app-my-projects></app-my-projects></section>
+  <section id="references" class="section"><app-references></app-references></section>
+  <section id="contact" class="section"><app-contact></app-contact></section>
+  <section id="legal" class="section"><app-legal></app-legal></section>
 </div>

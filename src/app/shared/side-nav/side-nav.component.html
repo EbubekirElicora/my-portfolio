@@ -1,3 +1,11 @@
-<nav class="side-nav" aria-label="Sections">
-  <a *ngFor="let l of links" class="nav-link" [attr.href]="l.href">{{ l.label }}</a>
+<nav class="side stack">
+  <div class="brand">
+    <small>frontend developer</small>
+    <span class="mono">MH</span>
+  </div>
+
+  <a class="nav-link" href="#contact">Contact</a>
+  <a class="nav-link" href="#my-work">My Work</a>
+  <a class="nav-link" href="#skills">Skills</a>
+  <a class="nav-link" href="#why-me">Why me</a>
 </nav>

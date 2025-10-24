@@ -1,51 +1,51 @@
 .why {
-    position: relative;
     height: 100vh;
+    position: relative;
     display: grid;
     align-content: center;
-    gap: 2rem;
-    padding: 2rem 3rem;
+    gap: 1.2rem;
 }
 
-.v-label {
+.v-right {
     position: absolute;
     right: 1.25rem;
     top: 50%;
     transform: translateY(-50%) rotate(90deg);
+    color: var(--accent);
     font-family: 'Quantico';
     font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.title {
+    font-size: clamp(28px, 4vw, 48px);
     color: var(--accent);
 }
 
-.intro .display {
-    color: var(--accent);
-    margin: 0 0 .25rem;
-}
-
-.intro p {
+.lead {
+    max-width: 720px;
     color: var(--muted);
-    max-width: 560px;
 }
 
 .badges {
     display: flex;
+    gap: 14px;
     flex-wrap: wrap;
-    gap: 1rem;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
+    margin-top: .75rem;
 
-.badge {
-    display: flex;
-    align-items: center;
-    gap: .6rem;
-    background: var(--panel);
-    padding: .75rem 1rem;
-    border-radius: 14px;
-}
+    li {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: .6rem;
+        padding: .7rem 1.1rem;
+        border-radius: 999px;
+        background: #151a20;
+        border: 1px solid #1e242c;
+    }
 
-.badge img {
-    width: 22px;
-    height: 22px;
+    img {
+        width: 20px;
+        height: 20px;
+    }
 }

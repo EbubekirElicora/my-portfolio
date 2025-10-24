@@ -1,52 +1,100 @@
-/* ===== Local fonts (Quantico + Roboto Mono) ===== */
+/* === Fonts (aus assets/fonts) === */
 @font-face {
   font-family: 'Quantico';
   src: url('assets/fonts/quantico-v19-latin-regular.woff2') format('woff2');
-  font-weight: 400; font-style: normal; font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
+
 @font-face {
   font-family: 'Quantico';
   src: url('assets/fonts/quantico-v19-latin-700.woff2') format('woff2');
-  font-weight: 700; font-style: normal; font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
+
 @font-face {
   font-family: 'Roboto Mono';
   src: url('assets/fonts/roboto-mono-v31-latin-regular.woff2') format('woff2');
-  font-weight: 400; font-style: normal; font-display: swap;
-}
-@font-face {
-  font-family: 'Roboto Mono';
-  src: url('assets/fonts/roboto-mono-v31-latin-700.woff2') format('woff2');
-  font-weight: 700; font-style: normal; font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
-/* ===== Design 3 Tokens ===== */
-:root{
-  --bg:#050607;
-  --bg-alt:#0a0c0f;
-  --panel:#10141a;
-
-  /* Dein Grün */
+/* === Design Tokens === */
+:root {
+  --bg: #050607;
+  --bg-grad-l: rgba(11, 27, 16, .0);
+  --bg-grad-r: rgba(11, 27, 16, .55);
+  --panel: #10141a;
+  --panel-olive: #223014;
+  /* Karten in My Work */
+  --text: #e6e9ed;
+  --muted: #9faeb5;
   --accent: rgba(181, 233, 59, 1);
-  --accent-2: rgba(200, 255, 90, 1);
-
-  --text:#e6e9ed;
-  --muted:#9faeb5;
-
-  --t-fast:75ms; --t:120ms; --t-slow:180ms;
+  --accent-weak: rgba(181, 233, 59, .6);
+  --ring: rgba(255, 255, 255, .25);
 }
 
-html, body{
-  height:100%;
-  margin:0;
-  background:var(--bg);
-  color:var(--text);
-  font-family:'Roboto Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;
-  scroll-behavior:smooth;
-  overflow: hidden; /* wichtig */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  /* horizontales Scroll-Bühnenlayout */
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Roboto Mono', monospace;
 }
 
-h1,h2,h3,.display{ font-family:'Quantico', sans-serif; }
+h1,
+h2,
+h3 {
+  font-family: 'Quantico', sans-serif;
+  line-height: 1.1;
+  margin: 0 0 .75rem;
+}
 
-a{ color:var(--accent); text-decoration:none; transition:color var(--t); }
-a:hover{ color:var(--accent-2); }
+.container {
+  width: min(1180px, 88vw);
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .8rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: var(--accent);
+  color: #0b0d0f;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .12s ease, background .12s ease, border-color .12s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  background: color-mix(in srgb, var(--accent), white 10%);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--ring);
+}
+
+.link {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--accent-weak);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

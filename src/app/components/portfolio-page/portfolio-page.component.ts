@@ -2,13 +2,13 @@ import { AfterViewInit, Component, ElementRef, OnDestroy, Renderer2, ViewChild }
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
+import { SideNavComponent } from '../../shared/side-nav/side-nav.component';
+import { WhyMeComponent } from '../why-me/why-me.component';
 import { SkillsComponent } from '../skills/skills.component';
+import { MyProjectsComponent } from '../my-projects/my-projects.component';
 import { ReferencesComponent } from '../references/references.component';
 import { ContactComponent } from '../contact/contact.component';
 import { LegalComponent } from '../legal/legal.component';
-import { WhyMeComponent } from '../why-me/why-me.component';
-import { MyProjectsComponent } from '../my-projects/my-projects.component';
-import { SideNavComponent } from '../../shared/side-nav/side-nav.component';
 import { AboutComponent } from '../about/about.component';
 
 @Component({
@@ -16,7 +16,8 @@ import { AboutComponent } from '../about/about.component';
   standalone: true,
   imports: [
     CommonModule, RouterModule, SideNavComponent,
-    AboutComponent, WhyMeComponent, SkillsComponent, MyProjectsComponent, ReferencesComponent, ContactComponent, LegalComponent
+    AboutComponent, WhyMeComponent, SkillsComponent,
+    MyProjectsComponent, ReferencesComponent, ContactComponent, LegalComponent
   ],
   templateUrl: './portfolio-page.component.html',
   styleUrls: ['./portfolio-page.component.scss']
@@ -25,56 +26,49 @@ export class PortfolioPageComponent implements AfterViewInit, OnDestroy {
   @ViewChild('sectionsContainer', { static: true }) sectionsContainer!: ElementRef<HTMLDivElement>;
   private removeListeners: Array<() => void> = [];
 
-  constructor(private host: ElementRef, private r: Renderer2) {}
+  constructor(private host: ElementRef<HTMLElement>, private r: Renderer2) {}
 
   ngAfterViewInit(): void {
     const container = this.sectionsContainer.nativeElement;
 
-    /* 1) Mausrad: vertikale Delta -> horizontal scrollen */
-    const wheelHandler = (ev: WheelEvent) => {
-      // verhindert, dass der Body vertikal scrollt
+    // Mausrad -> horizontal scrollen
+    const onWheel = (ev: WheelEvent) => {
       ev.preventDefault();
       container.scrollBy({ left: ev.deltaY, behavior: 'auto' });
     };
-    // explizit non-passive, sonst greift preventDefault nicht in manchen Browsern
-    container.addEventListener('wheel', wheelHandler, { passive: false });
-    this.removeListeners.push(() => container.removeEventListener('wheel', wheelHandler));
+    container.addEventListener('wheel', onWheel, { passive: false });
+    this.removeListeners.push(() => container.removeEventListener('wheel', onWheel));
 
-    /* 2) Side-Nav: horizontales Scrollen */
-    const navLinks = this.host.nativeElement.querySelectorAll('.side-nav .nav-link');
-    navLinks.forEach((a: HTMLAnchorElement) => {
-      const off = this.r.listen(a, 'click', (ev: Event) => {
-        ev.preventDefault();
-        const targetId = a.getAttribute('href')?.replace('#', '');
-        this.scrollToSectionId(targetId);
+    // SideNav-Verlinkungen (anchors mit .nav-link)
+    const navLinks = this.host.nativeElement.querySelectorAll('.side-nav .nav-link') as NodeListOf<HTMLAnchorElement>;
+    navLinks.forEach(a => {
+      const off = this.r.listen(a, 'click', (e: Event) => {
+        e.preventDefault();
+        const id = a.getAttribute('href')?.slice(1);
+        if (!id) return;
+        const target = this.host.nativeElement.querySelector<HTMLElement>('#' + id);
+        if (target) container.scrollTo({ left: target.offsetLeft, top: 0, behavior: 'smooth' });
+        this.updateActive(a.getAttribute('href')!);
       });
       this.removeListeners.push(off);
     });
 
-    /* 3) Next-Arrow Buttons */
-    const arrows = this.host.nativeElement.querySelectorAll('.next-arrow');
-    arrows.forEach((btn: HTMLElement) => {
+    // Pfeile .next-arrow data-target="#id"
+    const arrows = this.host.nativeElement.querySelectorAll('.next-arrow') as NodeListOf<HTMLElement>;
+    arrows.forEach(btn => {
       const off = this.r.listen(btn, 'click', () => {
-        const target = btn.getAttribute('data-target')?.replace('#', '');
-        this.scrollToSectionId(target);
+        const id = btn.getAttribute('data-target')?.slice(1);
+        if (!id) return;
+        const target = this.host.nativeElement.querySelector<HTMLElement>('#' + id);
+        if (target) container.scrollTo({ left: target.offsetLeft, top: 0, behavior: 'smooth' });
       });
       this.removeListeners.push(off);
     });
 
-    /* 4) Active-Link synchronisieren beim Scrollen */
-    const offScroll = this.r.listen(container, 'scroll', () => this.syncActiveLink());
-    this.removeListeners.push(offScroll);
-
-    /* 5) Tastatur ( ← / → ) */
-    const keyHandler = (ev: KeyboardEvent) => {
-      if (ev.key === 'ArrowRight') container.scrollBy({ left: window.innerWidth, behavior: 'smooth' });
-      if (ev.key === 'ArrowLeft')  container.scrollBy({ left: -window.innerWidth, behavior: 'smooth' });
-    };
-    window.addEventListener('keydown', keyHandler);
-    this.removeListeners.push(() => window.removeEventListener('keydown', keyHandler));
-
-    /* 6) Initial den aktiven Link setzen */
-    setTimeout(() => this.syncActiveLink(), 0);
+    // aktiver Navpunkt beim Scrollen
+    const onScroll = () => this.syncActiveLink();
+    container.addEventListener('scroll', onScroll);
+    this.removeListeners.push(() => container.removeEventListener('scroll', onScroll));
   }
 
   ngOnDestroy(): void {
@@ -82,32 +76,20 @@ export class PortfolioPageComponent implements AfterViewInit, OnDestroy {
     this.removeListeners = [];
   }
 
-  private scrollToSectionId(id?: string | null) {
-    if (!id) return;
-    const container = this.sectionsContainer.nativeElement;
-    const target = this.host.nativeElement.querySelector('#' + id) as HTMLElement | null;
-    if (!target) return;
-    container.scrollTo({ left: target.offsetLeft, top: 0, behavior: 'smooth' });
-    this.updateActiveNav('#' + id);
-  }
-
   private syncActiveLink() {
     const container = this.sectionsContainer.nativeElement;
-    const sections = Array.from(this.host.nativeElement.querySelectorAll('.section')) as HTMLElement[];
-    const left = container.scrollLeft;
-    let bestId = sections[0]?.id;
-    let best = Number.POSITIVE_INFINITY;
+    const sections = Array.from(this.host.nativeElement.querySelectorAll<HTMLElement>('.section'));
+    const x = container.scrollLeft;
+    let bestId = sections[0]?.id; let best = Number.POSITIVE_INFINITY;
     for (const s of sections) {
-      const d = Math.abs(s.offsetLeft - left);
+      const d = Math.abs(s.offsetLeft - x);
       if (d < best) { best = d; bestId = s.id; }
     }
-    if (bestId) this.updateActiveNav('#' + bestId);
+    if (bestId) this.updateActive('#' + bestId);
   }
 
-  private updateActiveNav(hash: string) {
-    const navLinks = this.host.nativeElement.querySelectorAll('.side-nav .nav-link');
-    navLinks.forEach((a: HTMLAnchorElement) => {
-      a.classList.toggle('active', a.getAttribute('href') === hash);
-    });
+  private updateActive(hash: string) {
+    const links = this.host.nativeElement.querySelectorAll('.side-nav .nav-link') as NodeListOf<HTMLAnchorElement>;
+    links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === hash));
   }
 }
