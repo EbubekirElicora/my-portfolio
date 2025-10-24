@@ -28,7 +28,19 @@ export class PortfolioPageComponent implements AfterViewInit, OnDestroy {
   constructor(private host: ElementRef, private r: Renderer2) {}
 
   ngAfterViewInit(): void {
-    // Side-Nav: horizontales Scrollen
+    const container = this.sectionsContainer.nativeElement;
+
+    /* 1) Mausrad: vertikale Delta -> horizontal scrollen */
+    const wheelHandler = (ev: WheelEvent) => {
+      // verhindert, dass der Body vertikal scrollt
+      ev.preventDefault();
+      container.scrollBy({ left: ev.deltaY, behavior: 'auto' });
+    };
+    // explizit non-passive, sonst greift preventDefault nicht in manchen Browsern
+    container.addEventListener('wheel', wheelHandler, { passive: false });
+    this.removeListeners.push(() => container.removeEventListener('wheel', wheelHandler));
+
+    /* 2) Side-Nav: horizontales Scrollen */
     const navLinks = this.host.nativeElement.querySelectorAll('.side-nav .nav-link');
     navLinks.forEach((a: HTMLAnchorElement) => {
       const off = this.r.listen(a, 'click', (ev: Event) => {
@@ -39,7 +51,7 @@ export class PortfolioPageComponent implements AfterViewInit, OnDestroy {
       this.removeListeners.push(off);
     });
 
-    // Next-Arrow Buttons: data-target="#id"
+    /* 3) Next-Arrow Buttons */
     const arrows = this.host.nativeElement.querySelectorAll('.next-arrow');
     arrows.forEach((btn: HTMLElement) => {
       const off = this.r.listen(btn, 'click', () => {
@@ -49,10 +61,20 @@ export class PortfolioPageComponent implements AfterViewInit, OnDestroy {
       this.removeListeners.push(off);
     });
 
-    // Active-Link beim Scrollen synchronisieren
-    const container = this.sectionsContainer.nativeElement;
+    /* 4) Active-Link synchronisieren beim Scrollen */
     const offScroll = this.r.listen(container, 'scroll', () => this.syncActiveLink());
     this.removeListeners.push(offScroll);
+
+    /* 5) Tastatur ( ← / → ) */
+    const keyHandler = (ev: KeyboardEvent) => {
+      if (ev.key === 'ArrowRight') container.scrollBy({ left: window.innerWidth, behavior: 'smooth' });
+      if (ev.key === 'ArrowLeft')  container.scrollBy({ left: -window.innerWidth, behavior: 'smooth' });
+    };
+    window.addEventListener('keydown', keyHandler);
+    this.removeListeners.push(() => window.removeEventListener('keydown', keyHandler));
+
+    /* 6) Initial den aktiven Link setzen */
+    setTimeout(() => this.syncActiveLink(), 0);
   }
 
   ngOnDestroy(): void {

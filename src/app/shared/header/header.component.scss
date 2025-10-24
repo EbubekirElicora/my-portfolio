@@ -18,15 +18,14 @@
 .monogram {
     background: var(--accent);
     color: #000;
-    font-weight: 800;
     font-family: 'Quantico';
+    font-weight: 800;
     padding: .35rem .5rem;
     border-radius: 8px;
 }
 
 .role {
     color: var(--muted);
-    font-family: 'Roboto Mono';
 }
 
 .top-links {
@@ -38,7 +37,6 @@
 .top-links img {
     width: 18px;
     height: 18px;
-    filter: brightness(1);
     opacity: .9;
     transition: opacity var(--t);
 }

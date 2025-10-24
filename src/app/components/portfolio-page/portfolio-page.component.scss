@@ -1,16 +1,17 @@
-/* Seitenhintergrund (breiter Gradient L→R wie im Figma) */
 :host {
     display: block;
     background: linear-gradient(90deg, var(--bg-darker) 0%, var(--bg-dark) 40%, var(--bg-darker) 100%);
     color: var(--text);
 }
 
-/* horizontaler Scrollcontainer existiert bereits bei dir – nur Feinschliff: */
 .sections {
+    position: relative;
+    height: 100vh;
+    margin-left: 84px;
     display: flex;
+    flex-direction: row;
     overflow-x: auto;
     overflow-y: hidden;
-    height: 100vh;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
 }
@@ -20,14 +21,9 @@
     height: 100vh;
     scroll-snap-align: start;
     position: relative;
-    display: flex;
-    align-items: center;
-    padding-left: calc(var(--sidebar) + var(--gutter));
-    /* Platz für linke Leiste */
-    padding-right: calc(var(--gutter) * 2);
+    box-sizing: border-box;
 }
 
-/* Top-Navigation (Mini-Icons DE/EN und Social – optional, wenn du sie dort nutzt) */
 .top-nav {
     position: fixed;
     right: 24px;
@@ -48,14 +44,63 @@
     opacity: 1;
 }
 
-/* Pfeil-Buttons (nutzt deine PNGs aus icons/arrows) */
-.next-arrow{
-  position:absolute; right:1.25rem; bottom:1.25rem;
-  width:48px; height:48px; border-radius:50%;
-  border:1px solid rgba(255,255,255,.25); background:transparent;
-  background-image:url('assets/img/icons/arrows/arrow_right.png');
-  background-repeat:no-repeat;
-  background-position:center;
-  transition:transform var(--t), border-color var(--t);
+.next-arrow {
+    position: absolute;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, .25);
+    background: transparent url('../../../assets/img/icons/arrows/arrow_right.png') no-repeat center;
 }
-.next-arrow:hover{ transform:translateY(-2px); border-color:var(--accent); }
+
+.next-arrow:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+}
+
+
+
+
+/* :host::before {
+    content: '';
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 84px;
+    background: var(--accent);
+    z-index: 5;
+}
+
+.sections {
+    position: relative;
+    height: 100vh;
+    margin-left: 84px;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.section {
+    flex: 0 0 100vw;
+    height: 100vh;
+    scroll-snap-align: start;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.next-arrow {
+    position: absolute;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, .25);
+    background: transparent url('../../../assets/img/icons/arrows/arrow_right.png') no-repeat center;
+} */

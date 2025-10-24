@@ -7,9 +7,9 @@
   gap: 2rem;
 }
 
-.vertical-label {
+.v-left {
   position: absolute;
-  left: clamp(.5rem, 2vw, 1.5rem);
+  left: 1.25rem;
   top: 50%;
   transform: translateY(-50%) rotate(-90deg);
   color: var(--accent);
@@ -22,7 +22,7 @@
   color: var(--muted);
 }
 
-.skills__grid {
+.grid {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -30,20 +30,16 @@
 }
 
 .skill {
+  background: var(--panel);
+  border-radius: 16px;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: .5rem;
-  background: var(--panel);
-  border-radius: 16px;
-  padding: 1rem;
 }
 
 .skill img {
   width: 42px;
   height: 42px;
-}
-
-.skill span {
-  font-family: 'Roboto Mono';
 }
