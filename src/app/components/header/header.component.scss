@@ -1,0 +1,45 @@
+.site-header {
+    position: sticky;
+    top: 32px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 44px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-links {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-right: 44px;
+}
+
+.top-links img {
+    width: 30px;
+    height: 30px;
+}
+
+.top-links a:hover img {
+    opacity: 1;
+}
+
+.lang {
+    display: flex;
+    color: var(--text);
+    font-size: 18px;
+    font-family: 'Roboto Mono';
+    font-weight: 700;
+    gap: 6px;
+}

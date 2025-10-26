@@ -3,16 +3,19 @@
 
   <div class="form-side">
     <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-      <input formControlName="name" placeholder="Your name">
-      <input formControlName="email" placeholder="Your e-mail">
+      <input formControlName="name" placeholder="Your name" />
+      <input formControlName="email" placeholder="Your e-mail" />
       <textarea formControlName="message" rows="6" placeholder="Your message"></textarea>
 
       <label class="policy">
-        <input type="checkbox" formControlName="policy">
-        <span>I’ve read the privacy policy …</span>
+        <input type="checkbox" formControlName="privacy" />
+        <span>Ive read the privacy policy …</span>
       </label>
 
-      <button type="submit" [disabled]="contactForm.invalid">Send</button>
+      <button type="submit" [disabled]="contactForm.invalid || submitting">Send</button>
+
+      <p *ngIf="success" class="ok">Thanks! Your message has been sent.</p>
+      <p *ngIf="error" class="err">{{ error }}</p>
     </form>
   </div>
 
@@ -21,8 +24,16 @@
     <p class="muted">Encourage people to contact you …</p>
 
     <ul class="contacts">
-      <li><img src="assets/img/icons/contact/eMail.png" alt=""><span>m.hubergmail.com</span></li>
-      <li><img src="assets/img/icons/contact/phone_contact.png" alt=""><span>0157 123 456 68</span></li>
+      <li><img src="assets/img/icons/contact/eMail.png" alt="" /><span>m.hubergmail.com</span></li>
+      <li><img src="assets/img/icons/contact/phone_contact.png" alt="" /><span>0157 123 456 68</span></li>
     </ul>
   </div>
+
+  <img class="next-arrow"
+       src="assets/img/icons/arrows/arrow_right.png"
+       alt="Weiter"
+       role="button"
+       tabindex="0"
+       (click)="onNext()"
+       (keydown)="onKey($event)" />
 </section>

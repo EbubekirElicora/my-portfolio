@@ -1,5 +1,6 @@
+
 <section class="why container">
-  <aside class="v-right">Why me</aside>
+  <h1 class="v-left">Why me</h1>
 
   <h2 class="title">I am</h2>
   <p class="lead">Schreibe 2–3 Sätze über Motivation, Fokus, Lernbereitschaft …</p>
@@ -10,5 +11,6 @@
     <li><img src="assets/img/icons/about_me/relocation.png" alt=""> <span>open to relocate</span></li>
   </ul>
 
-  <button class="next-arrow" data-target="#skills" aria-label="weiter"></button>
+   <img class="next-arrow" src="../../../assets/img/icons/arrows/arrow_right.png" alt="Weiter" role="button" tabindex="0"
+    (click)="onNext()" (keydown)="onKey($event)" />
 </section>

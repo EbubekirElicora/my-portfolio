@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ScrollableSection } from '../../shared/scrollable-section.base';
+import { ScrollService } from '../../services/scroll.service';
 import { CommonModule } from '@angular/common';
 
 interface Skill {
@@ -6,12 +8,6 @@ interface Skill {
   icon: string;
 }
 
-/**
- * Skills component displays a set of skills with icons. Each skill
- * consists of a name and the path to its icon. Replace the sample
- * skills array with icons exported from your Figma design and update
- * the names accordingly.
- */
 @Component({
   selector: 'app-skills',
   standalone: true,
@@ -19,8 +15,10 @@ interface Skill {
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.scss']
 })
-export class SkillsComponent {
-  /** Array of skills to display. Replace with real data. */
+export class SkillsComponent extends ScrollableSection {
+  override nextSectionId = 'my-work';
+  constructor(scroll: ScrollService) { super(scroll); }
+
   skills: Skill[] = [
     { name: 'Angular', icon: '/assets/img/skill/angular.png' },
     { name: 'TypeScript', icon: '/assets/img/skill/typescript.png' },

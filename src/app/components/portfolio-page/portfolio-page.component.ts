@@ -2,7 +2,7 @@ import { AfterViewInit, Component, ElementRef, OnDestroy, Renderer2, ViewChild }
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-import { SideNavComponent } from '../../shared/side-nav/side-nav.component';
+import { SideNavComponent } from '../side-nav/side-nav.component';
 import { WhyMeComponent } from '../why-me/why-me.component';
 import { SkillsComponent } from '../skills/skills.component';
 import { MyProjectsComponent } from '../my-projects/my-projects.component';

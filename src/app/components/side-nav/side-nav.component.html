@@ -1,0 +1,23 @@
+<nav class="side stack">
+  <div class="brand">
+  <svg class="brand-arc" viewBox="0 0 160 110" width="140" height="110" aria-hidden="true">
+    <path id="brandArcPath" d="M 20 90 A 60 60 0 0 1 140 90" fill="none"/>
+    <text class="brand-arc-text">
+      <textPath href="#brandArcPath" startOffset="50%" text-anchor="middle" letter-spacing="-1">
+        frontend developer
+      </textPath>
+    </text>
+  </svg>
+  <h1>EE</h1>
+</div>
+
+<a class="nav-link outline" role="button" tabindex="0"
+   (click)="onNav('why-me')" [class.active]="activeLink === 'why-me'">Why me</a>
+<a class="nav-link outline" role="button" tabindex="0"
+   (click)="onNav('skills')" [class.active]="activeLink === 'skills'">Skills</a>
+<a class="nav-link outline" role="button" tabindex="0"
+   (click)="onNav('my-work')" [class.active]="activeLink === 'my-work'">My Work</a>
+<a class="nav-link outline" role="button" tabindex="0"
+   (click)="onNav('contact')" [class.active]="activeLink === 'contact'">Contact</a>
+
+</nav>

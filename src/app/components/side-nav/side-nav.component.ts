@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ScrollService } from '../../services/scroll.service';
 
 @Component({
   selector: 'app-side-nav',
@@ -9,10 +10,12 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./side-nav.component.scss']
 })
 export class SideNavComponent {
-  links = [
-    { label: 'Why me',  href: '#why-me'  },
-    { label: 'Skills',  href: '#skills'  },
-    { label: 'My Work', href: '#my-work' },
-    { label: 'Contact', href: '#contact' }
-  ];
+  activeLink = ''; 
+
+  constructor(private scroll: ScrollService) {}
+
+  onNav(sectionId: string) {
+    this.scroll.scrollTo(sectionId);
+    this.activeLink = sectionId;
+  }
 }

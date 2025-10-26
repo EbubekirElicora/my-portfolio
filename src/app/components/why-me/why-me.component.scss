@@ -1,16 +1,17 @@
 .why {
-    height: 100vh;
+    width: 835px;
+    height: 332px;
+    top: 164px;
     position: relative;
     display: grid;
     align-content: center;
-    gap: 1.2rem;
+    gap: 16px;
 }
 
-.v-right {
+.v-left {
     position: absolute;
-    right: 1.25rem;
     top: 50%;
-    transform: translateY(-50%) rotate(90deg);
+    transform: rotate(270deg);
     color: var(--accent);
     font-family: 'Quantico';
     font-weight: 700;

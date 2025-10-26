@@ -1,36 +1,50 @@
 /* grüne Seitenleiste hinter die SideNav legen */
-:host::before{
+:host::before {
   content: '';
-  position: fixed; inset: 0 auto 0 0; width: 84px;
+  position: fixed;
+  inset: 0 auto 0 0;
+  width: 172px;
   background: var(--accent);
   z-index: 5;
+  box-shadow: inset -2px 0px 20px 1px rgba(0, 0, 0, 0.42);
 }
 
 /* horizontale Bühne */
-.sections{
-  display:flex;
-  height:100vh;
-  overflow-x:auto; overflow-y:hidden;
+.sections {
+  display: flex;
+  height: 100vh;
+  overflow-x: auto;
+  overflow-y: hidden;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  margin-left:84px; /* Platz für die Leiste links */
+  margin-left: 84px;
+  /* Platz für die Leiste links */
   background:
     radial-gradient(1000px 600px at 70% 36%, var(--bg-grad-r), transparent),
     var(--bg);
 }
-.section{
+
+.section {
   flex: 0 0 100vw;
-  height:100vh;
+  height: 100vh;
   scroll-snap-align: start;
   position: relative;
 }
 
 /* Pfeil (global verwendbar) */
-.next-arrow{
-  position:absolute; right: 24px; bottom: 24px;
-  width:44px; height:44px; border-radius:50%;
-  border:1px solid var(--ring);
+.next-arrow {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--ring);
   background: transparent url('../../../assets/img/icons/arrows/arrow_right.png') center/20px 20px no-repeat;
   transition: transform .12s, border-color .12s;
 }
-.next-arrow:hover{ transform: translateY(-3px); border-color: var(--accent); }
+
+.next-arrow:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+}

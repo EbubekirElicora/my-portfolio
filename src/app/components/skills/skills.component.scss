@@ -1,9 +1,10 @@
 .skills {
   position: relative;
-  height: 100vh;
   display: grid;
   align-content: center;
-  gap: 2rem;
+  width: 971px;
+  height: 359px;
+  top: 461px;
 }
 
 .v-left {
@@ -23,9 +24,8 @@
 
 .grid {
   display: grid;
-  gap: 1rem;
+  padding-inline-start: 0;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  max-width: 1000px;
 }
 
 .skill {

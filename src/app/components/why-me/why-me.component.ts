@@ -1,5 +1,7 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { ScrollableSection } from '../../shared/scrollable-section.base';
+import { ScrollService } from '../../services/scroll.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-why-me',
@@ -8,6 +10,7 @@ import { Component } from '@angular/core';
   templateUrl: './why-me.component.html',
   styleUrl: './why-me.component.scss'
 })
-export class WhyMeComponent {
-
+export class WhyMeComponent extends ScrollableSection {
+  override nextSectionId = 'skills';
+  constructor(scroll: ScrollService) { super(scroll); }
 }

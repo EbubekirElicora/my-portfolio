@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
+import { ScrollableSection } from '../../shared/scrollable-section.base';   // <— Pfad anpassen falls nötig
+import { ScrollService } from '../../services/scroll.service';              // <— Pfad anpassen
 
 @Component({
   selector: 'app-contact',
@@ -9,20 +11,26 @@ import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent {
+export class ContactComponent extends ScrollableSection {
+  override nextSectionId = 'legal';
+
+  submitting = false;
+  success = false;
+  error = '';
+
+  constructor(
+    scroll: ScrollService,
+    private fb: FormBuilder
+  ) {
+    super(scroll);
+  }
+
   contactForm = this.fb.group({
     name: ['', { validators: [Validators.required, Validators.minLength(2)], updateOn: 'blur' }],
     email: ['', { validators: [Validators.required, Validators.email], updateOn: 'blur' }],
     message: ['', { validators: [Validators.required, Validators.minLength(10)], updateOn: 'blur' }],
     privacy: [false, { validators: [Validators.requiredTrue], updateOn: 'change' }]
   });
-
-  submitting = false;
-  success = false;
-  error = '';
-
-  constructor(private fb: FormBuilder) {}
-
 
   async onSubmit(): Promise<void> {
     if (this.contactForm.invalid) {
@@ -32,6 +40,7 @@ export class ContactComponent {
     this.submitting = true;
     this.error = '';
     try {
+      // TODO: E-Mail/Backend call integrieren
       this.success = true;
       this.contactForm.reset();
     } catch (err: any) {
