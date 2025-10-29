@@ -1,44 +1,49 @@
 .skills {
   position: relative;
-  display: grid;
-  align-content: center;
+  display: flex;
+  align-content: flex-start;
   width: 971px;
   height: 359px;
   top: 461px;
+  left: 216px;
 }
 
-.v-left {
-  position: absolute;
-  left: 1.25rem;
-  top: 50%;
-  transform: translateY(-50%) rotate(-90deg);
-  color: var(--accent);
-  font-family: 'Quantico';
-  font-weight: 700;
+.skills-pos {
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
-.intro {
-  max-width: 680px;
-  color: var(--muted);
+.icons-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .grid {
   display: grid;
   padding-inline-start: 0;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(136px, 1fr));
 }
 
 .skill {
-  background: var(--panel);
   border-radius: 16px;
-  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: .5rem;
+}
+
+.p-pos {
+  padding-left: 40px;
 }
 
 .skill img {
-  width: 42px;
-  height: 42px;
+  width: 60px;
+  height: 60px;
+}
+
+.next-arrow {
+  position: absolute;
+  top: 387px;
+  left: 976px;
 }

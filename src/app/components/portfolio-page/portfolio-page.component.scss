@@ -1,4 +1,18 @@
-/* grüne Seitenleiste hinter die SideNav legen */
+:root{
+  --bg-grad: linear-gradient(
+    88.66deg,
+    #000000 11.41%,
+    #2C2B2B 22.29%,
+    #0B0A0A 37.32%,
+    #323232 58.54%,
+    #0B0A0A 70.03%
+  );
+}
+
+.about {
+    background: var(--bg-grad) !important;
+}
+
 :host::before {
   content: '';
   position: fixed;
@@ -15,13 +29,8 @@
   height: 100vh;
   overflow-x: auto;
   overflow-y: hidden;
-  scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  margin-left: 84px;
-  /* Platz für die Leiste links */
-  background:
-    radial-gradient(1000px 600px at 70% 36%, var(--bg-grad-r), transparent),
-    var(--bg);
+  margin-left: 44px;
 }
 
 .section {
@@ -48,3 +57,4 @@
   transform: translateY(-3px);
   border-color: var(--accent);
 }
+

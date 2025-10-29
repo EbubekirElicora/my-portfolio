@@ -2,9 +2,8 @@
     position: sticky;
     top: 32px;
     display: flex;
-    justify-content: flex-end;
     align-items: center;
-    padding-right: 44px;
+    padding-left: 1046px;
 }
 
 .brand {
@@ -40,6 +39,5 @@ nav {
     color: var(--text);
     font-size: 18px;
     font-family: 'Roboto Mono';
-    font-weight: 700;
     gap: 6px;
 }

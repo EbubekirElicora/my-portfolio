@@ -1,39 +1,11 @@
-/* === Fonts (aus assets/fonts) === */
-@font-face {
-  font-family: 'Quantico';
-  src: url('assets/fonts/quantico-v19-latin-regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Quantico';
-  src: url('assets/fonts/quantico-v19-latin-700.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Roboto Mono';
-  src: url('assets/fonts/roboto-mono-v31-latin-regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* === Design Tokens === */
 :root {
   --bg: #050607;
   --bg-grad-l: rgba(11, 27, 16, .0);
   --bg-grad-r: rgba(11, 27, 16, .55);
   --panel: #10141a;
-  --panel-olive: #223014;
   --text: rgba(255, 253, 253, 1);
   --accent: rgba(181, 233, 59, 1);
   --accent-weak: rgba(181, 233, 59, .6);
-  --ring: rgba(255, 255, 255, .25);
 }
 
 html,
@@ -43,32 +15,50 @@ body {
   overflow: hidden;
   background: var(--bg);
   color: var(--text);
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Roboto Mono';
 }
 
 h1,
 h2,
 h3 {
-  font-family: 'Quantico', sans-serif;
+  font-family: 'Quantico';
   line-height: 1.1;
-  margin:0;
+  margin: 0;
 }
 
-.container {
-  width: min(1180px, 64vw);
-  margin: 0 auto;
+.header-txt{ 
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    height: 100%;
+    margin: 0;
+    color: transparent;
+    -webkit-text-stroke: 3px var(--accent);
+    font-size: 54px;
+    text-align: end;
+}
+
+
+p {
+  font-family: 'Quantico';
+  font-weight: 400;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
 }
 
 .btn {
+  font-family: "Quantico";
+  font-weight: 400;
+  font-size: 14px;
   display: inline-flex;
   align-items: center;
-  gap: .5rem;
-  padding: .8rem 1.2rem;
-  border-radius: 999px;
+  padding: 13px 30px 13px 30px;
+  border-radius: 30px;
   border: 1px solid transparent;
   background: var(--accent);
-  color: #0b0d0f;
-  font-weight: 700;
+  color: rgba(37, 37, 37, 1);
   cursor: pointer;
   transition: transform .12s ease, background .12s ease, border-color .12s ease;
 }
@@ -80,8 +70,8 @@ h3 {
 
 .btn--ghost {
   background: transparent;
-  color: var(--text);
-  border-color: var(--ring);
+  color: var(--accent);
+  border-color: var(--accent);
 }
 
 .link {
@@ -91,7 +81,58 @@ h3 {
 }
 
 img {
-  max-width: 100%;
-  height: auto;
   display: block;
+}
+
+/* Roboto Mono – 400 normal */
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("assets/fonts/roboto-mono-v31-latin-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Roboto Mono – 700 normal */
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("assets/fonts/roboto-mono-v31-latin-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Roboto Mono – 400 italic */
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("assets/fonts/roboto-mono-v31-latin-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Roboto Mono – 700 italic */
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("assets/fonts/roboto-mono-v31-latin-700italic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Quantico (keine Variable-Version) – nur die 2 Schnitte, die du brauchst */
+@font-face {
+  font-family: "Quantico";
+  src: url("/assets/fonts/quantico-v19-latin-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Quantico";
+  src: url("/assets/fonts/quantico-v19-latin-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }

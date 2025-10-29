@@ -1,52 +1,83 @@
 .why {
     width: 835px;
     height: 332px;
-    top: 164px;
     position: relative;
-    display: grid;
-    align-content: center;
-    gap: 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    top: 164px;
+    left: 216px;
 }
 
-.v-left {
-    position: absolute;
-    top: 50%;
-    transform: rotate(270deg);
-    color: var(--accent);
-    font-family: 'Quantico';
-    font-weight: 700;
-    letter-spacing: 1px;
+.why-text {
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .title {
-    font-size: clamp(28px, 4vw, 48px);
+    font-size: 48px;
+    padding-top: 53px;
     color: var(--accent);
 }
 
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
 .lead {
-    max-width: 720px;
     color: var(--muted);
 }
 
 .badges {
     display: flex;
-    gap: 14px;
+    gap: 32px;
     flex-wrap: wrap;
-    margin-top: .75rem;
+    padding-inline-start: 62px;
 
     li {
-        list-style: none;
         display: flex;
         align-items: center;
-        gap: .6rem;
-        padding: .7rem 1.1rem;
-        border-radius: 999px;
-        background: #151a20;
-        border: 1px solid #1e242c;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 8px;
     }
 
-    img {
-        width: 20px;
-        height: 20px;
+    ul {
+        padding-inline-start: 58px
     }
+}
+
+p {
+    margin-block-start: 0;
+}
+
+.relocation.icon {
+    width: 30px;
+    height: 50px;
+}
+
+.remote-icon {
+    width: 54px;
+    height: 47px;
+}
+
+.location-icon {
+    width: 33px;
+    height: 40px;
+}
+
+.next-arrow {
+    position: absolute;
+    left: 998px;
+    top: 752px;
+}
+
+.btn-pos {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 37px;
 }

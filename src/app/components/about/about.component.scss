@@ -1,8 +1,7 @@
 .hero {
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+  left: 324px;
 }
 
 .name_sub_container {
@@ -13,17 +12,6 @@
   align-items: flex-end;
   top: 56%;
 }
-
-.content {
-  align-items: center;
-  display: flex;
-}
-
-.copy {
-  display: flex;
-  justify-content: center;
-}
-
 
 .copy h1 {
   font-size: 100px;
@@ -49,4 +37,11 @@
 .portrait {
   height: 100vh;
   object-fit: cover;
+}
+
+.next-arrow {
+  display: flex !important;
+  position: absolute !important;
+  left: 1233px !important;
+  top: 348px !important;
 }
