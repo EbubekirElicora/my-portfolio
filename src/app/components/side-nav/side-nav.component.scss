@@ -4,12 +4,12 @@
   top: 0;
   bottom: 0;
   width: 172px;
+  background-color: var(--accent);
   z-index: 10;
-  color: rgba(74, 74, 74, 1);
-  filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.42));
 }
 
 .side {
+  position: relative;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -17,6 +17,25 @@
   justify-content: start;
   gap: 56px;
   padding-top: 32px;
+  z-index: 20;
+}
+
+.side::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -22px;
+  width: 44px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.42);
+  filter: blur(23.5px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.side > * {
+  position: relative;
+  z-index: 1;
 }
 
 .brand-hit {
@@ -50,7 +69,7 @@
 }
 
 .brand-arc text {
-  font-family: 'Quantico';
+  font-family: "Quantico";
   font-size: 18px;
   fill: rgba(74, 74, 74, 1);
   font-weight: 400;
@@ -71,7 +90,7 @@
 }
 
 .nav-link {
-  font-family: 'Quantico';
+  font-family: "Quantico";
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   text-decoration: none;

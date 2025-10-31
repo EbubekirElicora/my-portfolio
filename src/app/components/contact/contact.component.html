@@ -1,39 +1,93 @@
 <section class="contact">
-  <aside class="vertical-label">Contact me</aside>
+  <div class="form-container">
+    <div class="contact-txt">
+      <h1 class="header-txt">Contact me</h1>
+    </div>
 
-  <div class="form-side">
-    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-      <input formControlName="name" placeholder="Your name" />
-      <input formControlName="email" placeholder="Your e-mail" />
-      <textarea formControlName="message" rows="6" placeholder="Your message"></textarea>
+    <div class="form-side">
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <input formControlName="name" placeholder="Your name" />
+        <input formControlName="email" placeholder="Your e-mail" />
+        <textarea
+          formControlName="message"
+          rows="11"
+          placeholder="Your message"
+        ></textarea>
 
-      <label class="policy">
-        <input type="checkbox" formControlName="privacy" />
-        <span>Ive read the privacy policy …</span>
-      </label>
+        <div class="checkbox-btn-container">
+          <div class="container-size">
+            <div>
+              <label class="policy">
+                <div>
+                  <input type="checkbox" formControlName="privacy" />
+                </div>
+                <span
+                  >Ive read the <a href="">privacy policy</a> and agree to the
+                  processing of my data as outlined.</span
+                >
+              </label>
+            </div>
 
-      <button type="submit" [disabled]="contactForm.invalid || submitting">Send</button>
-
-      <p *ngIf="success" class="ok">Thanks! Your message has been sent.</p>
-      <p *ngIf="error" class="err">{{ error }}</p>
-    </form>
+            <div class="btn-pos">
+              <button
+                class="btn-sub"
+                type="submit"
+                [disabled]="contactForm.invalid || submitting"
+              >
+                Send
+              </button>
+              <p *ngIf="success" class="ok">
+                Thanks! Your message has been sent.
+              </p>
+              <p *ngIf="error" class="err">{{ error }}</p>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
   </div>
 
   <div class="info-side">
     <p class="lead">Let us work together.</p>
-    <p class="muted">Encourage people to contact you …</p>
+    <p class="muted">
+      Encourage people to contact you and describe what role you are interested
+      in. Express confidence in your ability to make a meaningful contribution
+      to a team through your expertise and enthusiasm for improving your skills.
+    </p>
 
     <ul class="contacts">
-      <li><img src="assets/img/icons/contact/eMail.png" alt="" /><span>m.hubergmail.com</span></li>
-      <li><img src="assets/img/icons/contact/phone_contact.png" alt="" /><span>0157 123 456 68</span></li>
+      <li>
+        <img
+          class="emailImg"
+          src="assets/img/icons/contact/eMail_contact.png"
+          alt=""
+        /><span>E-Mail: max-Muster.gmx.de</span>
+      </li>
+      <li>
+        <img
+          class="phoneImg"
+          src="assets/img/icons/contact/phone_contact.png"
+          alt=""
+        /><span>Tel: 0157 123 456 68</span>
+      </li>
     </ul>
-  </div>
 
-  <img class="next-arrow"
-       src="assets/img/icons/arrows/arrow_right.png"
-       alt="Weiter"
-       role="button"
-       tabindex="0"
-       (click)="onNext()"
-       (keydown)="onKey($event)" />
+    <img
+      class="next-arrow"
+      src="assets/img/icons/arrows/arrow_right.png"
+      alt="Weiter"
+      role="button"
+      tabindex="0"
+      (click)="onNext()"
+      (keydown)="onKey($event)"
+    />
+
+    <div class="container-legal-notice">
+      <div class="legal-notice-pos">
+        <a href=""> Legal notice </a>
+        <a href=""> privacy policy </a>
+        <p>Max Mustermann 2025</p>
+      </div>
+    </div>
+  </div>
 </section>

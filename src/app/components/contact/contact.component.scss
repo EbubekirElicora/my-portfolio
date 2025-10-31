@@ -1,66 +1,189 @@
 .contact {
   position: relative;
-  min-height: 100vh;
-  padding: 2rem 3rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  display: flex;
 }
 
-.vertical-label {
+.contact-txt {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.form-container {
+  display: flex;
   position: absolute;
-  left: 50%;
-  top: 2rem;
-  transform: translateX(-50%) rotate(-90deg);
-  color: var(--accent);
-  font-family: 'Quantico';
-  font-weight: 700;
+  width: 560px;
+  height: 528px;
+  top: 144px;
+  gap: 40px;
+}
+
+.form-side {
+  width: 100%;
 }
 
 .form-side form {
-  display: grid;
-  gap: .9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 input,
 textarea {
+  font-family: "Quantico";
+  font-weight: 400;
   background: transparent;
-  color: var(--text);
+  color: var(--text) !important;
   border: 1px solid var(--accent);
-  border-radius: 18px;
-  padding: .9rem 1.1rem;
+  border-radius: 30px;
+  padding: 22px 25px;
 }
 
-button[disabled] {
-  opacity: .5;
+input::placeholder,
+textarea::placeholder {
+  color: var(--accent-weak);
+  opacity: 0.4;
+}
+
+.btn-sub[disabled] {
+  font-family: "Quantico";
+  font-weight: 400;
+  color: rgba(74, 74, 74, 1);
   cursor: not-allowed;
+  padding: 13px 30px 13px 30px;
+  border-radius: 30px;
+  background-color: rgba(158, 157, 157, 1);
 }
 
-.info-side .lead {
+.btn-pos {
+  text-align: end;
+  padding-top: 24px;
+}
+
+.checkbox-btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.policy span {
+  font-family: "Quantico";
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--accent);
+}
+
+.policy a {
+  text-decoration: none;
   color: var(--text);
-  font-family: 'Quantico';
 }
 
-.info-side .muted {
-  color: var(--muted);
-  max-width: 420px;
+.policy a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--text);
 }
 
 .contacts {
   list-style: none;
   padding: 0;
-  margin: 1rem 0 0;
-  display: grid;
-  gap: .5rem;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .contacts li {
   display: flex;
   align-items: center;
-  gap: .6rem;
+  justify-content: flex-end;
+  gap: 16px;
 }
 
-.contacts img {
-  width: 18px;
-  height: 18px;
+.emailImg {
+  width: 22px;
+  height: 30px;
+}
+
+.phoneImg {
+  width: 19px;
+  height: 21px;
+}
+
+.info-side .lead {
+  color: var(--accent-weak);
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.info-side .muted {
+  color: var(--text);
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+label {
+  display: flex;
+  gap: 8px;
+}
+
+.container-size {
+  width: 408px;
+}
+
+input[type="checkbox"] {
+  display: inline-block;
+  border: 0px !important;
+  background-image: url(../../../assets/img/icons/checkBox/default_box.png);
+  background-size: cover;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0px;
+  margin: 0;
+  padding: 0 !important;
+  width: 24px;
+  height: 24px;
+}
+
+input[type="checkbox"]:checked {
+  background-image: url(../../../assets/img/icons/checkBox/checked_box.png);
+}
+
+.next-arrow {
+  position: absolute;
+  top: 400px;
+  left: 308px;
+  transform: rotate(180deg);
+}
+
+.info-side {
+  display: flex;
+  flex-direction: column;
+  width: 416px;
+  height: 840px;
+  position: absolute;
+  left: 624px;
+  top: 144px;
+  text-align: right;
+  gap: 24px;
+  justify-content: flex-start;
+}
+
+.legal-notice-pos {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 256px;
+  gap: 16px;
+}
+
+a,
+.legal-notice-pos p {
+  font-family: "Quantico";
+  font-weight: 400;
+  color: var(--text);
+  font-size: 14px;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }

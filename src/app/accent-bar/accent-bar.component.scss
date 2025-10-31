@@ -1,0 +1,19 @@
+/* Eltern-Container muss position:relative haben */
+.section-with-accent {
+  position: relative;
+}
+
+/* der eigentliche Balken */
+.accent-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100px; /* passe an: z.B. 56–96px */
+  background: linear-gradient(
+    180deg,
+    rgba(var(--accent), 1) 0%,
+    rgba(var(--accent-end), 1) 100%
+  );
+
+}

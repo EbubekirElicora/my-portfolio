@@ -1,61 +1,77 @@
 .refs {
-    display: grid;
-    grid-template-columns: 80px 1fr;
-    gap: 28px;
-}
-
-.vertical {
-    writing-mode: vertical-rl;
-    color: var(--accent);
-    font-weight: 700;
+    display: flex;
+    position: absolute;
+    gap: 40px;
+    top: 240px;
+    width: 574px;
+    height: 574px;
 }
 
 .refs__list {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     gap: 16px;
 }
 
 .ref {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 24px;
+    display: flex;
+    gap: 14px;
     align-items: center;
-    background: rgba(255, 255, 255, .03);
-    border: 1px solid rgba(255, 255, 255, .08);
-    border-radius: 16px;
-    padding: 18px 22px;
+    border: 1px solid var(--accent-weak);
+    border-radius: 30px;
+    padding: 24px 16px;
+    width: 480px;
+    height: 184px;
+    box-sizing: border-box;
 }
 
-blockquote {
-    margin: 0;
-    color: var(--text);
-    font-style: italic;
+.p-container {
+    width: 100%;
 }
 
 .ref__author {
-    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 68%
 }
 
-.ref__author span {
-    display: block;
-    color: var(--muted);
-    font-size: .9rem;
+
+.header-txt {
+    text-align: start !important;
 }
 
-@media (max-width: 900px) {
-    .refs {
-        grid-template-columns: 1fr;
-    }
+.next-arrow {
+    position: absolute;
+    left: 692px;
+    top: 403px;
+}
 
-    .vertical {
-        display: none;
-    }
+p {
+    text-align: center;
+}
 
-    .ref {
-        grid-template-columns: 1fr;
-    }
+.ref__author p {
+    color: var(--accent-weak);
+    font-size: 14px !important;
+    margin-block-start: 16px;
+    margin-block-end: 0;
+}
 
-    .ref__author {
-        text-align: left;
-    }
+.divider {
+    display: inline-block;
+    width: 1px;
+    border: 1px;
+    height: 100%;
+    background-color: var(--accent);
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--accent);
+    font-size: 24px;
+    font-weight: 400;
 }

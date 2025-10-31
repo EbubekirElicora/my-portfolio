@@ -1,26 +1,24 @@
-:root{
+:root {
   --bg-grad: linear-gradient(
     88.66deg,
     #000000 11.41%,
-    #2C2B2B 22.29%,
-    #0B0A0A 37.32%,
+    #2c2b2b 22.29%,
+    #0b0a0a 37.32%,
     #323232 58.54%,
-    #0B0A0A 70.03%
+    #0b0a0a 70.03%
   );
 }
 
 .about {
-    background: var(--bg-grad) !important;
+  background: var(--bg-grad) !important;
 }
 
-:host::before {
-  content: '';
-  position: fixed;
-  inset: 0 auto 0 0;
-  width: 172px;
-  background: var(--accent);
-  z-index: 5;
-  box-shadow: inset -2px 0px 20px 1px rgba(0, 0, 0, 0.42);
+.references {
+  flex: 0 0 900px !important;
+}
+
+.contact {
+  flex: 0 0 1224px !important;
 }
 
 /* horizontale Bühne */
@@ -30,11 +28,11 @@
   overflow-x: auto;
   overflow-y: hidden;
   scroll-behavior: smooth;
-  margin-left: 44px;
+  margin-left: 64px;
 }
 
 .section {
-  flex: 0 0 100vw;
+  flex: 0 0 1160px;
   height: 100vh;
   scroll-snap-align: start;
   position: relative;
@@ -49,12 +47,13 @@
   height: 44px;
   border-radius: 50%;
   border: 1px solid var(--ring);
-  background: transparent url('../../../assets/img/icons/arrows/arrow_right.png') center/20px 20px no-repeat;
-  transition: transform .12s, border-color .12s;
+  background: transparent
+    url("../../../assets/img/icons/arrows/arrow_right.png") center/20px 20px
+    no-repeat;
+  transition: transform 0.12s, border-color 0.12s;
 }
 
 .next-arrow:hover {
   transform: translateY(-3px);
   border-color: var(--accent);
 }
-

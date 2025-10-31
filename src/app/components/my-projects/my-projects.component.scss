@@ -19,6 +19,10 @@ header span {
     color: var(--accent);
 }
 
+.span-last {
+    font-size: 30px !important;
+}
+
 .ellipse {
     padding-left: 42px;
     position: absolute;
@@ -28,7 +32,8 @@ header span {
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(3, minmax(980px, 1fr));
+    grid-template-columns:
+        minmax(980px, 1fr) minmax(980px, 1fr) minmax(980px, 1fr) minmax(856px, 1fr);
     gap: 28px;
 }
 
@@ -44,6 +49,13 @@ header span {
     height: 560px;
 }
 
+.last-card {
+    width: 344px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+}
+
 .card header {
     display: flex;
     align-items: center;
@@ -51,8 +63,20 @@ header span {
     padding-left: 40px;
 }
 
+.last-card header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
 .card .no {
     font-size: 100px;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--accent);
+}
+
+.last-card .no {
+    font-size: 48px;
     color: transparent;
     -webkit-text-stroke: 1px var(--accent);
 }
@@ -90,6 +114,7 @@ header span {
 
 .header-txt {
     padding-left: 40px;
+    padding-bottom: 16px;
 }
 
 .first-project {
@@ -113,4 +138,17 @@ p {
 
 .next-arrow {
     position: absolute;
+    left: 3800px;
+    top: 780px;
+}
+
+.last-card p {
+    margin-block-start: 26px;
+}
+
+.last-card .btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }

@@ -10,6 +10,7 @@ import { ReferencesComponent } from '../references/references.component';
 import { ContactComponent } from '../contact/contact.component';
 import { LegalComponent } from '../legal/legal.component';
 import { AboutComponent } from '../about/about.component';
+import { AccentBarComponent } from '../../accent-bar/accent-bar.component';
 
 @Component({
   selector: 'app-portfolio-page',
@@ -17,7 +18,7 @@ import { AboutComponent } from '../about/about.component';
   imports: [
     CommonModule, RouterModule, SideNavComponent,
     AboutComponent, WhyMeComponent, SkillsComponent,
-    MyProjectsComponent, ReferencesComponent, ContactComponent, LegalComponent
+    MyProjectsComponent, ReferencesComponent, ContactComponent, LegalComponent, AccentBarComponent
   ],
   templateUrl: './portfolio-page.component.html',
   styleUrls: ['./portfolio-page.component.scss']
