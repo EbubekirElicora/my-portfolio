@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
 import { ScrollableSection } from '../../shared/scrollable-section.base';
-import { ScrollService } from '../../services/scroll.service'; 
+import { ScrollService } from '../../services/scroll.service';
 
 @Component({
   selector: 'app-contact',
@@ -62,5 +62,11 @@ export class ContactComponent extends ScrollableSection {
     } finally {
       this.submitting = false;
     }
+  }
+
+  override onNext() {
+    document
+      .getElementById('about')
+      ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 }

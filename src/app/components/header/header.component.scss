@@ -1,43 +1,43 @@
 .site-header {
-    position: sticky;
-    top: 32px;
-    display: flex;
-    align-items: center;
-    padding-left: 1046px;
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  padding-left: 1078px;
+  height: 64px;
 }
 
 .brand {
-    display: flex;
-    align-items: center;
-    gap: .75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 }
 
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .top-links {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    padding-right: 44px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-right: 44px;
 }
 
 .top-links img {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 }
 
 .top-links a:hover img {
-    opacity: 1;
+  opacity: 1;
 }
 
 .lang {
-    display: flex;
-    color: var(--text);
-    font-size: 18px;
-    font-family: 'Roboto Mono';
-    gap: 6px;
+  display: flex;
+  color: var(--text);
+  font-size: 18px;
+  font-family: "Roboto Mono";
+  gap: 6px;
 }

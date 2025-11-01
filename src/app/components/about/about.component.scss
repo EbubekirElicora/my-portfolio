@@ -2,6 +2,8 @@
   height: 100vh;
   position: absolute;
   left: 324px;
+  width: 824px;
+  top: 32px;
 }
 
 .name_sub_container {
@@ -10,20 +12,21 @@
   z-index: 1;
   flex-direction: column;
   align-items: flex-end;
-  top: 56%;
+  top: 528px;
 }
 
 .copy h1 {
   font-size: 100px;
   color: var(--accent);
   font-weight: 700;
+  margin-block-end: 0;
 }
 
 .copy .subtitle {
   font-family: 'Quantico';
   font-size: 48px;
   font-weight: 700;
-  margin-block-start: 24px;
+  margin-block-start: 16px;
   color: transparent;
   -webkit-text-stroke: 1px var(--accent);
 }

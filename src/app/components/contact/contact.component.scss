@@ -152,7 +152,7 @@ input[type="checkbox"]:checked {
 
 .next-arrow {
   position: absolute;
-  top: 400px;
+  top: 415px;
   left: 308px;
   transform: rotate(180deg);
 }
@@ -163,7 +163,7 @@ input[type="checkbox"]:checked {
   width: 416px;
   height: 840px;
   position: absolute;
-  left: 624px;
+  left: 680px;
   top: 144px;
   text-align: right;
   gap: 24px;
@@ -174,7 +174,7 @@ input[type="checkbox"]:checked {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding-top: 256px;
+  padding-top: 310px;
   gap: 16px;
 }
 
@@ -186,4 +186,28 @@ a,
   font-size: 14px;
   margin-block-start: 0;
   margin-block-end: 0;
+}
+
+.contact .contact-accent-layer {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 2000;
+}
+
+.contact .accent-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgb(181, 233, 59) 0%,
+    rgb(84, 120, 0) 100%
+  );
 }
