@@ -1,15 +1,21 @@
+// src/app/shared/scrollable-section.base.ts
 import { ScrollService } from '../services/scroll.service';
-import { NavigableSection } from '../interfaces/interface/interface';
 
+export abstract class ScrollableSection {
+  abstract nextSectionId: string;     // Ziel-ID für „weiter“
+  protected backTargetId?: string;    // optional: Ziel für „zurück“
 
-export abstract class ScrollableSection  implements NavigableSection {
-  abstract nextSectionId: string;
   constructor(protected scroll: ScrollService) {}
-  onNext(ev?: KeyboardEvent): void {
-    if (ev) ev.preventDefault();
-    if (!this.nextSectionId) return;
-    this.scroll.scrollTo(this.nextSectionId);
+
+  onNext(): void {
+    if (this.nextSectionId) this.scroll.scrollTo(this.nextSectionId);
   }
+
+  onBack(): void {
+    if (this.backTargetId) this.scroll.scrollTo(this.backTargetId);
+    else this.scroll.scrollToStart();
+  }
+
   onKey(ev: KeyboardEvent): void {
     const isEnter = ev.key === 'Enter';
     const isSpace = ev.key === ' ' || ev.code === 'Space';

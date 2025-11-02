@@ -1,52 +1,74 @@
 <section class="skills container">
   <div class="skills-pos">
     <h1 class="header-txt">My Skill Set</h1>
-  </div >
-  <div class= "icons-container">
-  <p class="p-pos">A short introduction of your skills. Highlight your experience of working on different projects using different
-    front-end technologies and emphasise your openness to learning and adapting to new technologies. </p>
+  </div>
+  <div class="icons-container">
+    <p class="p-pos">
+      A short introduction of your skills. Highlight your experience of working
+      on different projects using different front-end technologies and emphasise
+      your openness to learning and adapting to new technologies.
+    </p>
 
-  <ul class="grid">
-    <li class="skill"><img src="assets/img/icons/skill/angular.png" alt="">
-      <p>Angular</p>
-    </li>
-    <li class="skill"><img src="assets/img/icons/skill/typescript.png" alt="">
-      <p>TypeScript</p>
-    </li>
-    <li class="skill"><img src="assets/img/icons/skill/javaScript.png" alt="">
-      <p>JavaScript</p>
-    </li>
-    <li class="skill"><img src="assets/img/icons/skill/html.png" alt="">
-      <p>HTML</p>
-    </li>
-    <li class="skill"><img src="assets/img/icons/skill/css.png" alt="">
-      <p>CSS</p>
-    </li>
-    <li class="skill"><img src="assets/img/icons/skill/api.png" alt="">
-      <p>REST-API</p>
-    </li>
-    <li class="skill"><img src="assets/img/icons/skill/firebase.png" alt="">
-      <p>Firebase</p>
-    </li>
-    <li class="skill"><img src="assets/img/icons/skill/git.png" alt="">
-      <p>Git</p>
-    </li>
-    <li class="skill"><img src="assets/img/icons/skill/scrum.png" alt="">
-      <p>Scrum</p>
-    </li>
-    <li class="skill"><img src="assets/img/icons/skill/materialDesign.png" alt="">
-      <p>Material Design</p>
-    </li>
-    <li class="skill"><img src="assets/img/icons/skill/wordpress.png" alt="">
-      <p>WordPress</p>
-    </li>
-    <li class="skill"><img src="assets/img/icons/skill/challengeMe.png" alt="">
-      <p>Challenge me</p>
-    </li>
-  </ul>
-
-</div>
+    <ul class="grid">
+      <li class="skill">
+        <img src="assets/img/icons/skill/angular.png" alt="" />
+        <p>Angular</p>
+      </li>
+      <li class="skill">
+        <img src="assets/img/icons/skill/typescript.png" alt="" />
+        <p>TypeScript</p>
+      </li>
+      <li class="skill">
+        <img src="assets/img/icons/skill/javaScript.png" alt="" />
+        <p>JavaScript</p>
+      </li>
+      <li class="skill">
+        <img src="assets/img/icons/skill/html.png" alt="" />
+        <p>HTML</p>
+      </li>
+      <li class="skill">
+        <img src="assets/img/icons/skill/css.png" alt="" />
+        <p>CSS</p>
+      </li>
+      <li class="skill">
+        <img src="assets/img/icons/skill/api.png" alt="" />
+        <p>REST-API</p>
+      </li>
+      <li class="skill">
+        <img src="assets/img/icons/skill/firebase.png" alt="" />
+        <p>Firebase</p>
+      </li>
+      <li class="skill">
+        <img src="assets/img/icons/skill/git.png" alt="" />
+        <p>Git</p>
+      </li>
+      <li class="skill">
+        <img src="assets/img/icons/skill/scrum.png" alt="" />
+        <p>Scrum</p>
+      </li>
+      <li class="skill">
+        <img src="assets/img/icons/skill/materialDesign.png" alt="" />
+        <p>Material Design</p>
+      </li>
+      <li class="skill">
+        <img src="assets/img/icons/skill/wordpress.png" alt="" />
+        <p>WordPress</p>
+      </li>
+      <li class="skill">
+        <img src="assets/img/icons/skill/challengeMe.png" alt="" />
+        <p>Challenge me</p>
+      </li>
+    </ul>
+  </div>
 </section>
 
-<img class="next-arrow" src="../../../assets/img/icons/arrows/arrow_right.png" alt="Weiter" role="button" tabindex="0"
-  (click)="onNext()" (keydown)="onKey($event)" />
+<img
+  class="next-arrow"
+  src="assets/img/icons/arrows/arrow_right.png"
+  alt="Weiter"
+  role="button"
+  tabindex="0"
+  (click)="onNext()"
+  (keydown.enter)="onNext()"
+  (keydown.space)="onNext()"
+/>

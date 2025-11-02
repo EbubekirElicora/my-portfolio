@@ -1,24 +1,10 @@
-:root {
-  --bg-grad: linear-gradient(
-    88.66deg,
-    #000000 11.41%,
-    #2c2b2b 22.29%,
-    #0b0a0a 37.32%,
-    #323232 58.54%,
-    #0b0a0a 70.03%
-  );
+#why-me,
+#skills {
+  flex: 0 0 1156px !important;
 }
 
-.about {
-  background: var(--bg-grad) !important;
-}
-
-.references {
-  flex: 0 0 900px !important;
-}
-
-.contact {
-  flex: 0 0 1224px !important;
+#references {
+  flex: 0 0 1104px !important;
 }
 
 .sections {
@@ -26,32 +12,11 @@
   overflow-x: auto;
   overflow-y: hidden;
   scroll-behavior: smooth;
-  margin-left: 64px;
 }
 
 .section {
-  flex: 0 0 1160px;
+  flex: 0 0 1224px;
   height: 100vh;
   scroll-snap-align: start;
   position: relative;
-}
-
-/* Pfeil (global verwendbar) */
-.next-arrow {
-  position: absolute;
-  right: 24px;
-  bottom: 24px;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: 1px solid var(--ring);
-  background: transparent
-    url("../../../assets/img/icons/arrows/arrow_right.png") center/20px 20px
-    no-repeat;
-  transition: transform 0.12s, border-color 0.12s;
-}
-
-.next-arrow:hover {
-  transform: translateY(-3px);
-  border-color: var(--accent);
 }

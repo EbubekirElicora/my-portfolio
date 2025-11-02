@@ -44,9 +44,23 @@
 
 .next-arrow {
   position: absolute;
-  top: 339px;
-  left: 1200px;
+  top: 346px;
+  left: 1156px;
+  pointer-events: auto;
+  cursor: pointer;
+  z-index: 1;
 }
+
+.next-arrow:hover,
+.next-arrow:focus-visible {
+  filter: drop-shadow(0 0 12px rgba(181,233,59,0.9));
+}
+
+.next-arrow:focus-visible {
+  outline: 2px solid rgba(181,233,59,1);
+  outline-offset: 4px;
+}
+
 
 .header-txt {
   text-align: center !important;

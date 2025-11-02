@@ -1,7 +1,8 @@
+// src/app/sections/about/about.component.ts
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { ScrollableSection } from '../../shared/scrollable-section.base';
 import { ScrollService } from '../../services/scroll.service';
-import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-about',

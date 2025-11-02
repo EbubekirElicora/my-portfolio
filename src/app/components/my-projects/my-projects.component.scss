@@ -1,154 +1,168 @@
 .work {
-    height: 100vh;
-    position: relative;
-    display: flex;
-    top: 153px;
-    left: 216px;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  top: 153px;
+  left: 216px;
 }
 
 .work-txt {
-    height: 100%;
-    display: flex;
-    align-items: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 header span {
-    font-family: 'Quantico';
-    font-weight: 400;
-    font-size: 54px;
-    color: var(--accent);
+  font-family: "Quantico";
+  font-weight: 400;
+  font-size: 54px;
+  color: var(--accent);
 }
 
 .span-last {
-    font-size: 30px !important;
+  font-size: 30px !important;
 }
 
 .ellipse {
-    padding-left: 42px;
-    position: absolute;
-    width: 13px;
-    height: 13px;
+  padding-left: 42px;
+  position: absolute;
+  width: 13px;
+  height: 13px;
 }
 
 .cards {
-    display: grid;
-    grid-template-columns:
-        minmax(980px, 1fr) minmax(980px, 1fr) minmax(980px, 1fr) minmax(856px, 1fr);
-    gap: 28px;
+  display: grid;
+  grid-template-columns:
+    minmax(980px, 1fr) minmax(980px, 1fr) minmax(980px, 1fr)
+    minmax(640px, 1fr);
 }
 
 .card {
-    background: color-mix(in srgb, var(--accent) 20%, transparent);
-    border-radius: 32px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, .25);
-    display: flex;
-    align-items: start;
-    flex-direction: column;
-    gap: 8px;
-    width: 919px;
-    height: 560px;
+  background: color-mix(in srgb, var(--accent) 20%, transparent);
+  border-radius: 32px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 8px;
+  width: 919px;
+  height: 560px;
 }
 
 .last-card {
-    width: 344px;
-    display: flex;
-    align-items: start;
-    flex-direction: column;
+  width: 344px;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
 }
 
 .card header {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    padding-left: 40px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-left: 40px;
 }
 
 .last-card header {
-    display: flex;
-    align-items: center;
-    gap: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .card .no {
-    font-size: 100px;
-    color: transparent;
-    -webkit-text-stroke: 1px var(--accent);
+  font-size: 100px;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--accent);
 }
 
 .last-card .no {
-    font-size: 48px;
-    color: transparent;
-    -webkit-text-stroke: 1px var(--accent);
+  font-size: 48px;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--accent);
 }
 
 .card .shot {
-    width: 337px;
-    aspect-ratio: 16/10;
-    object-fit: cover;
-    border-radius: 30px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, .35);
+  width: 337px;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  border-radius: 30px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
 }
 
 .card .cta {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-    flex-direction: column;
-    padding-right: 40px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex-direction: column;
+  padding-right: 40px;
 }
 
 .project-span {
-    font-family: 'Quantico';
-    font-weight: 400;
-    font-size: 24px;
-    color: var(--text);
-    display: flex;
-    gap: 21px;
-    align-items: center;
+  font-family: "Quantico";
+  font-weight: 400;
+  font-size: 24px;
+  color: var(--text);
+  display: flex;
+  gap: 21px;
+  align-items: center;
 }
 
 .btn-container {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 .header-txt {
-    padding-left: 40px;
-    padding-bottom: 16px;
+  padding-left: 40px;
+  padding-bottom: 16px;
 }
 
 .first-project {
-    display: flex;
-    padding-left: 116px;
+  display: flex;
+  padding-left: 116px;
 }
 
 .project-container {
-    padding-inline-end: 29px;
+  padding-inline-end: 29px;
 }
 
 p {
-    margin-block-start: 16px;
-    margin-block-end: 24px;
+  margin-block-start: 16px;
+  margin-block-end: 24px;
 }
 
 .last-txt {
-    padding-left: 116px;
-    padding-right: 40px;
+  padding-left: 116px;
+  padding-right: 40px;
 }
 
 .next-arrow {
-    position: absolute;
-    left: 3800px;
-    top: 780px;
+  position: absolute;
+  left: 3680px;
+  top: 780px;
+  pointer-events: auto;
+  cursor: pointer;
+  z-index: 1;
 }
 
+.next-arrow:hover,
+.next-arrow:focus-visible {
+  filter: drop-shadow(0 0 12px rgba(181,233,59,0.9));
+}
+
+.next-arrow:focus-visible {
+  outline: 2px solid rgba(181,233,59,1);
+  outline-offset: 4px;
+}
+
+
 .last-card p {
-    margin-block-start: 26px;
+  margin-block-start: 26px;
 }
 
 .last-card .btn-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }

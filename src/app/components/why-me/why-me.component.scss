@@ -1,85 +1,97 @@
 .why {
-    width: 835px;
-    height: 332px;
-    position: relative;
-    display: flex;
-    align-items: flex-start;
-    gap: 52px;
-    top: 164px;
-    left: 216px;
+  width: 835px;
+  height: 332px;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 52px;
+  top: 164px;
+  left: 216px;
 }
 
 .why-text {
-    height: 100%;
-    display: flex;
-    align-items: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .title {
-    font-size: 48px;
-    padding-top: 53px;
-    color: var(--accent);
+  font-size: 48px;
+  padding-top: 53px;
+  color: var(--accent);
 }
 
-
 .info-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .lead {
-    color: var(--muted);
+  color: var(--muted);
 }
 
 .badges {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  padding-inline-start: 62px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+
+  li {
     display: flex;
-    gap: 32px;
-    flex-wrap: wrap;
-    padding-inline-start: 62px;
-    margin-block-start: 0;
-    margin-block-end: 0;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8px;
+  }
 
-    li {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 8px;
-    }
-
-    ul {
-        padding-inline-start: 58px
-    }
+  ul {
+    padding-inline-start: 58px;
+  }
 }
 
 p {
-    margin-block-start: 0;
+  margin-block-start: 0;
 }
 
 .relocation.icon {
-    width: 30px;
-    height: 50px;
+  width: 30px;
+  height: 50px;
 }
 
 .remote-icon {
-    width: 54px;
-    height: 47px;
+  width: 54px;
+  height: 47px;
 }
 
 .location-icon {
-    width: 33px;
-    height: 40px;
+  width: 33px;
+  height: 40px;
 }
 
 .next-arrow {
-    position: absolute;
-    left: 1200px;
-    top: 730px;
+  position: absolute;
+  left: 1156px;
+  top: 753px;
+  pointer-events: auto;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.next-arrow:hover,
+.next-arrow:focus-visible {
+  filter: drop-shadow(0 0 12px rgba(181,233,59,0.9));
+}
+
+.next-arrow:focus-visible {
+  outline: 2px solid rgba(181,233,59,1);
+  outline-offset: 4px;
 }
 
 .btn-pos {
-    display: flex;
-    justify-content: flex-end;
-    padding-top: 35px;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 35px;
 }

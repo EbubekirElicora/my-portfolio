@@ -1,77 +1,90 @@
 .refs {
-    display: flex;
-    position: absolute;
-    gap: 40px;
-    top: 240px;
-    width: 574px;
-    height: 574px;
+  display: flex;
+  position: absolute;
+  gap: 40px;
+  top: 240px;
+  width: 574px;
+  height: 574px;
+  left: 216px;
 }
 
 .refs__list {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    gap: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 16px;
 }
 
 .ref {
-    display: flex;
-    gap: 14px;
-    align-items: center;
-    border: 1px solid var(--accent-weak);
-    border-radius: 30px;
-    padding: 24px 16px;
-    width: 480px;
-    height: 184px;
-    box-sizing: border-box;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  border: 1px solid var(--accent-weak);
+  border-radius: 30px;
+  padding: 24px 16px;
+  width: 480px;
+  height: 184px;
+  box-sizing: border-box;
 }
 
 .p-container {
-    width: 100%;
+  width: 100%;
 }
 
 .ref__author {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 68%
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 68%;
 }
 
-
 .header-txt {
-    text-align: start !important;
+  text-align: start !important;
 }
 
 .next-arrow {
-    position: absolute;
-    left: 692px;
-    top: 403px;
+  position: absolute;
+  left: 896px;
+  top: 403px;
+  pointer-events: auto;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.next-arrow:hover,
+.next-arrow:focus-visible {
+  filter: drop-shadow(0 0 12px rgba(181,233,59,0.9));
+}
+
+.next-arrow:focus-visible {
+  outline: 2px solid rgba(181,233,59,1);
+  outline-offset: 4px;
 }
 
 p {
-    text-align: center;
+  text-align: center;
 }
 
 .ref__author p {
-    color: var(--accent-weak);
-    font-size: 14px !important;
-    margin-block-start: 16px;
-    margin-block-end: 0;
+  color: var(--accent-weak);
+  font-size: 14px !important;
+  margin-block-start: 16px;
+  margin-block-end: 0;
 }
 
 .divider {
-    display: inline-block;
-    width: 1px;
-    border: 1px;
-    height: 100%;
-    background-color: var(--accent);
+  display: inline-block;
+  width: 1px;
+  border: 1px;
+  height: 100%;
+  background-color: var(--accent);
 }
 
 h2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--accent);
-    font-size: 24px;
-    font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--accent);
+  font-size: 24px;
+  font-weight: 400;
 }

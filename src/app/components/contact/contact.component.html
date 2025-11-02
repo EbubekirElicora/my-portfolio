@@ -17,7 +17,7 @@
         <div class="checkbox-btn-container">
           <div class="container-size">
             <div>
-              <label class="policy">
+              <div class="policy">
                 <div>
                   <input type="checkbox" formControlName="privacy" />
                 </div>
@@ -25,7 +25,7 @@
                   >Ive read the <a href="">privacy policy</a> and agree to the
                   processing of my data as outlined.</span
                 >
-              </label>
+              </div>
             </div>
 
             <div class="btn-pos">
@@ -74,23 +74,24 @@
 
     <img
       class="next-arrow"
-      src="assets/img/icons/arrows/arrow_right.png"
+      src="assets/img/icons/arrows/arrow_left.png"
       alt="Zurück"
       role="button"
       tabindex="0"
-      (click)="onNext()"
-      (keydown)="onKey($event)"
+      (click)="onBack()"
+      (keydown.enter)="onBack()"
+      (keydown.space)="onBack()"
     />
 
     <div class="container-legal-notice">
       <div class="legal-notice-pos">
-        <a href=""> Legal notice </a>
-        <a href=""> privacy policy </a>
+        <a class="legal-a" href=""> Legal notice </a>
+        <a class="policy-a" href=""> privacy policy </a>
         <p>Max Mustermann 2025</p>
       </div>
     </div>
   </div>
-  
+
   <div class="contact-accent-layer">
     <div class="accent-bar" aria-hidden="true"></div>
   </div>

@@ -39,6 +39,25 @@ textarea {
   padding: 22px 25px;
 }
 
+textarea {
+  resize: none;
+  -webkit-appearance: none;
+  appearance: none;
+  overflow: auto;
+}
+
+textarea::-webkit-resizer {
+  display: none;
+}
+
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  height: 264px;
+  min-height: 264px;
+  max-height: 264px;
+}
+
 input::placeholder,
 textarea::placeholder {
   color: var(--accent-weak);
@@ -122,9 +141,10 @@ textarea::placeholder {
   margin-block-end: 0;
 }
 
-label {
+.policy {
   display: flex;
   gap: 8px;
+  height: 24px;
 }
 
 .container-size {
@@ -133,29 +153,51 @@ label {
 
 input[type="checkbox"] {
   display: inline-block;
-  border: 0px !important;
-  background-image: url(../../../assets/img/icons/checkBox/default_box.png);
-  background-size: cover;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  padding: 0 !important;
   cursor: pointer;
   -webkit-appearance: none;
   appearance: none;
-  border-radius: 0px;
-  margin: 0;
-  padding: 0 !important;
-  width: 24px;
-  height: 24px;
+  border: 0 !important;
+  border-radius: 0;
+  background-image: url(../../../assets/img/icons/checkBox/default_box.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
 }
 
 input[type="checkbox"]:checked {
   background-image: url(../../../assets/img/icons/checkBox/checked_box.png);
+  background-size: 100% 100%;
+}
+
+input[type="checkbox"]:hover:not(:checked) {
+  background-image: url(../../../assets/img/icons/checkBox/checkBox_hover.png);
+  background-size: 100% 100%;
 }
 
 .next-arrow {
   position: absolute;
   top: 415px;
   left: 308px;
-  transform: rotate(180deg);
+  pointer-events: auto;
+  display: block;
+  cursor: pointer;
+  z-index: 1;
 }
+
+.next-arrow:hover,
+.next-arrow:focus-visible {
+  filter: drop-shadow(0 0 12px rgba(181,233,59,0.9));
+}
+
+.next-arrow:focus-visible {
+  outline: 2px solid rgba(181,233,59,1);
+  outline-offset: 4px;
+}
+
 
 .info-side {
   display: flex;
@@ -205,9 +247,10 @@ a,
   right: 0;
   width: 100px;
   height: 100%;
-  background: linear-gradient(
-    180deg,
-    rgb(181, 233, 59) 0%,
-    rgb(84, 120, 0) 100%
-  );
+  background: linear-gradient(160.33deg, #b5e93b 50.78%, #547800 133.54%);
+}
+
+.legal-notice-pos .legal-a:hover,
+.legal-notice-pos .policy-a:hover {
+  color: var(--accent-weak);
 }

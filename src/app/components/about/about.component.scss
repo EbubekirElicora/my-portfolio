@@ -23,7 +23,7 @@
 }
 
 .copy .subtitle {
-  font-family: 'Quantico';
+  font-family: "Quantico";
   font-size: 48px;
   font-weight: 700;
   margin-block-start: 16px;
@@ -43,8 +43,20 @@
 }
 
 .next-arrow {
-  display: flex;
-  position: absolute ;
-  left: 1200px ;
-  top: 326px ;
+  position: absolute;
+  left: 1224px;
+  top: 326px;
+  display: block;              /* Bild als Block, verhindert Zeilenlücken */
+  cursor: pointer;
+  z-index: 1;
+}
+
+.next-arrow:hover,
+.next-arrow:focus-visible {
+  filter: drop-shadow(0 0 12px rgba(181,233,59,0.9));
+}
+
+.next-arrow:focus-visible {
+  outline: 2px solid rgba(181,233,59,1);
+  outline-offset: 4px;
 }

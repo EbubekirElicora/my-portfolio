@@ -4,8 +4,10 @@
   <div class="refs__list">
     <article class="ref">
       <div class="p-container">
-        <p>‘‘Michael is a reliable and friendly person. Work in a structured way and write a clear code. I recommend him
-          as a colleague.’’</p>
+        <p>
+          ‘‘Michael is a reliable and friendly person. Work in a structured way
+          and write a clear code. I recommend him as a colleague.’’
+        </p>
       </div>
       <div class="divider"></div>
       <div class="ref__author">
@@ -16,8 +18,9 @@
 
     <article class="ref">
       <div class="p-container">
-        <p>‘’ He is a trustworthy teamplayer and can cope with the stress of deadlines. Structured work and clear code.
-          ‘’
+        <p>
+          ‘’ He is a trustworthy teamplayer and can cope with the stress of
+          deadlines. Structured work and clear code. ‘’
         </p>
       </div>
       <div class="divider"></div>
@@ -30,9 +33,10 @@
 
     <article class="ref">
       <div class="p-container">
-        <p>‘Michael had to develop, format and deliver content in collaboration with the team members.He is a reliable
-          and
-          friendly person.’’</p>
+        <p>
+          ‘Michael had to develop, format and deliver content in collaboration
+          with the team members.He is a reliable and friendly person.’’
+        </p>
       </div>
       <div class="divider"></div>
 
@@ -42,9 +46,15 @@
       </div>
     </article>
   </div>
-
-
 </section>
 
-<img class="next-arrow" src="../../../assets/img/icons/arrows/arrow_right.png" alt="Weiter" role="button" tabindex="0"
-  (click)="onNext()" (keydown)="onKey($event)" />
+<img
+  class="next-arrow"
+  src="assets/img/icons/arrows/arrow_right.png"
+  alt="Weiter"
+  role="button"
+  tabindex="0"
+  (click)="onNext()"
+  (keydown.enter)="onNext()"
+  (keydown.space)="onNext()"
+/>

@@ -1,5 +1,7 @@
+// interface
 export interface NavigableSection {
   nextSectionId: string;
-  onNext(ev?: KeyboardEvent): void;
+  onNext(ev?: Event): void;          // vorher: KeyboardEvent
   onKey(ev: KeyboardEvent): void;
+  onBack?(ev?: Event): void;         // falls du Back nutzt
 }

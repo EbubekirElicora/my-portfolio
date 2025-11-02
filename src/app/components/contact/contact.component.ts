@@ -12,8 +12,8 @@ import { ScrollService } from '../../services/scroll.service';
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent extends ScrollableSection {
-  override nextSectionId = 'legal';
-
+  override nextSectionId = '';
+  protected override backTargetId = 'about';
   submitting = false;
   success = false;
   error = '';
@@ -62,11 +62,5 @@ export class ContactComponent extends ScrollableSection {
     } finally {
       this.submitting = false;
     }
-  }
-
-  override onNext() {
-    document
-      .getElementById('about')
-      ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 }

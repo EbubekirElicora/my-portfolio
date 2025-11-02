@@ -2,14 +2,8 @@
   position: absolute;
   display: flex;
   align-items: flex-end;
-  padding-left: 1078px;
+  padding-left: 1090px;
   height: 64px;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
 }
 
 nav {
@@ -25,19 +19,77 @@ nav {
   padding-right: 44px;
 }
 
-.top-links img {
+.top-links .icon {
+  position: relative;
+  display: inline-block;
   width: 30px;
   height: 30px;
 }
 
-.top-links a:hover img {
+.top-links .icon img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 500;
+}
+
+.top-links .icon img.base {
+  opacity: 1;
+}
+.top-links .icon img.hover {
+  opacity: 0;
+}
+
+.top-links .icon:hover img.base,
+.top-links .icon:focus-visible img.base {
+  opacity: 0;
+}
+
+.top-links .icon:hover img.hover,
+.top-links .icon:focus-visible img.hover {
   opacity: 1;
 }
 
+/* --- Sprache --- */
 .lang {
   display: flex;
-  color: var(--text);
+  gap: 6px;
   font-size: 18px;
   font-family: "Roboto Mono";
-  gap: 6px;
+  font-weight: 700;
+  align-items: center;
+}
+
+.lang > * + * {
+  position: relative;
+  padding-left: 8px;
+}
+
+.lang > * + *::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 15px;
+  pointer-events: none;
+  background-color: var(--text);
+}
+
+.lang {
+  position: relative;
+  z-index: 1;
+}
+
+.lang a {
+  color: var(--text);
+}
+
+.lang a.de:hover,
+.lang a.de:focus-visible,
+.lang a.en:hover,
+.lang a.en:focus-visible {
+  color: var(--accent);
 }
