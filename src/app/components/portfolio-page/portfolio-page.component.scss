@@ -12,6 +12,7 @@
   overflow-x: auto;
   overflow-y: hidden;
   scroll-behavior: smooth;
+  background: transparent;
 }
 
 .section {
@@ -19,4 +20,6 @@
   height: 100vh;
   scroll-snap-align: start;
   position: relative;
+  background: transparent;
 }
+

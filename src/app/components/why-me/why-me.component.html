@@ -3,25 +3,39 @@
     <h1 class="header-txt">Why me</h1>
   </div>
   <div class="info-container">
-    <p class="lead">Write some information about yourself that is IT related. Why are you passionate about coding? What
-      is your source of inspiration for improving your programming skills? </p>
+    <p class="lead">
+      Write some information about yourself that is IT related. Why are you
+      passionate about coding? What is your source of inspiration for improving
+      your programming skills?
+    </p>
     <h2 class="title">I am</h2>
+
     <ul class="badges">
-      <li><img class="location-icon" src="assets/img/icons/about_me/location.png" alt="">
-        <p>located in city
-          name</p>
+      <li class="location-icon">
+        <img class="base" src="assets/img/icons/about_me/location.svg" alt="" />
+        <img class="hover" src="assets/img/icons/about_me/location_hover.svg" alt="" />
+        <p>located in city name</p>
       </li>
-      <li><img class="remote-icon" src="assets/img/icons/about_me/remote.png" alt="">
+      <li class="remote-icon">
+        <img src="assets/img/icons/about_me/remote.svg" alt="" />
         <p>open to work remote</p>
       </li>
-      <li><img class="relocation-icon" src="assets/img/icons/about_me/relocation.png" alt="">
-        <p>open to
-          relocate</p>
+      <li class="relocation-icon">
+        <img src="assets/img/icons/about_me/relocation.svg" alt="" />
+        <p>open to relocate</p>
       </li>
     </ul>
+
     <div class="btn-pos"><button class="btn">Contact me</button></div>
   </div>
 </section>
 
-<img class="next-arrow" src="../../../assets/img/icons/arrows/arrow_right.png" alt="Weiter" role="button" tabindex="0"
-  (click)="onNext()" (keydown)="onKey($event)" />
+<img
+  class="next-arrow"
+  src="assets/img/icons/arrows/arrow_right.png"
+  alt="Weiter"
+  role="button"
+  tabindex="0"
+  (click)="onNext()"
+  (keydown)="onKey($event)"
+/>

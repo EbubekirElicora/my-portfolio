@@ -56,19 +56,8 @@ p {
   margin-block-start: 0;
 }
 
-.relocation.icon {
-  width: 30px;
-  height: 50px;
-}
-
-.remote-icon {
-  width: 54px;
-  height: 47px;
-}
-
-.location-icon {
-  width: 33px;
-  height: 40px;
+.badges p {
+  margin-block-end: 0;
 }
 
 .next-arrow {
@@ -82,16 +71,30 @@ p {
 
 .next-arrow:hover,
 .next-arrow:focus-visible {
-  filter: drop-shadow(0 0 12px rgba(181,233,59,0.9));
+  filter: drop-shadow(0 0 12px rgba(181, 233, 59, 0.9));
 }
 
 .next-arrow:focus-visible {
-  outline: 2px solid rgba(181,233,59,1);
+  outline: 2px solid rgba(181, 233, 59, 1);
   outline-offset: 4px;
 }
 
 .btn-pos {
   display: flex;
   justify-content: flex-end;
-  padding-top: 35px;
+  padding-top: 52px;
 }
+
+.badges .location-icon:hover,
+.badges .remote-icon:hover,
+.badges .relocation-icon:hover {
+  color: var(--accent);
+}
+
+.hover {
+  opacity: 0;
+  display: none;
+}
+
+/* .location-icon:hover img.hover { opacity: 1; display: block;}
+.location-icon:hover img.base  { opacity: 0; display: none; } */

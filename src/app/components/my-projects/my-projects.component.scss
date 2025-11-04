@@ -24,10 +24,16 @@ header span {
 }
 
 .ellipse {
-  padding-left: 42px;
-  position: absolute;
+  display: flex;
   width: 13px;
   height: 13px;
+}
+
+.ellipse-container {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  gap: 16px;
 }
 
 .cards {
@@ -81,6 +87,10 @@ header span {
   -webkit-text-stroke: 1px var(--accent);
 }
 
+.last-card p {
+  padding-left: 0 !important;
+}
+
 .card .shot {
   width: 337px;
   aspect-ratio: 16/10;
@@ -91,7 +101,7 @@ header span {
 
 .card .cta {
   display: flex;
-  gap: 40px;
+  gap: 24px;
   align-items: center;
   flex-direction: column;
   padding-right: 40px;
@@ -119,20 +129,42 @@ header span {
 
 .first-project {
   display: flex;
-  padding-left: 116px;
+  padding-left: 89px;
 }
 
+.second-project {
+  display: flex;
+  padding-left: 94px;
+}
+
+.third-project {
+  display: flex;
+  padding-left: 99px;
+}
+
+
 .project-container {
-  padding-inline-end: 29px;
+  padding-inline-end: 54px;
 }
 
 p {
   margin-block-start: 16px;
   margin-block-end: 24px;
+  padding-left: 30px;
 }
 
 .last-txt {
-  padding-left: 116px;
+  padding-left: 89px;
+  padding-right: 40px;
+}
+
+.last-txt-second {
+  padding-left: 94px;
+  padding-right: 40px;
+}
+
+.last-txt-third {
+  padding-left: 99px;
   padding-right: 40px;
 }
 
@@ -147,14 +179,13 @@ p {
 
 .next-arrow:hover,
 .next-arrow:focus-visible {
-  filter: drop-shadow(0 0 12px rgba(181,233,59,0.9));
+  filter: drop-shadow(0 0 12px rgba(181, 233, 59, 0.9));
 }
 
 .next-arrow:focus-visible {
-  outline: 2px solid rgba(181,233,59,1);
+  outline: 2px solid rgba(181, 233, 59, 1);
   outline-offset: 4px;
 }
-
 
 .last-card p {
   margin-block-start: 26px;

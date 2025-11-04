@@ -119,16 +119,6 @@ textarea::placeholder {
   gap: 16px;
 }
 
-.emailImg {
-  width: 22px;
-  height: 30px;
-}
-
-.phoneImg {
-  width: 19px;
-  height: 21px;
-}
-
 .info-side .lead {
   color: var(--accent-weak);
   margin-block-start: 0;
@@ -162,19 +152,19 @@ input[type="checkbox"] {
   appearance: none;
   border: 0 !important;
   border-radius: 0;
-  background-image: url(../../../assets/img/icons/checkBox/default_box.png);
+  background-image: url(../../../assets/img/icons/checkBox/checkBox_default.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
 }
 
 input[type="checkbox"]:checked {
-  background-image: url(../../../assets/img/icons/checkBox/checked_box.png);
+  background-image: url(../../../assets/img/icons/checkBox/checkBox_checked.svg);
   background-size: 100% 100%;
 }
 
 input[type="checkbox"]:hover:not(:checked) {
-  background-image: url(../../../assets/img/icons/checkBox/checkBox_hover.png);
+  background-image: url(../../../assets/img/icons/checkBox/checkBox_hover.svg);
   background-size: 100% 100%;
 }
 
