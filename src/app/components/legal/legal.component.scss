@@ -1,46 +1,93 @@
-/* .legal {
-    display: grid;
-    grid-template-columns: 80px 1fr;
-    gap: 28px;
+.legal-sideline-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
-.vertical {
-    writing-mode: vertical-rl;
-    color: var(--accent);
-    font-weight: 700;
+.legal {
+  box-sizing: border-box;
 }
 
-.legal__cols {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
+.legal-container {
+  display: flex;
+  flex-direction: column;
 }
 
-h3 {
-    color: var(--accent);
-    margin-top: 0;
+.legal-position {
+  display: flex;
+  position: absolute;
+  left: 270px;
+  width: 864px;
+  top: 152px;
+  gap: 52px;
 }
 
-h4 {
-    margin: 14px 0 6px;
-    color: var(--text);
+.legal-section {
+  margin-bottom: 16px;
 }
 
-p,
-li {
-    color: var(--muted);
+.legal-section h2 {
+  font-size: 18px;
+  color: var(--accent);
+  margin-bottom: 16px;
 }
 
-@media (max-width: 900px) {
-    .legal {
-        grid-template-columns: 1fr;
-    }
+.legal-section ul {
+  font-family: "Quantico";
+  font-weight: 400;
+  font-size: 18px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
-    .vertical {
-        display: none;
-    }
+.legal-section li {
+  position: relative;
+  padding-left: 20px;
+  line-height: 1.2;
+}
 
-    .legal__cols {
-        grid-template-columns: 1fr;
-    }
-} */
+.legal-section li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 50%; /* Mitte des li */
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--text);
+}
+
+.legal-section p {
+  color: var(--text);
+}
+
+.color {
+  color: var(--accent);
+}
+
+.next-arrow {
+  position: absolute;
+  top: 452px;
+  left: 1280px;
+  pointer-events: auto;
+  display: block;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.next-arrow:hover,
+.next-arrow:focus-visible {
+  filter: drop-shadow(0 0 12px rgba(181, 233, 59, 0.9));
+}
+
+.next-arrow:focus-visible {
+  outline: 2px solid rgba(181, 233, 59, 1);
+  outline-offset: 4px;
+}
+
+p {
+  margin-bottom: 16px;
+  margin-top: 16px;
+}

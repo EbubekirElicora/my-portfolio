@@ -18,7 +18,7 @@ body {
 body {
   background-image: url("../src/assets/img/background/background.png");
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -27,7 +27,7 @@ h1,
 h2,
 h3 {
   font-family: "Quantico";
-  line-height: 1.1;
+  line-height: 1.2;
   margin: 0;
 }
 
@@ -40,22 +40,26 @@ h3 {
   -webkit-text-stroke: 3px var(--accent);
   font-size: 54px;
   text-align: end;
+  line-height: 1.2;
 }
 
 p {
   font-family: "Quantico";
   font-weight: 400;
   font-size: 18px;
+  line-height: 1.2;
 }
 
 a {
   text-decoration: none;
+  line-height: 1.2;
 }
 
 .btn {
   font-family: "Quantico";
   font-weight: 400;
   font-size: 14px;
+  line-height: 1.2;
   display: inline-flex;
   align-items: center;
   padding: 13px 30px 13px 30px;

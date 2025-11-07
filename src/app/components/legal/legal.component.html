@@ -1,33 +1,75 @@
-<!-- <div class="legal container">
-  <aside class="vertical">Legal Notice</aside>
+<app-side-nav></app-side-nav>
 
-  <div class="legal__cols">
-    <section>
-      <h3>Imprint</h3>
-      <ul>
-        <li>[Student Names List]</li>
-        <li>[Address]</li>
-        <li>[Postcode and city]</li>
-        <li>Email: [Email]</li>
-      </ul>
+<section class="legal">
+  <div class="legal-position">
+    <div class="legal-sideline-container">
+      <h1 class="header-txt">Legal Notice</h1>
+    </div>
+    <div class="legal-txt-container">
+      <div class="legal-section">
+        <h2>Imprint</h2>
+        <ul>
+          <li>[Student Names List]</li>
+          <li>[Address of the JOIN operator – e.g. one of the students]</li>
+          <li>[Postcode and city]</li>
+        </ul>
+      </div>
 
-      <h4>Acceptance of terms</h4>
-      <p>…</p>
+      <div class="legal-section">
+        <p>
+          Exploring the Board <br />
+          Email: [Email]
+        </p>
+      </div>
 
-      <h4>Scope and ownership of the product</h4>
-      <p>…</p>
-    </section>
+      <div class="legal-section">
+        <p>
+          <span class="color">Acceptance of terms</span><br />
+          By accessing and using Portfolio (Product), you acknowledge and agree
+          to the following terms and conditions, and any policies, guidelines,
+          or amendments thereto that may be presented to you from time to time.
+          We, the listed students, may update or change the terms and conditions
+          from time to time without notice.
+        </p>
+      </div>
 
-    <section>
-      <h3>Use of the product</h3>
-      <p>…</p>
+      <div class="legal-section">
+        <p>
+          <span class="color">Scope and ownership of the product</span><br />
+          Portfolio has been developed as part of a student group project in a
+          web development bootcamp at the Developer Akademie GmbH. It has an
+          educational purpose and is not intended for extensive personal &amp;
+          business usage. As such, we cannot guarantee consistent availability,
+          reliability, accuracy, or any other aspect of quality regarding this
+          Product.
+        </p>
+        <p>
+          The design of Portfolio is owned by the Developer Akademie GmbH.
+          Unauthorized use, reproduction, modification, distribution, or
+          replication of the design is strictly prohibited.
+        </p>
+      </div>
 
-      <h4>Disclaimer of warranties…</h4>
-      <p>…</p>
-
-      <h4>Indemnity</h4>
-      <p>…</p>
-    </section>
+      <div class="legal-section">
+        <p>
+          <span class="color">Proprietary rights</span><br />
+          Aside from the design owned by Developer Akademie GmbH, we, the listed
+          students, retain all proprietary rights in Portfolio, including any
+          associated copyrighted material, trademarks, and other proprietary
+          information.
+        </p>
+      </div>
+    </div>
   </div>
-</div>
- -->
+</section>
+
+<img
+  class="next-arrow"
+  src="../../../assets/img/icons/arrows/arrow_right.png"
+  alt="Weiter"
+  role="button"
+  tabindex="0"
+  (click)="onNext()"
+  (keydown.enter)="onNext()"
+  (keydown.space)="onNext()"
+/>
