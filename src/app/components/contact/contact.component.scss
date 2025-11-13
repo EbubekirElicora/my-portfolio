@@ -32,11 +32,15 @@ input,
 textarea {
   font-family: "Quantico";
   font-weight: 400;
+  font-size: 14px;
   background: transparent;
   color: var(--text) !important;
   border: 1px solid var(--accent);
   border-radius: 30px;
   padding: 22px 25px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 textarea {
@@ -64,19 +68,20 @@ textarea::placeholder {
   opacity: 0.4;
 }
 
-.btn-sub[disabled] {
+.btn-sub {
   font-family: "Quantico";
   font-weight: 400;
   color: rgba(74, 74, 74, 1);
-  cursor: not-allowed;
+  cursor: pointer;
   padding: 13px 30px 13px 30px;
   border-radius: 30px;
   background-color: rgba(158, 157, 157, 1);
+  border-color: transparent;
 }
 
 .btn-pos {
   text-align: end;
-  padding-top: 24px;
+  padding-top: 16px;
 }
 
 .checkbox-btn-container {
@@ -90,6 +95,7 @@ textarea::placeholder {
   font-weight: 400;
   font-size: 14px;
   color: var(--accent);
+  width: 400px;
 }
 
 .policy a {
@@ -134,7 +140,6 @@ textarea::placeholder {
 .policy {
   display: flex;
   gap: 8px;
-  height: 24px;
 }
 
 .container-size {
@@ -155,17 +160,25 @@ input[type="checkbox"] {
   background-image: url(../../../assets/img/icons/checkBox/checkBox_default.svg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100% 100%;
 }
 
 input[type="checkbox"]:checked {
   background-image: url(../../../assets/img/icons/checkBox/checkBox_checked.svg);
-  background-size: 100% 100%;
 }
 
 input[type="checkbox"]:hover:not(:checked) {
   background-image: url(../../../assets/img/icons/checkBox/checkBox_hover.svg);
-  background-size: 100% 100%;
+}
+
+input[type="checkbox"].privacy-error {
+  background-image: url(../../../assets/img/icons/checkBox/checkBox_error.svg);
+}
+
+.privacy-error-text {
+  color: rgba(253, 46, 18, 1);
+  font-size: 14px;
+  margin-block-start: 8px;
+  margin-block-end: 0;
 }
 
 .next-arrow {
@@ -180,14 +193,13 @@ input[type="checkbox"]:hover:not(:checked) {
 
 .next-arrow:hover,
 .next-arrow:focus-visible {
-  filter: drop-shadow(0 0 12px rgba(181,233,59,0.9));
+  filter: drop-shadow(0 0 12px rgba(181, 233, 59, 0.9));
 }
 
 .next-arrow:focus-visible {
-  outline: 2px solid rgba(181,233,59,1);
+  outline: 2px solid rgba(181, 233, 59, 1);
   outline-offset: 4px;
 }
-
 
 .info-side {
   display: flex;
@@ -243,4 +255,73 @@ a,
 .legal-notice-pos .legal-a:hover,
 .legal-notice-pos .policy-a:hover {
   color: var(--accent-weak);
+}
+
+.field-error {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 22px 25px;
+  border: 1px solid rgba(253, 46, 18, 1);
+  border-radius: 30px;
+  color: rgba(253, 46, 18, 1);
+  background: transparent;
+}
+
+.field-error__text {
+  font-family: "Quantico";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.field-error__icon {
+  width: 20px;
+  height: 20px;
+  flex: 0 0;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.input-icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.textarea-wrapper .done-message {
+  top: auto;
+  bottom: 25px;
+  transform: none;
+}
+
+.textarea-wrapper textarea {
+  padding-bottom: 52px;
+}
+
+.textarea-wrapper.has-error textarea {
+  border-color: rgba(253, 46, 18, 1);
+}
+
+.textarea-error {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 25px 18px 25px;
+  color: rgba(253, 46, 18, 1);
+  font-size: 14px;
+  pointer-events: none;
 }

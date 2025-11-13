@@ -1,77 +1,151 @@
 <section class="contact">
   <div class="form-container">
     <div class="contact-txt">
-      <h1 class="header-txt">Contact me</h1>
+      <h1 class="header-txt">{{ "contact.headline" | translate }}</h1>
     </div>
-
     <div class="form-side">
       <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-        <input formControlName="name" placeholder="Your name" />
-        <input formControlName="email" placeholder="Your e-mail" />
-        <textarea
-          formControlName="message"
-          rows="11"
-          placeholder="Your message"
-        ></textarea>
-
+        <div class="input-wrapper">
+          <input
+            formControlName="name"
+            [placeholder]="
+              showNameError() ? '' : ('contact.form.name' | translate)
+            "
+            (focus)="onNameFocus()"
+            (blur)="onNameBlur()"
+          />
+          <img
+            class="input-icon"
+            src="assets/img/icons/contact/done.svg"
+            alt=""
+            *ngIf="isFieldValid(nameCtrl)"
+          />
+        </div>
+        <div class="field-error" *ngIf="showNameError()">
+          <span class="field-error__text">{{ nameErrorText() }}</span>
+          <img
+            class="field-error__icon"
+            src="assets/img/icons/contact/error.svg"
+            alt=""
+          />
+        </div>
+        <div class="input-wrapper">
+          <input
+            formControlName="email"
+            [placeholder]="
+              showEmailError() ? '' : ('contact.form.email' | translate)
+            "
+            (focus)="onEmailFocus()"
+            (blur)="onEmailBlur()"
+          />
+          <img
+            class="input-icon"
+            src="assets/img/icons/contact/done.svg"
+            alt=""
+            *ngIf="isFieldValid(emailCtrl)"
+          />
+        </div>
+        <div class="field-error" *ngIf="showEmailError()">
+          <span class="field-error__text">{{ emailErrorText() }}</span>
+          <img
+            class="field-error__icon"
+            src="assets/img/icons/contact/error.svg"
+            alt=""
+          />
+        </div>
+        <div
+          class="input-wrapper textarea-wrapper"
+          [class.has-error]="showMessageError()"
+        >
+          <textarea
+            formControlName="message"
+            rows="11"
+            [placeholder]="
+              showMessageError() ? '' : ('contact.form.message' | translate)
+            "
+            (focus)="onMessageFocus()"
+            (blur)="onMessageBlur()"
+          ></textarea>
+          <img
+            class="input-icon done-message"
+            src="assets/img/icons/contact/done.svg"
+            alt=""
+            *ngIf="isFieldValid(messageCtrl)"
+          />
+          <div class="textarea-error" *ngIf="showMessageError()">
+            <span class="field-error__text">{{ messageErrorText() }}</span>
+            <img
+              class="field-error__icon"
+              src="assets/img/icons/contact/error.svg"
+              alt=""
+            />
+          </div>
+        </div>
         <div class="checkbox-btn-container">
           <div class="container-size">
-            <div>
-              <div class="policy">
-                <div>
-                  <input type="checkbox" formControlName="privacy" />
-                </div>
-                <span
-                  >Ive read the <a href="">privacy policy</a> and agree to the
-                  processing of my data as outlined.</span
-                >
-              </div>
+            <div class="policy" [class.policy-error]="showPrivacyError()">
+              <input
+                type="checkbox"
+                formControlName="privacy"
+                [class.privacy-error]="showPrivacyError()"
+              />
+              <span class="policy-text">
+                {{ "contact.form.policy_prefix" | translate }}
+                <a href="/legal">
+                  {{ "contact.form.policy_link" | translate }}
+                </a>
+                {{ "contact.form.policy_suffix" | translate }}
+              </span>
             </div>
-
+            <p class="privacy-error-text" *ngIf="showPrivacyError()">
+              {{ "contact.errors.privacy_required" | translate }}
+            </p>
             <div class="btn-pos">
               <button
-                class="btn-sub"
                 type="submit"
-                [disabled]="contactForm.invalid || submitting"
+                [ngClass]="{
+                  btn: contactForm.valid && contactForm.get('privacy')?.value,
+                  'btn-sub': !(
+                    contactForm.valid && contactForm.get('privacy')?.value
+                  )
+                }"
+                [disabled]="submitting"
               >
-                Send
+                {{ "contact.form.send" | translate }}
               </button>
               <p *ngIf="success" class="ok">
-                Thanks! Your message has been sent.
+                {{ "contact.form.success" | translate }}
               </p>
-              <p *ngIf="error" class="err">{{ error }}</p>
+              <p *ngIf="error" class="err">
+                {{ "contact.form.error" | translate }}
+              </p>
             </div>
           </div>
         </div>
       </form>
     </div>
   </div>
-
   <div class="info-side">
-    <p class="lead">Let us work together.</p>
-    <p class="muted">
-      Encourage people to contact you and describe what role you are interested
-      in. Express confidence in your ability to make a meaningful contribution
-      to a team through your expertise and enthusiasm for improving your skills.
-    </p>
-
+    <p class="lead">{{ "contact.info.lead" | translate }}</p>
+    <p class="muted">{{ "contact.info.muted" | translate }}</p>
     <ul class="contacts">
       <li>
         <img
           class="emailImg"
           src="assets/img/icons/contact/eMail_contact.svg"
-          alt=""
-        /><span>E-Mail: max-muster&#64;gmx.de</span>
+          alt="E-Mail Icon"
+        />
+        <span>E-Mail: max-muster&#64;gmx.de</span>
       </li>
       <li>
         <img
           class="phoneImg"
           src="assets/img/icons/contact/phone_contact.svg"
-          alt=""
-        /><span>Tel: 0157 123 456 68</span>
+          alt="Telefon Icon"
+        />
+        <span>Tel: 0157 123 456 68</span>
       </li>
     </ul>
-
     <img
       class="next-arrow"
       src="assets/img/icons/arrows/arrow_left.png"
@@ -82,16 +156,18 @@
       (keydown.enter)="onBack()"
       (keydown.space)="onBack()"
     />
-
     <div class="container-legal-notice">
       <div class="legal-notice-pos">
-        <a class="legal-a" href="/legal"> Legal notice </a>
-        <a class="policy-a" hreif="/privacy"> privacy policy </a>
+        <a class="legal-a" href="/legal">{{
+          "contact.footer.legal" | translate
+        }}</a>
+        <a class="policy-a" href="/privacy">{{
+          "contact.footer.policy" | translate
+        }}</a>
         <p>&copy; Max Mustermann 2025</p>
       </div>
     </div>
   </div>
-
   <div class="contact-accent-layer">
     <div class="accent-bar" aria-hidden="true"></div>
   </div>

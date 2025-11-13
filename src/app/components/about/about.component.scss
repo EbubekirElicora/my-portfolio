@@ -60,3 +60,7 @@
   outline: 2px solid rgba(181,233,59,1);
   outline-offset: 4px;
 }
+
+:host-context(html[lang="de"]) .next-arrow  { 
+   top: 392px;
+}

@@ -88,3 +88,7 @@ h2 {
   font-size: 24px;
   font-weight: 400;
 }
+
+:host-context(html[lang="de"]) .next-arrow  { 
+   top: 548px;
+}

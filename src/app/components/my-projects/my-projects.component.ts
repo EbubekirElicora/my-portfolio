@@ -2,17 +2,18 @@ import { Component } from '@angular/core';
 import { ScrollableSection } from '../../shared/scrollable-section.base';
 import { ScrollService } from '../../services/scroll.service';
 import { CommonModule } from '@angular/common';
-
+import { TranslationPipe } from '../../shared/translation.pipe';
 
 @Component({
   selector: 'app-my-projects',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslationPipe],
   templateUrl: './my-projects.component.html',
-  styleUrl: './my-projects.component.scss'
+  styleUrl: './my-projects.component.scss',
 })
-
 export class MyProjectsComponent extends ScrollableSection {
   override nextSectionId = 'references';
-  constructor(scroll: ScrollService) { super(scroll); }
+  constructor(scroll: ScrollService) {
+    super(scroll);
+  }
 }

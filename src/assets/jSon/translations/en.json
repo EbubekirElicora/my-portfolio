@@ -1,0 +1,151 @@
+{
+  "header": {
+    "email": "E-Mail",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "lang_de": "DE",
+    "lang_en": "EN"
+  },
+  "legal": {
+    "title": "Legal Notice",
+    "imprint": "Imprint",
+    "names_list": "[Student Names List]",
+    "address": "[Address of the JOIN operator – e.g. one of the students]",
+    "postcode_city": "[Postcode and city]",
+    "exploring": "Exploring the Board",
+    "email_label": "Email: [Email]",
+    "acceptance": "Acceptance of terms",
+    "acceptance_text": "By accessing and using Portfolio (Product), you acknowledge and agree to the following terms and conditions, and any policies or amendments that may be presented to you from time to time. We, the listed students, may update or change the terms and conditions without notice.",
+    "scope": "Scope and ownership of the product",
+    "scope_text_1": "Portfolio was developed as part of a student group project in a web development bootcamp at Developer Akademie GmbH. It serves educational purposes and is not intended for extensive personal or business use. Therefore, we cannot guarantee consistent availability, reliability, or accuracy.",
+    "scope_text_2": "The design of Portfolio is owned by Developer Akademie GmbH. Unauthorized use, reproduction, modification, distribution, or replication of the design is strictly prohibited.",
+    "proprietary": "Proprietary rights",
+    "proprietary_text": "Aside from the design owned by Developer Akademie GmbH, we, the listed students, retain all proprietary rights in Portfolio, including any associated copyrighted material, trademarks, and other proprietary information.",
+    "use_of_product": "Use of the product",
+    "use_of_product_text": "Portfolio is to be used for lawful purposes only, in accordance with all applicable laws and regulations. Any use to exploit, advertise, harass, harm, threaten, or infringe the rights of others is strictly prohibited. You are solely responsible for your interactions with other users of Portfolio.",
+    "disclaimer": "Disclaimer of warranties & limitation of liability",
+    "disclaimer_text": "Portfolio is provided “as is” without any warranty of any kind, whether express or implied, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event shall we, the listed students, or Developer Akademie GmbH be liable for any direct or indirect damages to the extent permitted by law.",
+    "indemnity": "Indemnity",
+    "indemnity_text": "You agree to indemnify, defend, and hold harmless us, the listed students, Developer Akademie GmbH, and our affiliates and employees from any claims arising out of your use of Portfolio or your breach of this Legal Notice.",
+    "contact_line": "For any questions or notices, please contact us at [contact email].",
+    "date": "Date: July 04, 2025",
+    "footer_legal": "Legal notice",
+    "footer_privacy": "Privacy policy"
+  },
+  "nav": {
+    "brand_arc": "full-stack developer",
+    "brand_about_aria": "Go to the start/about section",
+    "why_me": "Why me",
+    "skills": "Skills",
+    "my_work": "My Work",
+    "contact": "Contact"
+  },
+  "why": {
+    "headline": "Why me",
+    "intro": "Write some information about yourself that is IT related. Why are you passionate about coding? What is your source of inspiration for improving your programming skills?",
+    "title": "I am",
+    "located": "Located in city name",
+    "remote": "Open to work remote",
+    "relocate": "Open to relocate",
+    "contact_btn": "Contact me"
+  },
+  "skills": {
+    "headline": "My Skill Set",
+    "intro": "A short introduction of your skills. Highlight your experience of working on different projects using different front-end technologies and emphasise your openness to learning and adapting to new technologies."
+  },
+  "work": {
+    "headline": "My Work",
+
+    "project1": {
+      "title": "Project Join",
+      "about": "About the project",
+      "about_text": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+      "tech": "Technologies I have used",
+      "tech_list": "Angular, TypeScript, HTML, CSS, Firebase",
+      "team": "My team work experience",
+      "team_text": "Maybe you used a certain technology for the first time? Have you learnt more about how to keep your code clean or how to organise the components in your projects?"
+    },
+
+    "project2": {
+      "title": "Project Pollo Loco",
+      "about": "About the project",
+      "about_text": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
+      "tech": "Technologies I have used",
+      "tech_list": "JavaScript, HTML, CSS",
+      "learned": "What I have learned",
+      "learned_text": "Maybe you used a certain technology for the first time? Have you learnt more about how to keep your code clean or how to organise the components in your projects?"
+    },
+
+    "project3": {
+      "title": "Project DA Bubble",
+      "about": "About the project",
+      "about_text": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+      "tech": "Technologies I have used",
+      "tech_list": "Angular, TypeScript, HTML, CSS, Firebase",
+      "team": "My team work experience",
+      "team_text": "How many people were in the team and what was your role? Describe your tasks in 1-2 sentences. It is nice to mention good teamwork and cooperation."
+    },
+
+    "project4": {
+      "title": "Ongoing project",
+      "about_text": "Are you currently working on a project? What is it about and what technologies are you using? Emphasise that good planning and execution are essential to the success of your work and to achieving great results.",
+      "button": "Let's talk"
+    }
+  },
+  "refs": {
+    "headline": "References",
+
+    "ref1": {
+      "text": "“Michael is a reliable and friendly person. Works in a structured way and writes clear code. I recommend him as a colleague.”",
+      "author": "James Rugman",
+      "project": "Project Join"
+    },
+
+    "ref2": {
+      "text": "“He is a trustworthy team player and can cope well with the stress of deadlines. Structured work and clear code.”",
+      "author": "Evelyn Marx",
+      "project": "Project DA Bubble"
+    },
+
+    "ref3": {
+      "text": "“Michael had to develop, format, and deliver content in collaboration with the team members. He is a reliable and friendly person.”",
+      "author": "Noah Mueller",
+      "project": "Project Sharkie"
+    }
+  },
+  "contact": {
+    "headline": "Contact me",
+    "form": {
+      "name": "Your name",
+      "email": "Your e-mail",
+      "message": "Your message",
+      "policy_prefix": "I've read the",
+      "policy_link": "privacy policy",
+      "policy_suffix": "and agree to the processing of my data as outlined.",
+      "send": "Send",
+      "success": "Thanks! Your message has been sent.",
+      "error": "Something went wrong. Please try again later."
+    },
+    "errors": {
+      "name_required": "Please enter your name.",
+      "name_minlength": "Please enter at least 5 characters.",
+      "name_pattern": "Only letters (a–z), umlauts, spaces, hyphen and apostrophe are allowed.",
+      "email_required": "Please enter your email address.",
+      "email_pattern": "Please enter a valid email address (e.g. name@example.com).",
+      "message_required": "Please enter a message.",
+      "message_minchars": "Please enter at least 20 characters.",
+      "privacy_required": "Please accept the privacy policy."
+    },
+    "info": {
+      "lead": "Let us work together.",
+      "muted": "Encourage people to contact you and describe what role you are interested in. Express confidence in your ability to make a meaningful contribution to a team through your expertise and enthusiasm for improving your skills."
+    },
+    "footer": {
+      "legal": "Legal notice",
+      "policy": "Privacy policy"
+    }
+  },
+  "about": {
+    "subtitle": "Full-Stack Developer"
+  }
+}

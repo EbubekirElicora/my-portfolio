@@ -54,8 +54,23 @@
       </a>
     </div>
     <div class="lang code-regular">
-      <a class="de" href="/de" lang="de" hreflang="de">DE</a>
-      <a class="en" href="/en" lang="en" hreflang="en">EN</a>
+      <a
+        class="de"
+        href="/de"
+        lang="de"
+        hreflang="de"
+        (click)="setGerman(); $event.preventDefault()"
+        >DE</a
+      >
+
+      <a
+        class="en"
+        href="/en"
+        lang="en"
+        hreflang="en"
+        (click)="setEnglish(); $event.preventDefault()"
+        >EN</a
+      >
     </div>
   </nav>
 </header>

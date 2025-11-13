@@ -1,0 +1,152 @@
+{
+  "header": {
+    "email": "E-Mail",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "lang_de": "DE",
+    "lang_en": "EN"
+  },
+  "legal": {
+    "title": "Impressum",
+    "imprint": "Impressum",
+    "names_list": "[Liste der Studierenden]",
+    "address": "[Adresse des JOIN-Betreibers – z. B. eine/r der Studierenden]",
+    "postcode_city": "[PLZ und Ort]",
+    "exploring": "Exploring the Board",
+    "email_label": "E-Mail: [E-Mail-Adresse]",
+    "acceptance": "Nutzungsbedingungen",
+    "acceptance_text": "Durch den Zugriff auf und die Nutzung von Portfolio (Produkt) erkennen Sie die folgenden Bedingungen sowie etwaige Richtlinien oder Ergänzungen an. Wir, die aufgeführten Studierenden, können die Bedingungen von Zeit zu Zeit ohne Ankündigung ändern.",
+    "scope": "Geltungsbereich und Eigentum am Produkt",
+    "scope_text_1": "Portfolio wurde im Rahmen eines studentischen Gruppenprojekts in einem Web-Development-Bootcamp an der Developer Akademie GmbH entwickelt. Es dient Bildungszwecken und ist nicht für umfangreiche private und geschäftliche Nutzung vorgesehen. Daher können wir keine gleichbleibende Verfügbarkeit, Zuverlässigkeit oder Genauigkeit garantieren.",
+    "scope_text_2": "Das Design von Portfolio ist Eigentum der Developer Akademie GmbH. Unbefugte Nutzung, Vervielfältigung, Modifikation, Verbreitung oder Reproduktion des Designs ist strikt untersagt.",
+    "proprietary": "Eigentumsrechte",
+    "proprietary_text": "Abgesehen vom Design der Developer Akademie GmbH behalten wir, die aufgeführten Studierenden, alle Eigentumsrechte an Portfolio, einschließlich urheberrechtlich geschützter Materialien, Marken und anderer Schutzrechte.",
+    "use_of_product": "Nutzung des Produkts",
+    "use_of_product_text": "Portfolio ist ausschließlich rechtmäßig zu verwenden, im Einklang mit allen geltenden Gesetzen und Vorschriften. Jede Nutzung zur Ausbeutung, Werbung, Belästigung, Schädigung oder Verletzung der Rechte Dritter ist untersagt. Sie sind allein für Ihre Interaktionen mit anderen Nutzern verantwortlich.",
+    "disclaimer": "Gewährleistungsausschluss & Haftungsbeschränkung",
+    "disclaimer_text": "Portfolio wird „wie besehen“ ohne jegliche ausdrückliche oder stillschweigende Gewährleistung bereitgestellt, einschließlich, aber nicht beschränkt auf die stillschweigenden Gewährleistungen der Marktgängigkeit, Eignung für einen bestimmten Zweck und Nichtverletzung von Rechten Dritter. Eine Haftung der aufgeführten Studierenden oder der Developer Akademie GmbH für direkte oder indirekte Schäden ist ausgeschlossen, soweit gesetzlich zulässig.",
+    "indemnity": "Freistellung",
+    "indemnity_text": "Sie stellen uns, die aufgeführten Studierenden, die Developer Akademie GmbH sowie unsere Partner und Mitarbeitenden von allen Ansprüchen frei, die aus Ihrer Nutzung von Portfolio oder der Verletzung dieses Impressums entstehen.",
+    "contact_line": "Bei Fragen oder Hinweisen kontaktieren Sie uns unter [Kontakt-E-Mail].",
+    "date": "Datum: 04. Juli 2025",
+    "footer_legal": "Impressum",
+    "footer_privacy": "Datenschutz"
+  },
+  "nav": {
+    "brand_arc": "full-stack entwickler",
+    "brand_about_aria": "Zur Start/About-Sektion",
+    "why_me": "Warum <br> ich",
+    "skills": "Meine <br> Fähigkeiten",
+    "my_work": "Meine <br> Projekte",
+    "contact": "Kontakt"
+  },
+  "why": {
+    "headline": "Warum ich",
+    "intro": "Schreibe hier Informationen über dich, die mit IT zu tun haben. Warum bist du leidenschaftlich beim Programmieren? Was inspiriert dich, deine Fähigkeiten zu verbessern?",
+    "title": "Ich bin",
+    "located": "Ansässig in Stadtname",
+    "remote": "Offen für Remote-Arbeit",
+    "relocate": "Offen für Umzug",
+    "contact_btn": "Kontaktiere mich"
+  },
+  "skills": {
+    "headline": "Meine Fähigkeiten",
+    "intro": "Eine kurze Einführung in deine Fähigkeiten. Betone deine Erfahrung in der Arbeit an verschiedenen Projekten mit unterschiedlichen Frontend-Technologien und deine Offenheit, Neues zu lernen und dich an neue Technologien anzupassen."
+  },
+  "work": {
+    "headline": "Meine Projekte",
+
+    "project1": {
+      "title": "Projekt Join",
+      "about": "Über das Projekt",
+      "about_text": "Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktion, weise Benutzer und Kategorien zu.",
+      "tech": "Technologien, die ich verwendet habe",
+      "tech_list": "Angular, TypeScript, HTML, CSS, Firebase",
+      "team": "Meine Teamarbeitserfahrung",
+      "team_text": "Vielleicht hast du eine bestimmte Technologie zum ersten Mal verwendet? Hast du gelernt, deinen Code sauber zu halten oder Komponenten besser zu organisieren?"
+    },
+
+    "project2": {
+      "title": "Projekt Pollo Loco",
+      "about": "Über das Projekt",
+      "about_text": "Jump-, Run- und Wurfspiel auf objektorientierter Basis. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen.",
+      "tech": "Technologien, die ich verwendet habe",
+      "tech_list": "JavaScript, HTML, CSS",
+      "learned": "Was ich gelernt habe",
+      "learned_text": "Vielleicht hast du eine Technologie zum ersten Mal genutzt? Hast du mehr darüber gelernt, deinen Code sauber zu halten oder Projekte besser zu strukturieren?"
+    },
+
+    "project3": {
+      "title": "Projekt DA Bubble",
+      "about": "Über das Projekt",
+      "about_text": "Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktion, weise Benutzer und Kategorien zu.",
+      "tech": "Technologien, die ich verwendet habe",
+      "tech_list": "Angular, TypeScript, HTML, CSS, Firebase",
+      "team": "Meine Teamarbeitserfahrung",
+      "team_text": "Wie viele Personen waren im Team und was war deine Rolle? Beschreibe deine Aufgaben in 1–2 Sätzen. Gute Zusammenarbeit sollte erwähnt werden."
+    },
+
+    "project4": {
+      "title": "Laufendes Projekt",
+      "about_text": "Arbeitest du derzeit an einem Projekt? Worum geht es und welche Technologien verwendest du? Betone, dass gute Planung und Umsetzung entscheidend für den Erfolg sind.",
+      "button": "Lass uns reden"
+    }
+  },
+
+  "refs": {
+    "headline": "Referenzen",
+
+    "ref1": {
+      "text": "„Michael ist eine zuverlässige und freundliche Person. Arbeitet strukturiert und schreibt sauberen Code. Ich empfehle ihn als Kollegen.“",
+      "author": "James Rugman",
+      "project": "Projekt Join"
+    },
+
+    "ref2": {
+      "text": "„Er ist ein vertrauenswürdiger Teamplayer und kann gut mit Termindruck umgehen. Strukturiertes Arbeiten und sauberer Code.“",
+      "author": "Evelyn Marx",
+      "project": "Projekt DA Bubble"
+    },
+
+    "ref3": {
+      "text": "„Michael musste Inhalte zusammen mit den Teammitgliedern entwickeln, formatieren und bereitstellen. Er ist eine zuverlässige und freundliche Person.“",
+      "author": "Noah Mueller",
+      "project": "Projekt Sharkie"
+    }
+  },
+  "contact": {
+    "headline": "Kontaktiere mich",
+    "form": {
+      "name": "Dein Name",
+      "email": "Deine E-Mail",
+      "message": "Deine Nachricht",
+      "policy_prefix": "Ich habe die",
+      "policy_link": "Datenschutzerklärung",
+      "policy_suffix": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+      "send": "Senden",
+      "success": "Danke! Deine Nachricht wurde gesendet.",
+      "error": "Etwas ist schiefgelaufen. Bitte versuche es später erneut."
+    },
+    "errors": {
+      "name_required": "Bitte gib deinen Namen ein.",
+      "name_minlength": "Bitte gib mindestens 5 Zeichen ein.",
+      "name_pattern": "Nur Buchstaben (a–z, äöü, ß), Leerzeichen, Bindestrich und Apostroph sind erlaubt.",
+      "email_required": "Bitte gib deine E-Mail-Adresse ein.",
+      "email_pattern": "Bitte gib eine gültige E-Mail-Adresse ein (z. B. name@example.com).",
+      "message_required": "Bitte gib eine Nachricht ein.",
+      "message_minchars": "Bitte gib mindestens 20 Zeichen ein.",
+      "privacy_required": "Bitte akzeptiere die Datenschutzerklärung."
+    },
+    "info": {
+      "lead": "Lass uns zusammenarbeiten.",
+      "muted": "Ermutige Besucher, dich zu kontaktieren, und beschreibe, welche Rolle dich interessiert. Zeige Selbstvertrauen in deine Fähigkeit, durch dein Wissen und deine Begeisterung einen wertvollen Beitrag zu leisten."
+    },
+    "footer": {
+      "legal": "Impressum",
+      "policy": "Datenschutz"
+    }
+  },
+  "about": {
+    "subtitle": "Full-Stack Entwickler"
+  }
+}

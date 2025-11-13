@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { ScrollableSection } from '../../shared/scrollable-section.base';
 import { ScrollService } from '../../services/scroll.service';
 import { CommonModule } from '@angular/common';
+import { TranslationPipe } from '../../shared/translation.pipe';
 
 @Component({
   selector: 'app-why-me',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslationPipe],
   templateUrl: './why-me.component.html',
   styleUrl: './why-me.component.scss'
 })

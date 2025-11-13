@@ -1,16 +1,17 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ScrollService } from '../../services/scroll.service';
+import { TranslationPipe } from '../../shared/translation.pipe';
 
 @Component({
   selector: 'app-side-nav',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslationPipe],
   templateUrl: './side-nav.component.html',
-  styleUrls: ['./side-nav.component.scss']
+  styleUrls: ['./side-nav.component.scss'],
 })
 export class SideNavComponent {
-  activeLink = ''; 
+  activeLink = '';
 
   constructor(private scroll: ScrollService) {}
 
