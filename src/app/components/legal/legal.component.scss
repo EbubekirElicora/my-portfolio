@@ -201,3 +201,26 @@ a,
 .legal-notice-pos .policy-a:hover {
   color: var(--accent-weak);
 }
+
+.email-container {
+  display: flex;
+  gap: 16px;
+}
+
+.phone-container {
+  display: flex;
+  gap: 8px;
+}
+
+.email-container:hover,
+.phone-container:hover {
+  color: var(--accent-weak);
+}
+
+.email-container:hover .emailImgHover {
+  background: url("/assets/img/icons/contact/eMail_contact_hover.svg");
+}
+
+.phone-container:hover img {
+  background: url("/assets/img/icons/contact/phone_contact_hover.svg");
+}

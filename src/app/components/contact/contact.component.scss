@@ -122,7 +122,6 @@ textarea::placeholder {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 16px;
 }
 
 .info-side .lead {
@@ -324,4 +323,27 @@ a,
   color: rgba(253, 46, 18, 1);
   font-size: 14px;
   pointer-events: none;
+}
+
+.email-container {
+  display: flex;
+  gap: 16px;
+}
+
+.phone-container {
+  display: flex;
+  gap: 8px;
+}
+
+.email-container:hover,
+.phone-container:hover {
+  color: var(--accent-weak);
+}
+
+.email-container:hover .emailImgHover{
+  background: url("/assets/img/icons/contact/eMail_contact_hover.svg");
+}
+
+.phone-container:hover img {
+  background: url("/assets/img/icons/contact/phone_contact_hover.svg");
 }
