@@ -13,7 +13,25 @@ import { TranslationPipe } from '../../shared/translation.pipe';
 })
 export class MyProjectsComponent extends ScrollableSection {
   override nextSectionId = 'references';
+  isProjectExpanded = [false, false, false];
   constructor(scroll: ScrollService) {
     super(scroll);
+  }
+
+  toggleProject(index: number): void {
+    const wasOpen = this.isProjectExpanded[index];
+    this.isProjectExpanded = this.isProjectExpanded.map(() => false);
+    this.isProjectExpanded[index] = !wasOpen;
+  }
+
+  getProjectToggleLabel(index: number): string {
+    return this.isProjectExpanded[index]
+      ? 'work.toggle.less'
+      : 'work.toggle.more';
+  }
+  getProjectToggleIcon(index: number): string {
+    return this.isProjectExpanded[index]
+      ? 'assets/img/icons/project_details/polygon_up.png'
+      : 'assets/img/icons/project_details/polygon_down.png';
   }
 }

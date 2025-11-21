@@ -96,6 +96,65 @@ p {
   display: none;
 }
 
-:host-context(html[lang="de"]) .next-arrow  { 
-   top: 733px;
+:host-context(html[lang="de"]) .next-arrow {
+  top: 733px;
+}
+
+@media (max-width: 799px) {
+  .why {
+    display: flex;
+    flex-direction: column;
+    position: static;
+    width: 100%;
+    height: 100%;
+    padding-top: 112px;
+    padding-bottom: 80px;
+    gap: 24px;
+  }
+
+  .header-txt {
+    writing-mode: initial;
+    transform: unset;
+    padding: 0;
+    font-size: 32px;
+    -webkit-text-stroke: 1px var(--accent);
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .info-container {
+    align-items: center;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 32px;
+    margin-block-start: 0;
+    padding-top:0;
+  }
+  .badges {
+    padding-inline-start: 0;
+    flex-direction: column;
+  }
+  .why-text {
+    height: auto;
+  }
+
+  .next-arrow {
+    display: none;
+  }
+
+  .location-icon {
+    display: none !important;
+  }
+
+  .remote-icon {
+    order: 2;
+  }
+
+  .relocation-icon {
+    order: 1;
+  }
 }

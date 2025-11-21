@@ -37,13 +37,15 @@
     "brand_about_aria": "Zur Start/About-Sektion",
     "why_me": "Warum <br> ich",
     "skills": "Meine <br> Fähigkeiten",
+    "skills_mobile": "Mein <br> Skill-Set",
     "my_work": "Meine <br> Projekte",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "contact_mobile": "Kontaktiere <br> mich"
   },
   "why": {
     "headline": "Warum ich",
     "intro": "Schreibe hier Informationen über dich, die mit IT zu tun haben. Warum bist du leidenschaftlich beim Programmieren? Was inspiriert dich, deine Fähigkeiten zu verbessern?",
-    "title": "Ich bin",
+    "title": "Ich bin:",
     "located": "Ansässig in Stadtname",
     "remote": "Offen für Remote-Arbeit",
     "relocate": "Offen für Umzug",
@@ -55,6 +57,10 @@
   },
   "work": {
     "headline": "Meine Projekte",
+    "toggle": {
+      "more": "Mehr anzeigen",
+      "less": "Weniger anzeigen"
+    },
 
     "project1": {
       "title": "Projekt Join",
@@ -95,6 +101,8 @@
 
   "refs": {
     "headline": "Referenzen",
+    "headline-mobile": "Brauchen Sie ein Teamplayer?",
+    "text-mobile": "Hier ist, was meine Kollegen über mich gesagt haben",
 
     "ref1": {
       "text": "„Michael ist eine zuverlässige und freundliche Person. Arbeitet strukturiert und schreibt sauberen Code. Ich empfehle ihn als Kollegen.“",

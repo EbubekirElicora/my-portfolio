@@ -340,10 +340,252 @@ a,
   color: var(--accent-weak);
 }
 
-.email-container:hover .emailImgHover{
+.email-container:hover .emailImgHover {
   background: url("/assets/img/icons/contact/eMail_contact_hover.svg");
 }
 
 .phone-container:hover img {
   background: url("/assets/img/icons/contact/phone_contact_hover.svg");
+}
+
+.mobile,
+.mobile-legal,
+.mobile-arrow,
+.mobile-social {
+  display: none;
+}
+
+@media (max-width: 799px) {
+  .contact .contact-accent-layer {
+    display: none;
+  }
+
+  .header-txt {
+    writing-mode: initial;
+    transform: unset;
+    padding: 0;
+    font-size: 32px;
+    -webkit-text-stroke: 1px var(--accent);
+  }
+
+  .form-container {
+    display: flex;
+    position: static;
+    width: 100%;
+    height: 100%;
+    gap: 16px;
+    flex-direction: column;
+  }
+
+  .checkbox-btn-container {
+    align-items: start;
+  }
+
+  .info-side {
+    display: none;
+  }
+
+  .container-size {
+    width: 100%;
+  }
+
+  .mobile {
+    display: flex;
+    position: static;
+    width: auto;
+    height: auto;
+    text-align: left;
+  }
+
+  .contacts li {
+    justify-content: start;
+  }
+
+  .contact {
+    padding-bottom: 240px;
+    padding-top: 108px;
+    flex-direction: column;
+  }
+
+  .mobile-legal {
+    display: flex;
+  }
+
+  .legal-policy-mobile-container {
+    display: flex;
+    gap: 24px;
+  }
+
+  .legal-notice-pos {
+    padding-top: 0;
+  }
+
+  p,
+  .email-container span,
+  .phone-container span {
+    font-size: 16px !important;
+  }
+
+  .legal-a,
+  .policy-a,
+  .legal-notice-pos p {
+    font-size: 16px;
+    color: var(--text-burger);
+  }
+
+  .email-container {
+    gap: 8px;
+  }
+
+  .mobile-legal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    z-index: 30;
+    width: 100%;
+    height: 112px;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-bottom: 32px;
+    padding-top: 16px;
+    background: linear-gradient(160.33deg, #b5e93b 50.78%, #547800 133.54%);
+  }
+
+  .mobile-legal .legal-notice-pos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    padding-top: 0;
+  }
+
+  svg {
+    height: 80px !important;
+  }
+
+  .brand-hit {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    display: block;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+  }
+
+  .brand-hit:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+  }
+
+  .brand {
+    text-align: center;
+    position: relative;
+    width: 128px;
+    height: 60px;
+    margin: 0;
+  }
+
+  .brand-arc {
+    position: absolute;
+    inset: 0;
+    display: block;
+    pointer-events: none;
+  }
+
+  .brand-arc text {
+    font-family: "Quantico";
+    font-size: 18px;
+    fill: rgba(74, 74, 74, 1);
+    font-weight: 400;
+  }
+
+  .brand h1 {
+    position: absolute;
+    left: 52%;
+    top: 58%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-weight: 700;
+    font-size: 32px;
+    letter-spacing: -4px;
+    color: transparent;
+    pointer-events: none;
+    -webkit-text-stroke: 2px rgba(74, 74, 74, 1);
+  }
+
+  .mobile-arrow {
+    display: flex;
+    justify-content: center;
+    bottom: 200px;
+    left: 50%;
+    z-index: 50;
+    width: 100%;
+    pointer-events: auto;
+    padding-top: clamp(80px, 20vw, 120px);
+  }
+
+  .mobile-arrow .next-arrow {
+    cursor: pointer;
+    width: clamp(80px, 16vw, 150px);
+    height: auto;
+  }
+
+  .next-arrow {
+    position: static;
+    transform: rotate(90deg);
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: clamp(80px, 20vw, 120px);
+  }
+
+  .mobile-social {
+    display: flex;
+  }
+
+  .top-links {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .top-links .icon {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+  }
+
+  .top-links .icon img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 500;
+  }
+
+  .top-links .icon img.base {
+    opacity: 1;
+  }
+  .top-links .icon img.hover {
+    opacity: 0;
+  }
+
+  .top-links .icon:hover img.base,
+  .top-links .icon:focus-visible img.base {
+    opacity: 0;
+  }
+
+  .top-links .icon:hover img.hover,
+  .top-links .icon:focus-visible img.hover {
+    opacity: 1;
+  }
 }

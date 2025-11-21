@@ -27,8 +27,93 @@
     <h1>EE</h1>
   </div>
 
-  <a class="nav-link" href="#why-me" [innerHTML]="'nav.why_me' | translate"></a>
-  <a class="nav-link" href="#skills" [innerHTML]="'nav.skills' | translate"></a>
-  <a class="nav-link" href="#my-work" [innerHTML]="'nav.my_work' | translate"></a>
-  <a class="nav-link" href="#contact">{{ "nav.contact" | translate }}</a>
+  <a
+    class="nav-link"
+    href="#why-me"
+    [innerHTML]="'nav.why_me' | translate"
+    (click)="onNav('why-me')"
+  ></a>
+  <a
+    class="nav-link"
+    href="#skills"
+    [innerHTML]="'nav.skills' | translate"
+    (click)="onNav('skills')"
+  ></a>
+  <a
+    class="nav-link"
+    href="#my-work"
+    [innerHTML]="'nav.my_work' | translate"
+    (click)="onNav('my-work')"
+  ></a>
+  <a class="nav-link" href="#contact" (click)="onNav('contact')">
+    {{ "nav.contact" | translate }}
+  </a>
+
+  <button
+    #burgerBtn
+    class="burger-btn"
+    type="button"
+    (click)="toggleMenu()"
+    aria-label="Menü öffnen"
+  >
+    <img src="assets/img/icons/burger_menu/burgerMenu_open.svg" alt="" />
+  </button>
+</nav>
+
+<nav class="mobile-menu" *ngIf="isMenuOpen" #mobileMenu>
+  <button
+    class="mobile-menu__close"
+    type="button"
+    (click)="closeMenu()"
+    aria-label="Menü schließen"
+  >
+    <img src="assets/img/icons/burger_menu/burgerMenu_close.svg" alt="" />
+  </button>
+
+  <a
+    class="mobile-menu__link"
+    href="#why-me"
+    (click)="onNav('why-me')"
+    [innerHTML]="'nav.why_me' | translate"
+  ></a>
+
+  <a
+    class="mobile-menu__link"
+    href="#skills"
+    (click)="onNav('skills')"
+    [innerHTML]="'nav.skills_mobile' | translate"
+  ></a>
+  <a
+    class="mobile-menu__link"
+    href="#my-work"
+    (click)="onNav('my-work')"
+    [innerHTML]="'nav.my_work' | translate"
+  ></a>
+
+  <a
+    class="mobile-menu__link"
+    href="#contact"
+    (click)="onNav('contact')"
+    [innerHTML]="'nav.contact_mobile' | translate"
+  >
+  </a>
+
+  <div class="mobile-menu__langs">
+    <a
+      class="de"
+      href="/de"
+      lang="de"
+      hreflang="de"
+      (click)="setGerman(); $event.preventDefault()"
+      >DE</a
+    >
+    <a
+      class="en"
+      href="/en"
+      lang="en"
+      hreflang="en"
+      (click)="setEnglish(); $event.preventDefault()"
+      >EN</a
+    >
+  </div>
 </nav>

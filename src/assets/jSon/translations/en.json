@@ -37,13 +37,15 @@
     "brand_about_aria": "Go to the start/about section",
     "why_me": "Why me",
     "skills": "Skills",
+    "skills_mobile": "My Skill Set",
     "my_work": "My Work",
-    "contact": "Contact"
+    "contact": "Contact",
+    "contact_mobile": "Contact me"
   },
   "why": {
     "headline": "Why me",
     "intro": "Write some information about yourself that is IT related. Why are you passionate about coding? What is your source of inspiration for improving your programming skills?",
-    "title": "I am",
+    "title": "I am:",
     "located": "Located in city name",
     "remote": "Open to work remote",
     "relocate": "Open to relocate",
@@ -55,6 +57,10 @@
   },
   "work": {
     "headline": "My Work",
+    "toggle": {
+      "more": "Show me more",
+      "less": "Show me less"
+    },
 
     "project1": {
       "title": "Project Join",
@@ -94,6 +100,8 @@
   },
   "refs": {
     "headline": "References",
+    "headline-mobile": "Need a teamplayer?",
+    "text-mobile": "Here what my colleagues said about me",
 
     "ref1": {
       "text": "“Michael is a reliable and friendly person. Works in a structured way and writes clear code. I recommend him as a colleague.”",

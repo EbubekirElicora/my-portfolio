@@ -93,3 +93,10 @@ nav {
 .lang a.en:focus-visible {
   color: var(--accent);
 }
+
+
+@media (max-width: 799px) {
+  .site-header {
+    display: none;
+  }
+}

@@ -1,7 +1,17 @@
-<app-side-nav></app-side-nav>
+<app-side-nav class="container-size"></app-side-nav>
 
 <main>
   <section [class.is-right]="isRight">
+    <img
+      class="mobile-back-to-main"
+      src="assets/img/icons/contact/mobile_arrow_back.svg"
+      alt="Zurück zur Startseite"
+      role="button"
+      tabindex="0"
+      (click)="backToMain()"
+      (keydown.enter)="backToMain()"
+      (keydown.space)="backToMain()"
+    />
     <section class="legal" id="legal-left">
       <div class="legal-position">
         <div class="legal-sideline-container">
@@ -144,6 +154,125 @@
 
       <div class="legal-accent-layer">
         <div class="accent-bar" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section class="legal-bottom-section mobile-container">
+      <div class="mobile-size">
+        <div class="social-container mobile-arrow">
+          <img
+            class="back-arrow-mobile"
+            src="../../../assets/img/icons/arrows/arrow_left.png"
+            alt="Zurück"
+            role="button"
+            tabindex="0"
+            (click)="goLeft()"
+            (keydown.enter)="goLeft()"
+            (keydown.space)="goLeft()"
+          />
+        </div>
+
+        <nav class="mobile-social" aria-label="social">
+          <div class="top-links">
+            <a
+              href="https://github.com/DEIN_GITHUB"
+              target="_blank"
+              rel="noopener"
+              aria-label="GitHub"
+              class="icon"
+            >
+              <img
+                class="base"
+                src="assets/img/icons/social_media/gitHub.svg"
+                alt="GitHub"
+              />
+              <img
+                class="hover"
+                src="assets/img/icons/social_media/gitHub_hover.svg"
+                alt=""
+                aria-hidden="true"
+              />
+            </a>
+            <a href="mailto:you@example.com" aria-label="E-Mail" class="icon">
+              <img
+                class="base"
+                src="assets/img/icons/social_media/eMail.svg"
+                alt="Mail"
+              />
+              <img
+                class="hover"
+                src="assets/img/icons/social_media/eMail_hover.svg"
+                alt=""
+                aria-hidden="true"
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/DEIN_LINKEDIN"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+              class="icon"
+            >
+              <img
+                class="base"
+                src="assets/img/icons/social_media/linkedIn.svg"
+                alt="LinkedIn"
+              />
+              <img
+                class="hover"
+                src="assets/img/icons/social_media/linkedIn_hover.svg"
+                alt=""
+                aria-hidden="true"
+              />
+            </a>
+          </div>
+        </nav>
+      </div>
+
+      <div class="container-legal-notice mobile-legal">
+        <div class="brand">
+          <a
+            class="brand-hit nav-link"
+            href="#about"
+            [attr.aria-label]="'nav.brand_about_aria' | translate"
+          ></a>
+          <svg
+            class="brand-arc"
+            viewBox="0 0 160 110"
+            width="140"
+            height="110"
+            aria-hidden="true"
+          >
+            <path
+              id="brandArcPath"
+              d="M 20 90 A 62 100 0 0 1 140 90"
+              fill="none"
+            />
+            <text class="brand-arc-text">
+              <textPath
+                href="#brandArcPath"
+                startOffset="50%"
+                text-anchor="middle"
+                letter-spacing="-1"
+              >
+                {{ "nav.brand_arc" | translate }}
+              </textPath>
+            </text>
+          </svg>
+          <h1>EE</h1>
+        </div>
+
+        <div class="legal-notice-pos">
+          <p>&copy; Max Mustermann 2025</p>
+          <div class="legal-policy-mobile-container">
+            <a class="legal-a" href="/legal">{{
+              "contact.footer.legal" | translate
+            }}</a>
+            <a class="policy-a" href="/privacy">{{
+              "contact.footer.policy" | translate
+            }}</a>
+          </div>
+        </div>
       </div>
     </section>
   </section>

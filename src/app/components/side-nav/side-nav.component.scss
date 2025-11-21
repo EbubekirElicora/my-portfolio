@@ -24,10 +24,10 @@
   content: "";
   position: absolute;
   top: 0;
-  right: -22px;
+  right: -40px;
   width: 44px;
   height: 100%;
-  background: rgba(0, 0, 0, 0.42);
+  background: rgba(0, 0, 0, 0.4);
   filter: blur(23.5px);
   pointer-events: none;
   z-index: 0;
@@ -110,4 +110,179 @@
 
 .nav-link:hover:not(.active) {
   color: rgba(255, 253, 253, 1);
+}
+
+.burger-btn {
+  display: none; /* Standard: auf Desktop unsichtbar */
+}
+
+@media (max-width: 799px) {
+  :host {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 72px;
+    background: linear-gradient(160.33deg, #b5e93b 50.78%, #547800 133.54%);
+    z-index: 1000;
+    display: block;
+  }
+
+  .side {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    padding: 0 24px 0 0;
+    z-index: 20;
+  }
+
+  /* Glow bleibt wie bei dir – kürze ich hier nur ein wenig */
+  .side::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 72px;
+    width: 100%;
+    height: 36px;
+    background: linear-gradient(
+      170.9deg,
+      rgba(0, 0, 0, 0.5) -52.37%,
+      rgba(23, 22, 22, 0.5) 197.35%
+    );
+    filter: blur(7.5px);
+    pointer-events: none;
+    opacity: 0.8;
+    z-index: 0;
+  }
+
+  .brand {
+    width: 128px;
+    height: 60px;
+    margin: 0;
+  }
+
+  .brand h1 {
+    left: 52%;
+    top: 58%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    letter-spacing: -4px;
+  }
+
+  svg {
+    height: 80px !important;
+  }
+
+  /* Desktop-Links auf Mobile ausblenden */
+ .side > .nav-link {
+    display: none;
+ }
+
+  /* BURGER auf Mobile anzeigen */
+  .burger-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: 1010;
+  }
+
+  .burger-btn:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 4px;
+  }
+
+  .mobile-menu-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 1100;
+    background: transparent;
+  }
+
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1100;
+    background: linear-gradient(
+      160.33deg,
+      rgba(181, 233, 59, 0.96) 49.55%,
+      rgba(84, 120, 0, 0.96) 119.53%
+    );
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    padding: 88px 40px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .mobile-menu__close {
+    position: absolute;
+    top: 20px;
+    right: 21px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .mobile-menu__link {
+    font-family: "Quantico";
+    font-weight: 400;
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--text-burger);
+    text-align: center;
+  }
+
+   .mobile-menu__link:hover {
+    cursor: pointer;
+   }
+
+  .mobile-menu__langs {
+    display: flex;
+    align-items: center;
+    display: flex;
+    gap: 8px;
+  }
+
+  a {
+    color: var(--text-burger);
+    font-family: "Quantico";
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  a:hover {
+    cursor: pointer;
+  }
+
+  .mobile-menu__langs > * + * {
+    position: relative;
+    padding-left: 8px;
+  }
+
+  .mobile-menu__langs > * + *::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 15px;
+    pointer-events: none;
+    background-color: var(--text-burger);
+  }
 }

@@ -1,39 +1,47 @@
 <section class="refs container">
-  <h1 class="header-txt">{{ 'refs.headline' | translate }}</h1>
+  <h1 class="header-txt">{{ "refs.headline" | translate }}</h1>
+  <h2 class="header-mobile">{{ "refs.headline-mobile" | translate }}</h2>
+  <p class="text-mobile">{{ "refs.text-mobile" | translate }}</p>
 
-  <div class="refs__list">
-    <article class="ref">
-      <div class="p-container">
-        <p>{{ 'refs.ref1.text' | translate }}</p>
-      </div>
-      <div class="divider"></div>
-      <div class="ref__author">
-        <h2>{{ 'refs.ref1.author' | translate }}</h2>
-        <p>{{ 'refs.ref1.project' | translate }}</p>
-      </div>
-    </article>
+  <div class="refs-scroll" #scrollContainer (scroll)="onRefsScroll($event)">
+    <div class="refs__list">
+      <article class="ref">
+        <div class="p-container">
+          <p>{{ "refs.ref1.text" | translate }}</p>
+        </div>
+        <div class="divider"></div>
+        <div class="ref__author">
+          <h2>{{ "refs.ref1.author" | translate }}</h2>
+          <p>{{ "refs.ref1.project" | translate }}</p>
+        </div>
+      </article>
 
-    <article class="ref">
-      <div class="p-container">
-        <p>{{ 'refs.ref2.text' | translate }}</p>
-      </div>
-      <div class="divider"></div>
-      <div class="ref__author">
-        <h2>{{ 'refs.ref2.author' | translate }}</h2>
-        <p>{{ 'refs.ref2.project' | translate }}</p>
-      </div>
-    </article>
+      <article class="ref">
+        <div class="p-container">
+          <p>{{ "refs.ref2.text" | translate }}</p>
+        </div>
+        <div class="divider"></div>
+        <div class="ref__author">
+          <h2>{{ "refs.ref2.author" | translate }}</h2>
+          <p>{{ "refs.ref2.project" | translate }}</p>
+        </div>
+      </article>
 
-    <article class="ref">
-      <div class="p-container">
-        <p>{{ 'refs.ref3.text' | translate }}</p>
-      </div>
-      <div class="divider"></div>
-      <div class="ref__author">
-        <h2>{{ 'refs.ref3.author' | translate }}</h2>
-        <p>{{ 'refs.ref3.project' | translate }}</p>
-      </div>
-    </article>
+      <article class="ref">
+        <div class="p-container">
+          <p>{{ "refs.ref3.text" | translate }}</p>
+        </div>
+        <div class="divider"></div>
+        <div class="ref__author">
+          <h2>{{ "refs.ref3.author" | translate }}</h2>
+          <p>{{ "refs.ref3.project" | translate }}</p>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <div class="refs__indicator">
+    <img class="refs__indicator-img" [src]="indicatorSrc" />
   </div>
 </section>
 

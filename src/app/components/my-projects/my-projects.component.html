@@ -4,12 +4,16 @@
   </div>
 
   <div class="cards">
-    <!-- PROJECT 1 -->
-    <article class="card">
+    <article
+      class="card"
+      [class.card--collapsed]="!isProjectExpanded[0]"
+      [class.card--expanded]="isProjectExpanded[0]"
+    >
       <header>
         <h1 class="no">1</h1>
         <span>{{ "work.project1.title" | translate }}</span>
       </header>
+
       <section class="first-project">
         <div class="project-container">
           <div>
@@ -17,29 +21,31 @@
               <div class="ellipse-container">
                 <img
                   class="ellipse"
-                  src="../../../assets/img/icons/project_details/ellipse.png"
+                  src="assets/img/icons/project_details/ellipse.png"
                 />
-                <span class="project-span">{{
-                  "work.project1.about" | translate
-                }}</span>
+                <span class="project-span">
+                  {{ "work.project1.about" | translate }}
+                </span>
               </div>
-              <p>{{ "work.project1.about_text" | translate }}</p>
+              <p>
+                {{ "work.project1.about_text" | translate }}
+              </p>
             </div>
           </div>
-
-          <div class="ellipse-container">
+          <div class="ellipse-container project-details">
             <img
               class="ellipse"
-              src="../../../assets/img/icons/project_details/ellipse.png"
+              src="assets/img/icons/project_details/ellipse.png"
             />
-            <span class="project-span">{{
-              "work.project1.tech" | translate
-            }}</span>
+            <span class="project-span">
+              {{ "work.project1.tech" | translate }}
+            </span>
           </div>
-          <p>{{ "work.project1.tech_list" | translate }}</p>
+          <p class="project-details">
+            {{ "work.project1.tech_list" | translate }}
+          </p>
         </div>
-
-        <div class="cta">
+        <div class="cta project-details">
           <img class="shot" src="assets/img/screenshots/join.png" alt="Join" />
           <div class="btn-container">
             <a class="btn btn--ghost" href="#" target="_blank">GitHub</a>
@@ -47,57 +53,92 @@
           </div>
         </div>
       </section>
-
-      <div class="last-txt">
+      <div class="last-txt project-details">
         <div class="ellipse-container">
           <img
             class="ellipse"
-            src="../../../assets/img/icons/project_details/ellipse.png"
+            src="assets/img/icons/project_details/ellipse.png"
           />
-          <span class="project-span">{{
-            "work.project1.team" | translate
-          }}</span>
+          <span class="project-span">
+            {{ "work.project1.team" | translate }}
+          </span>
         </div>
         <p>{{ "work.project1.team_text" | translate }}</p>
       </div>
+      <div class="cta mobile project-details">
+        <img class="shot" src="assets/img/screenshots/join.png" alt="Join" />
+        <div class="btn-container">
+          <a class="btn btn--ghost" href="#" target="_blank">GitHub</a>
+          <a class="btn" href="#" target="_blank">Live Test</a>
+        </div>
+      </div>
+      <button
+        *ngIf="!isProjectExpanded[0]"
+        class="project-toggle project-toggle--inside"
+        type="button"
+        (click)="toggleProject(0)"
+      >
+        <span>{{ getProjectToggleLabel(0) | translate }}</span>
+        <img [src]="getProjectToggleIcon(0)" alt="" />
+      </button>
     </article>
+    <button
+      *ngIf="isProjectExpanded[0]"
+      class="project-toggle project-toggle--outside"
+      type="button"
+      (click)="toggleProject(0)"
+    >
+      <span>{{ getProjectToggleLabel(0) | translate }}</span>
+      <img [src]="getProjectToggleIcon(0)" alt="" />
+    </button>
 
-    <!-- PROJECT 2 -->
-    <article class="card">
+    <article
+      class="card"
+      [class.card--collapsed]="!isProjectExpanded[1]"
+      [class.card--expanded]="isProjectExpanded[1]"
+    >
       <header>
         <h1 class="no">2</h1>
         <span>{{ "work.project2.title" | translate }}</span>
       </header>
+
       <section class="second-project">
         <div class="project-container">
+          <!-- ABOUT (immer sichtbar) -->
           <div>
             <div>
               <div class="ellipse-container">
                 <img
                   class="ellipse"
-                  src="../../../assets/img/icons/project_details/ellipse.png"
+                  src="assets/img/icons/project_details/ellipse.png"
                 />
-                <span class="project-span">{{
-                  "work.project2.about" | translate
-                }}</span>
+                <span class="project-span">
+                  {{ "work.project2.about" | translate }}
+                </span>
               </div>
-              <p>{{ "work.project2.about_text" | translate }}</p>
+              <p>
+                {{ "work.project2.about_text" | translate }}
+              </p>
             </div>
           </div>
 
-          <div class="ellipse-container">
+          <!-- TECHNOLOGIES (nur expanded) -->
+          <div class="ellipse-container project-details">
             <img
               class="ellipse"
-              src="../../../assets/img/icons/project_details/ellipse.png"
+              src="assets/img/icons/project_details/ellipse.png"
             />
-            <span class="project-span">{{
-              "work.project2.tech" | translate
-            }}</span>
+            <span class="project-span">
+              {{ "work.project2.tech" | translate }}
+            </span>
           </div>
-          <p>{{ "work.project2.tech_list" | translate }}</p>
+          <p class="project-details">
+            {{ "work.project2.tech_list" | translate }}
+          </p>
         </div>
 
-        <div class="cta">
+        <!-- DESKTOP-CTA (nur expanded auf Mobile) -->
+        <div class="cta project-details">
           <img
             class="shot"
             src="assets/img/screenshots/pollo_Loco.png"
@@ -110,56 +151,104 @@
         </div>
       </section>
 
-      <div class="last-txt-second">
+      <!-- LEARNED (nur expanded auf Mobile) -->
+      <div class="last-txt-second project-details">
         <div class="ellipse-container">
           <img
             class="ellipse"
-            src="../../../assets/img/icons/project_details/ellipse.png"
+            src="assets/img/icons/project_details/ellipse.png"
           />
-          <span class="project-span">{{
-            "work.project2.learned" | translate
-          }}</span>
+          <span class="project-span">
+            {{ "work.project2.learned" | translate }}
+          </span>
         </div>
         <p>{{ "work.project2.learned_text" | translate }}</p>
       </div>
+
+      <!-- MOBILE-CTA (nur expanded auf Mobile) -->
+      <div class="cta mobile project-details">
+        <img
+          class="shot"
+          src="assets/img/screenshots/pollo_Loco.png"
+          alt="Pollo Loco"
+        />
+        <div class="btn-container">
+          <a class="btn btn--ghost" href="#" target="_blank">GitHub</a>
+          <a class="btn" href="#" target="_blank">Live Test</a>
+        </div>
+      </div>
+
+      <!-- BUTTON IN DER BOX – nur wenn zu -->
+      <button
+        *ngIf="!isProjectExpanded[1]"
+        class="project-toggle project-toggle--inside"
+        type="button"
+        (click)="toggleProject(1)"
+      >
+        <span>{{ getProjectToggleLabel(1) | translate }}</span>
+        <img [src]="getProjectToggleIcon(1)" alt="" />
+      </button>
     </article>
 
+    <!-- BUTTON UNTER DER BOX – nur wenn auf -->
+    <button
+      *ngIf="isProjectExpanded[1]"
+      class="project-toggle project-toggle--outside"
+      type="button"
+      (click)="toggleProject(1)"
+    >
+      <span>{{ getProjectToggleLabel(1) | translate }}</span>
+      <img [src]="getProjectToggleIcon(1)" alt="" />
+    </button>
+
     <!-- PROJECT 3 -->
-    <article class="card">
+    <article
+      class="card"
+      [class.card--collapsed]="!isProjectExpanded[2]"
+      [class.card--expanded]="isProjectExpanded[2]"
+    >
       <header>
         <h1 class="no">3</h1>
         <span>{{ "work.project3.title" | translate }}</span>
       </header>
+
       <section class="third-project">
         <div class="project-container">
+          <!-- ABOUT (immer sichtbar) -->
           <div>
             <div>
               <div class="ellipse-container">
                 <img
                   class="ellipse"
-                  src="../../../assets/img/icons/project_details/ellipse.png"
+                  src="assets/img/icons/project_details/ellipse.png"
                 />
-                <span class="project-span">{{
-                  "work.project3.about" | translate
-                }}</span>
+                <span class="project-span">
+                  {{ "work.project3.about" | translate }}
+                </span>
               </div>
-              <p>{{ "work.project3.about_text" | translate }}</p>
+              <p>
+                {{ "work.project3.about_text" | translate }}
+              </p>
             </div>
           </div>
 
-          <div class="ellipse-container">
+          <!-- TECHNOLOGIES (nur expanded) -->
+          <div class="ellipse-container project-details">
             <img
               class="ellipse"
-              src="../../../assets/img/icons/project_details/ellipse.png"
+              src="assets/img/icons/project_details/ellipse.png"
             />
-            <span class="project-span">{{
-              "work.project3.tech" | translate
-            }}</span>
+            <span class="project-span">
+              {{ "work.project3.tech" | translate }}
+            </span>
           </div>
-          <p>{{ "work.project3.tech_list" | translate }}</p>
+          <p class="project-details">
+            {{ "work.project3.tech_list" | translate }}
+          </p>
         </div>
 
-        <div class="cta">
+        <!-- DESKTOP-CTA (nur expanded auf Mobile) -->
+        <div class="cta project-details">
           <img
             class="shot"
             src="assets/img/screenshots/da_bubble.png"
@@ -172,19 +261,55 @@
         </div>
       </section>
 
-      <div class="last-txt-third">
+      <!-- TEAM (nur expanded auf Mobile) -->
+      <div class="last-txt-third project-details">
         <div class="ellipse-container">
           <img
             class="ellipse"
-            src="../../../assets/img/icons/project_details/ellipse.png"
+            src="assets/img/icons/project_details/ellipse.png"
           />
-          <span class="project-span">{{
-            "work.project3.team" | translate
-          }}</span>
+          <span class="project-span">
+            {{ "work.project3.team" | translate }}
+          </span>
         </div>
         <p>{{ "work.project3.team_text" | translate }}</p>
       </div>
+
+      <!-- MOBILE-CTA (nur expanded auf Mobile) -->
+      <div class="cta mobile project-details">
+        <img
+          class="shot"
+          src="assets/img/screenshots/da_bubble.png"
+          alt="Da Bubble"
+        />
+        <div class="btn-container">
+          <a class="btn btn--ghost" href="#" target="_blank">GitHub</a>
+          <a class="btn" href="#" target="_blank">Live Test</a>
+        </div>
+      </div>
+
+      <!-- BUTTON IN DER BOX – nur wenn zu -->
+      <button
+        *ngIf="!isProjectExpanded[2]"
+        class="project-toggle project-toggle--inside"
+        type="button"
+        (click)="toggleProject(2)"
+      >
+        <span>{{ getProjectToggleLabel(2) | translate }}</span>
+        <img [src]="getProjectToggleIcon(2)" alt="" />
+      </button>
     </article>
+
+    <!-- BUTTON UNTER DER BOX – nur wenn auf -->
+    <button
+      *ngIf="isProjectExpanded[2]"
+      class="project-toggle project-toggle--outside"
+      type="button"
+      (click)="toggleProject(2)"
+    >
+      <span>{{ getProjectToggleLabel(2) | translate }}</span>
+      <img [src]="getProjectToggleIcon(2)" alt="" />
+    </button>
 
     <!-- PROJECT 4 -->
     <article class="last-card">

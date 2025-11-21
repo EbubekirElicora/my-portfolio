@@ -142,7 +142,6 @@ header span {
   padding-left: 99px;
 }
 
-
 .project-container {
   padding-inline-end: 54px;
 }
@@ -196,4 +195,154 @@ p {
   justify-content: center;
   align-items: center;
   width: 100%;
+}
+
+.mobile {
+  display: none !important;
+}
+
+.project-toggle {
+  display: none; // default: nur mobile
+}
+
+@media (max-width: 799px) {
+  .work {
+    position: relative;
+    display: flex;
+    height: auto;
+    width: 100%;
+    inset: 0;
+    flex-direction: column;
+    padding-top: 108px;
+  }
+
+  .work-txt {
+    padding-bottom: 32px;
+  }
+
+  .header-txt {
+    writing-mode: initial;
+    transform: unset;
+    padding: 0;
+    font-size: 32px;
+    -webkit-text-stroke: 1px var(--accent);
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .card {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 40px;
+    padding-top: 16px;
+  }
+
+  .first-project,
+  .second-project,
+  .third-project {
+    display: flex;
+    padding-left: 0;
+    flex-direction: column;
+  }
+
+  .cta {
+    display: none !important;
+  }
+
+  .mobile {
+    display: flex !important;
+    padding-right: 0 !important;
+    width: 100%;
+    gap: 32px !important;
+    margin-top: 16px;
+  }
+
+  .last-card {
+    width: 100%;
+  }
+
+  .last-card .btn-container {
+    display: none;
+  }
+
+  .next-arrow {
+    display: none;
+  }
+
+  .project-container,
+  .last-txt,
+  .last-txt-second,
+  .last-txt-third {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  header span {
+    font-size: 24px !important;
+  }
+
+  .card .no,
+  .last-card .no {
+    font-size: 40px !important;
+  }
+
+  .project-span {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 16px;
+    margin-block-end: 16px;
+  }
+
+  .card header {
+    padding-left: 10px;
+    gap: 10px;
+    padding-bottom: 16px;
+  }
+
+  .card.card--collapsed .project-details {
+    display: none !important;
+  }
+
+  .project-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: "Quantico";
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--accent);
+    text-decoration: underline;
+    line-height: 1.2;
+  }
+
+  .project-toggle img {
+    width: 14px;
+    height: auto;
+    display: block;
+  }
+
+  .project-toggle--inside {
+    align-self: center;
+  }
+
+  .project-toggle--outside {
+    margin-bottom: 24px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 499px) {
+  .card .shot {
+    width: 85%;
+  }
 }

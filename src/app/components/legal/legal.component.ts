@@ -2,35 +2,40 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SideNavComponent } from '../side-nav/side-nav.component';
 import { TranslationPipe } from '../../shared/translation.pipe';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-legal',
   standalone: true,
-  imports: [CommonModule, SideNavComponent,TranslationPipe],
+  imports: [CommonModule, SideNavComponent, TranslationPipe],
   templateUrl: './legal.component.html',
   styleUrl: './legal.component.scss',
 })
 export class LegalComponent {
   isRight = false;
+
+  constructor(private router: Router) {} // ⬅ Router injizieren
+
   goRight() {
-    this.isRight = true; 
-    document
-      .getElementById('legal-right')
-      ?.scrollIntoView({
-        behavior: 'smooth',
-        block: 'nearest',
-        inline: 'start',
-      });
+    this.isRight = true;
+    document.getElementById('legal-right')?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'nearest',
+      inline: 'start',
+    });
   }
 
   goLeft() {
     this.isRight = false;
-    document
-      .getElementById('legal-left')
-      ?.scrollIntoView({
-        behavior: 'smooth',
-        block: 'nearest',
-        inline: 'start',
-      });
+    document.getElementById('legal-left')?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'nearest',
+      inline: 'start',
+    });
+  }
+
+  backToMain() {
+    this.router.navigate(['/'], { fragment: 'about' });
   }
 
   onKeyNext(ev: KeyboardEvent) {

@@ -3,6 +3,34 @@
     <div class="contact-txt">
       <h1 class="header-txt">{{ "contact.headline" | translate }}</h1>
     </div>
+
+    <div class="info-side mobile">
+      <p class="lead">{{ "contact.info.lead" | translate }}</p>
+      <p class="muted">{{ "contact.info.muted" | translate }}</p>
+      <ul class="contacts">
+        <li>
+          <div class="email-container">
+            <img
+              class="emailImg"
+              src="assets/img/icons/contact/eMail_contact.svg"
+              alt="E-Mail Icon"
+            />
+            <span>E-Mail: max-muster&#64;gmx.de</span>
+          </div>
+        </li>
+        <li>
+          <div class="phone-container">
+            <img
+              class="phoneImg"
+              src="assets/img/icons/contact/phone_contact.svg"
+              alt="Telefon Icon"
+            />
+            <span>Tel: 0157 123 456 68</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
     <div class="form-side">
       <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
         <div class="input-wrapper">
@@ -125,6 +153,76 @@
       </form>
     </div>
   </div>
+
+  <div class="social-container mobile-arrow">
+    <img
+      class="next-arrow"
+      src="assets/img/icons/arrows/arrow_left.png"
+      alt="Zurück"
+      role="button"
+      tabindex="0"
+      (click)="onBack()"
+      (keydown.enter)="onBack()"
+      (keydown.space)="onBack()"
+    />
+  </div>
+
+  <nav class="mobile-social" aria-label="social">
+    <div class="top-links">
+      <a
+        href="https://github.com/DEIN_GITHUB"
+        target="_blank"
+        rel="noopener"
+        aria-label="GitHub"
+        class="icon"
+      >
+        <img
+          class="base"
+          src="assets/img/icons/social_media/gitHub.svg"
+          alt="GitHub"
+        />
+        <img
+          class="hover"
+          src="assets/img/icons/social_media/gitHub_hover.svg"
+          alt=""
+          aria-hidden="true"
+        />
+      </a>
+      <a href="mailto:you@example.com" aria-label="E-Mail" class="icon">
+        <img
+          class="base"
+          src="assets/img/icons/social_media/eMail.svg"
+          alt="Mail"
+        />
+        <img
+          class="hover"
+          src="assets/img/icons/social_media/eMail_hover.svg"
+          alt=""
+          aria-hidden="true"
+        />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/DEIN_LINKEDIN"
+        target="_blank"
+        rel="noopener"
+        aria-label="LinkedIn"
+        class="icon"
+      >
+        <img
+          class="base"
+          src="assets/img/icons/social_media/linkedIn.svg"
+          alt="LinkedIn"
+        />
+        <img
+          class="hover"
+          src="assets/img/icons/social_media/linkedIn_hover.svg"
+          alt=""
+          aria-hidden="true"
+        />
+      </a>
+    </div>
+  </nav>
+
   <div class="info-side">
     <p class="lead">{{ "contact.info.lead" | translate }}</p>
     <p class="muted">{{ "contact.info.muted" | translate }}</p>
@@ -174,5 +272,47 @@
   </div>
   <div class="contact-accent-layer">
     <div class="accent-bar" aria-hidden="true"></div>
+  </div>
+</section>
+
+<section class="container-legal-notice mobile-legal">
+  <div class="brand">
+    <a
+      class="brand-hit nav-link"
+      href="#about"
+      [attr.aria-label]="'nav.brand_about_aria' | translate"
+    ></a>
+    <svg
+      class="brand-arc"
+      viewBox="0 0 160 110"
+      width="140"
+      height="110"
+      aria-hidden="true"
+    >
+      <path id="brandArcPath" d="M 20 90 A 62 100 0 0 1 140 90" fill="none" />
+      <text class="brand-arc-text">
+        <textPath
+          href="#brandArcPath"
+          startOffset="50%"
+          text-anchor="middle"
+          letter-spacing="-1"
+        >
+          {{ "nav.brand_arc" | translate }}
+        </textPath>
+      </text>
+    </svg>
+    <h1>EE</h1>
+  </div>
+
+  <div class="legal-notice-pos">
+    <p>&copy; Max Mustermann 2025</p>
+    <div class="legal-policy-mobile-container">
+      <a class="legal-a" href="/legal">{{
+        "contact.footer.legal" | translate
+      }}</a>
+      <a class="policy-a" href="/privacy">{{
+        "contact.footer.policy" | translate
+      }}</a>
+    </div>
   </div>
 </section>
