@@ -212,10 +212,18 @@ a,
   gap: 8px;
 }
 
-.email-container:hover,
-.phone-container:hover {
+.emailLink:hover,
+.phoneLink:hover {
   color: var(--accent-weak);
 }
+
+.email-container a,
+.phone-container a {
+  font-family: "Quantico";
+  font-weight: 400;
+  font-size: 18px;
+}
+
 
 .email-container:hover .emailImgHover {
   background: url("/assets/img/icons/contact/eMail_contact_hover.svg");

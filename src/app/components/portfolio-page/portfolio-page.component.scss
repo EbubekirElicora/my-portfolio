@@ -63,6 +63,10 @@ app-legal {
     min-height: auto;
     padding-top: 88px;
   }
+
+    #skills.section {
+    padding-inline: 0;  // Skills selbst kümmert sich um den Rand
+  }
 }
 
 @media (max-width: 400px) {

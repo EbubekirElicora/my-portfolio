@@ -44,22 +44,28 @@
   },
   "why": {
     "headline": "Why me",
-    "intro": "Write some information about yourself that is IT related. Why are you passionate about coding? What is your source of inspiration for improving your programming skills?",
+    "intro": "I enjoy working in IT because clearly structured problems and well-thought-out solutions have always attracted me. Programming gives me the opportunity to implement ideas precisely while staying creative at the same time. What drives me is the desire to become a little better every day — not out of obligation, but out of genuine curiosity. New technologies, clean code patterns and well-executed projects by other developers inspire me to keep sharpening my own skills. It matters to me to work reliably, to truly understand things and to take responsibility for the outcome. I don’t just want to write code, but contribute to making projects stable, understandable and maintainable in the long run.",
     "title": "I am:",
-    "located": "Located in city name",
+    "located": "Located in Herne",
     "remote": "Open to work remote",
     "relocate": "Open to relocate",
     "contact_btn": "Contact me"
   },
   "skills": {
     "headline": "My Skill Set",
-    "intro": "A short introduction of your skills. Highlight your experience of working on different projects using different front-end technologies and emphasise your openness to learning and adapting to new technologies."
+    "intro": "I have worked on different projects where I used modern frontend technologies such as Angular, TypeScript, JavaScript, HTML and CSS. Through these diverse experiences, I learned to develop in a structured, clean and solution-oriented way. At the same time, I also took on backend tasks in several projects — including Python, Django, Flask, SQL and Firebase — which helps me understand applications as a whole. New technologies motivate me, and I adopt them quickly and openly in order to continuously expand my skills and adapt flexibly to new requirements."
   },
   "work": {
+    "mobile": {
+      "intro": "I love developing myself further and trying out new technologies directly in practice. If I can improve something, I do it — without detours. Innovation is not a buzzword for me, but the way I work: finding solutions that are smarter, faster and more stable. I keep myself technically up to date at all times, because standing still is not an option for me."
+    },
     "headline": "My Work",
     "toggle": {
       "more": "Show me more",
       "less": "Show me less"
+    },
+    "skills": {
+      "challangeMe": "Challenge me!"
     },
 
     "project1": {
@@ -104,21 +110,21 @@
     "text-mobile": "Here what my colleagues said about me",
 
     "ref1": {
-      "text": "“Michael is a reliable and friendly person. Works in a structured way and writes clear code. I recommend him as a colleague.”",
-      "author": "James Rugman",
+      "text": "„Ebubekir works reliably, structured and brings creative solutions. Working with him was always professional and pleasant.”",
+      "author": "Mario Hidri",
       "project": "Project Join"
     },
 
     "ref2": {
-      "text": "“He is a trustworthy team player and can cope well with the stress of deadlines. Structured work and clear code.”",
-      "author": "Evelyn Marx",
-      "project": "Project DA Bubble"
+      "text": "„A strong team player who stays calm under pressure. His work was always clean, clear and reliable.”",
+      "author": "Alex Herzen",
+      "project": "Project Pollo Loco"
     },
 
     "ref3": {
-      "text": "“Michael had to develop, format, and deliver content in collaboration with the team members. He is a reliable and friendly person.”",
+      "text": "„Ebubekir takes responsibility and delivers results you can rely on. Both technically and personally, he is a real asset.”",
       "author": "Noah Mueller",
-      "project": "Project Sharkie"
+      "project": "Project DA Bubble"
     }
   },
   "contact": {
@@ -146,7 +152,7 @@
     },
     "info": {
       "lead": "Let us work together.",
-      "muted": "Encourage people to contact you and describe what role you are interested in. Express confidence in your ability to make a meaningful contribution to a team through your expertise and enthusiasm for improving your skills."
+      "muted": "I am happy to receive any message from people who would like to collaborate with a dedicated developer. I am particularly interested in a full-stack role where I can contribute my knowledge and continue to grow at the same time. Through my enthusiasm for technology, my willingness to learn and my commitment to clean solutions, I am confident that I can be a valuable part of a team. If my work appeals to you, feel free to contact me — I look forward to hearing from you."
     },
     "footer": {
       "legal": "Legal notice",

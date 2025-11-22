@@ -98,6 +98,13 @@ textarea::placeholder {
   width: 400px;
 }
 
+.email-container a,
+.phone-container a {
+  font-family: "Quantico";
+  font-weight: 400;
+  font-size: 18px;
+}
+
 .policy a {
   text-decoration: none;
   color: var(--text);
@@ -182,7 +189,7 @@ input[type="checkbox"].privacy-error {
 
 .next-arrow {
   position: absolute;
-  top: 415px;
+  top: 480px;
   left: 308px;
   pointer-events: auto;
   display: block;
@@ -217,7 +224,7 @@ input[type="checkbox"].privacy-error {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding-top: 310px;
+  padding-top: 200px;
   gap: 16px;
 }
 
@@ -335,9 +342,10 @@ a,
   gap: 8px;
 }
 
-.email-container:hover,
-.phone-container:hover {
+.emailLink:hover,
+.phoneLink:hover {
   color: var(--accent-weak);
+  cursor: pointer;
 }
 
 .email-container:hover .emailImgHover {
@@ -353,6 +361,10 @@ a,
 .mobile-arrow,
 .mobile-social {
   display: none;
+}
+
+:host-context(html[lang="en"]) .legal-notice-pos {
+  padding-top: 240px;
 }
 
 @media (max-width: 799px) {
@@ -417,7 +429,7 @@ a,
   }
 
   .legal-notice-pos {
-    padding-top: 0;
+    padding-top: 0 !important;
   }
 
   p,

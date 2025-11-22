@@ -89,6 +89,10 @@ a {
 
 img {
   display: block;
+  -webkit-touch-callout: none;
+  -webkit-user-drag: none;
+  user-select: none;
+
 }
 
 /* Roboto Mono – 400 normal */
@@ -130,7 +134,7 @@ img {
 /* Quantico (keine Variable-Version) – nur die 2 Schnitte, die du brauchst */
 @font-face {
   font-family: "Quantico";
-  src: url("/assets/fonts/quantico-v19-latin-regular.woff2") format("woff2");
+  src: url("assets/fonts/quantico-v19-latin-regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -138,7 +142,7 @@ img {
 
 @font-face {
   font-family: "Quantico";
-  src: url("/assets/fonts/quantico-v19-latin-700.woff2") format("woff2");
+  src: url("assets/fonts/quantico-v19-latin-700.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;

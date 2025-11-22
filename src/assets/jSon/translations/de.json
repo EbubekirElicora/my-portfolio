@@ -44,22 +44,28 @@
   },
   "why": {
     "headline": "Warum ich",
-    "intro": "Schreibe hier Informationen über dich, die mit IT zu tun haben. Warum bist du leidenschaftlich beim Programmieren? Was inspiriert dich, deine Fähigkeiten zu verbessern?",
+    "intro": "Ich arbeite gerne in der IT, weil mich klar strukturierte Probleme und durchdachte Lösungen schon immer angezogen haben. Programmieren gibt mir die Möglichkeit, Ideen präzise umzusetzen und gleichzeitig kreativ zu bleiben.\nWas mich antreibt, ist der Wunsch, jeden Tag ein Stück besser zu werden — nicht aus Pflichtgefühl, sondern aus echter Neugier. Neue Technologien, saubere Code-Patterns und gut gelöste Projekte anderer Entwickler inspirieren mich, meine eigenen Fähigkeiten weiter zu schärfen.\nMir ist wichtig, zuverlässig zu arbeiten, Dinge wirklich zu verstehen und Verantwortung für das Ergebnis zu übernehmen. Ich möchte nicht nur Code schreiben, sondern dazu beitragen, dass Projekte langfristig stabil, verständlich und wartbar sind.",
     "title": "Ich bin:",
-    "located": "Ansässig in Stadtname",
+    "located": "Ansässig in Herne",
     "remote": "Offen für Remote-Arbeit",
     "relocate": "Offen für Umzug",
     "contact_btn": "Kontaktiere mich"
   },
   "skills": {
     "headline": "Meine Fähigkeiten",
-    "intro": "Eine kurze Einführung in deine Fähigkeiten. Betone deine Erfahrung in der Arbeit an verschiedenen Projekten mit unterschiedlichen Frontend-Technologien und deine Offenheit, Neues zu lernen und dich an neue Technologien anzupassen."
+    "intro": "Ich habe an unterschiedlichen Projekten gearbeitet und dabei moderne Frontend-Technologien wie Angular, TypeScript, JavaScript, HTML und CSS eingesetzt. Durch diese vielfältigen Erfahrungen habe ich gelernt, strukturiert, sauber und lösungsorientiert zu entwickeln. Gleichzeitig habe ich in mehreren Projekten auch Backend-Aufgaben übernommen – unter anderem mit Python, Django, Flask, SQL und Firebase – was mir hilft, Anwendungen ganzheitlich zu verstehen. Neue Technologien motivieren mich, und ich eigne sie mir schnell und offen an, um meine Fähigkeiten kontinuierlich zu erweitern und mich flexibel an neue Anforderungen anzupassen."
   },
   "work": {
+    "mobile": {
+      "intro": "Ich liebe es, mich weiterzuentwickeln und neue Technologien direkt in der Praxis auszuprobieren. Wenn ich etwas verbessern kann, mache ich es – ohne Umwege. Innovation ist für mich kein Schlagwort, sondern meine Arbeitsweise: Lösungen finden, die smarter, schneller und stabiler sind. Ich halte mich ständig technisch auf dem neuesten Stand, weil Stillstand für mich keine Option ist."
+    },
     "headline": "Meine Projekte",
     "toggle": {
       "more": "Mehr anzeigen",
       "less": "Weniger anzeigen"
+    },
+    "skills": {
+      "challangeMe": "Fordere mich heraus!"
     },
 
     "project1": {
@@ -105,21 +111,21 @@
     "text-mobile": "Hier ist, was meine Kollegen über mich gesagt haben",
 
     "ref1": {
-      "text": "„Michael ist eine zuverlässige und freundliche Person. Arbeitet strukturiert und schreibt sauberen Code. Ich empfehle ihn als Kollegen.“",
-      "author": "James Rugman",
+      "text": "„Ebubekir arbeitet zuverlässig, strukturiert und bringt kreative Lösungen ein. Die Zusammenarbeit mit ihm war jederzeit professionell und angenehm.“",
+      "author": "Mario Hidri",
       "project": "Projekt Join"
     },
 
     "ref2": {
-      "text": "„Er ist ein vertrauenswürdiger Teamplayer und kann gut mit Termindruck umgehen. Strukturiertes Arbeiten und sauberer Code.“",
-      "author": "Evelyn Marx",
-      "project": "Projekt DA Bubble"
+      "text": "„Ein starker Teamplayer, der auch unter Druck Ruhe bewahrt. Seine Arbeit war stets sauber, klar und zuverlässig.“",
+      "author": "Alex Herzen",
+      "project": "Projekt Pollo Loco"
     },
 
     "ref3": {
-      "text": "„Michael musste Inhalte zusammen mit den Teammitgliedern entwickeln, formatieren und bereitstellen. Er ist eine zuverlässige und freundliche Person.“",
+      "text": "„Ebubekir übernimmt Verantwortung und liefert Ergebnisse, auf die man sich verlassen kann. Technisch wie menschlich eine echte Bereicherung.“",
       "author": "Noah Mueller",
-      "project": "Projekt Sharkie"
+      "project": "Projekt DA Bubble"
     }
   },
   "contact": {
@@ -147,7 +153,7 @@
     },
     "info": {
       "lead": "Lass uns zusammenarbeiten.",
-      "muted": "Ermutige Besucher, dich zu kontaktieren, und beschreibe, welche Rolle dich interessiert. Zeige Selbstvertrauen in deine Fähigkeit, durch dein Wissen und deine Begeisterung einen wertvollen Beitrag zu leisten."
+      "muted": "Ich freue mich über jede Nachricht von Menschen, die mit einem engagierten Entwickler zusammenarbeiten möchten. Besonders interessiere ich mich für eine Rolle im Full-Stack-Bereich, in der ich mein Wissen einbringen und gleichzeitig weiter ausbauen kann. Durch meine Begeisterung für Technik, meine Lernbereitschaft und meinen Anspruch an saubere Lösungen bin ich überzeugt, ein wertvoller Teil eines Teams zu sein. Wenn dich meine Arbeit anspricht, melde dich gern – ich freue mich auf den Austausch."
     },
     "footer": {
       "legal": "Impressum",

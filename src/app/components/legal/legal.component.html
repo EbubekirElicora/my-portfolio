@@ -113,7 +113,9 @@
                 src="assets/img/icons/contact/eMail_contact.svg"
                 alt="E-Mail Icon"
               />
-              <span>E-Mail: max-muster&#64;gmx.de</span>
+              <a class="emailLink" href="mailto:ebubekir.elicora@gmx.de"
+                >E-Mail: ebubekir.elicora&#64;gmx.de</a
+              >
             </div>
           </li>
           <li>
@@ -123,7 +125,9 @@
                 src="assets/img/icons/contact/phone_contact.svg"
                 alt="Telefon Icon"
               />
-              <span>Tel: 0157 123 456 68</span>
+              <a class="phoneLink" href="tel:+491714155340"
+                >Tel: 0171 4155340
+              </a>
             </div>
           </li>
         </ul>
@@ -144,10 +148,10 @@
             <a class="legal-a" href="/legal">{{
               "legal.footer_legal" | translate
             }}</a>
-            <a class="policy-a" href="/privacy">{{
+            <a class="policy-a" href="/legal">{{
               "legal.footer_privacy" | translate
             }}</a>
-            <p>&copy; Max Mustermann 2025</p>
+            <p>&copy; Ebubekir Elicora 2025</p>
           </div>
         </div>
       </section>
@@ -163,12 +167,12 @@
           <img
             class="back-arrow-mobile"
             src="assets/img/icons/arrows/arrow_left.png"
-            alt="Zurück"
+            alt="Nach oben"
             role="button"
             tabindex="0"
-            (click)="goLeft()"
-            (keydown.enter)="goLeft()"
-            (keydown.space)="goLeft()"
+            (click)="scrollToTopMobile()"
+            (keydown.enter)="scrollToTopMobile()"
+            (keydown.space)="scrollToTopMobile()"
           />
         </div>
 
@@ -263,12 +267,12 @@
         </div>
 
         <div class="legal-notice-pos">
-          <p>&copy; Max Mustermann 2025</p>
+          <p>&copy; Ebubekir Elicora 2025</p>
           <div class="legal-policy-mobile-container">
-            <a class="legal-a" href="/legal">{{
+            <a class="legal-a" routerLink="/legal">{{
               "contact.footer.legal" | translate
             }}</a>
-            <a class="policy-a" href="/privacy">{{
+            <a class="policy-a" routerLink="/legal">{{
               "contact.footer.policy" | translate
             }}</a>
           </div>

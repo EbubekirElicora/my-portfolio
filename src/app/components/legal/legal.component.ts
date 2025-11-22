@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SideNavComponent } from '../side-nav/side-nav.component';
 import { TranslationPipe } from '../../shared/translation.pipe';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
+
 
 @Component({
   selector: 'app-legal',
@@ -51,5 +52,14 @@ export class LegalComponent {
       ev.preventDefault();
       this.goLeft();
     }
+  }
+  
+  scrollToTopMobile() {
+    const topSection = document.querySelector('.legal') as HTMLElement | null;
+    topSection?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start', // möglichst weit nach oben
+      inline: 'nearest',
+    });
   }
 }

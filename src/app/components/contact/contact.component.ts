@@ -11,11 +11,13 @@ import { ScrollableSection } from '../../shared/scrollable-section.base';
 import { ScrollService } from '../../services/scroll.service';
 import { TranslationPipe } from '../../shared/translation.pipe';
 import { LanguageService } from '../../services/language.service';
+import { Router, RouterLink } from '@angular/router';
+
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, TranslationPipe],
+  imports: [CommonModule, ReactiveFormsModule, TranslationPipe, RouterLink],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
 })

@@ -40,7 +40,7 @@ header span {
   display: grid;
   grid-template-columns:
     minmax(980px, 1fr) minmax(980px, 1fr) minmax(980px, 1fr)
-    minmax(640px, 1fr);
+    minmax(280px, 1fr);
 }
 
 .card {
@@ -169,7 +169,7 @@ p {
 
 .next-arrow {
   position: absolute;
-  left: 3680px;
+  left: 3332px;
   top: 780px;
   pointer-events: auto;
   cursor: pointer;
