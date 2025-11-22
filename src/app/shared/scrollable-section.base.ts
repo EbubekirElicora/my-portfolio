@@ -1,9 +1,8 @@
-// src/app/shared/scrollable-section.base.ts
 import { ScrollService } from '../services/scroll.service';
 
 export abstract class ScrollableSection {
-  abstract nextSectionId: string;     // Ziel-ID für „weiter“
-  protected backTargetId?: string;    // optional: Ziel für „zurück“
+  abstract nextSectionId: string;
+  protected backTargetId?: string; 
 
   constructor(protected scroll: ScrollService) {}
 

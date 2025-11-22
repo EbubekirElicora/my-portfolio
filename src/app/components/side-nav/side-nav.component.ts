@@ -4,7 +4,6 @@ import { ScrollService } from '../../services/scroll.service';
 import { TranslationPipe } from '../../shared/translation.pipe';
 import { LanguageService } from '../../services/language.service';
 
-
 @Component({
   selector: 'app-side-nav',
   standalone: true,
@@ -19,10 +18,9 @@ export class SideNavComponent {
   @ViewChild('mobileMenu') mobileMenu?: ElementRef<HTMLElement>;
   @ViewChild('burgerBtn') burgerBtn?: ElementRef<HTMLElement>;
 
-constructor(
-  private scroll: ScrollService,
-  private languageService: LanguageService
-) {}
+  constructor(
+    private scroll: ScrollService,
+    private languageService: LanguageService) {}
 
   onNav(sectionId: string) {
     this.scroll.scrollTo(sectionId);
@@ -50,7 +48,7 @@ constructor(
     this.closeMenu();
   }
 
-    setGerman(): void {
+  setGerman(): void {
     this.languageService.setLanguage('de');
   }
 

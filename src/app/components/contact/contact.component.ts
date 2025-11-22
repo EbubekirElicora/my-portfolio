@@ -13,7 +13,6 @@ import { TranslationPipe } from '../../shared/translation.pipe';
 import { LanguageService } from '../../services/language.service';
 import { Router, RouterLink } from '@angular/router';
 
-
 @Component({
   selector: 'app-contact',
   standalone: true,
@@ -35,15 +34,12 @@ export class ContactComponent extends ScrollableSection {
   constructor(
     scroll: ScrollService,
     private fb: FormBuilder,
-    private lang: LanguageService          // ⬅️ NEU
+    private lang: LanguageService
   ) {
     super(scroll);
   }
 
-  /** Nur Buchstaben (inkl. Umlaute), Leerzeichen, ' und - */
   private static namePattern = /^[A-Za-zÄÖÜäöüß'\-\s]+$/;
-
-  /** Mindestens 20 Zeichen */
   private static minChars(min: number) {
     return (control: AbstractControl): ValidationErrors | null => {
       const text = ((control.value || '') as string).trim();
@@ -53,10 +49,7 @@ export class ContactComponent extends ScrollableSection {
     };
   }
 
-  /** simple E-Mail-Regel: irgendwas@irgendwas.tld (>=2 Buchstaben) */
   private static emailPattern = /^[^\s@]+@[^\s@]+\.[A-Za-z]{2,}$/;
-
-  // kleiner Helper für Übersetzungen
   private tr(key: string): string {
     return this.lang.translateSync(key);
   }
@@ -96,7 +89,6 @@ export class ContactComponent extends ScrollableSection {
     ],
   });
 
-  // Bequeme Getter fürs Template
   get nameCtrl() {
     return this.contactForm.get('name')!;
   }
@@ -117,21 +109,26 @@ export class ContactComponent extends ScrollableSection {
     return !!ctrl && ctrl.touched && ctrl.invalid;
   }
 
+  private markFormInvalid() {
+    this.contactForm.markAllAsTouched();
+    this.contactForm.updateValueAndValidity();
+  }
+
+  private async sendForm() {
+    this.success = true;
+    this.contactForm.reset();
+  }
+
   async onSubmit(): Promise<void> {
     this.success = false;
     this.error = '';
-
     if (this.contactForm.invalid) {
-      this.contactForm.markAllAsTouched();
-      this.contactForm.updateValueAndValidity();
+      this.markFormInvalid();
       return;
     }
-
     this.submitting = true;
     try {
-      // hier würdest du senden
-      this.success = true;
-      this.contactForm.reset();
+      await this.sendForm();
     } catch (err: any) {
       this.error = err?.message ?? 'Fehler beim Senden';
     } finally {
@@ -139,7 +136,6 @@ export class ContactComponent extends ScrollableSection {
     }
   }
 
-  // NAME
   onNameFocus() {
     this.nameFocused = true;
   }
@@ -156,13 +152,13 @@ export class ContactComponent extends ScrollableSection {
 
   nameErrorText(): string {
     const c = this.nameCtrl;
-    if (c.hasError('required'))  return this.tr('contact.errors.name_required');
-    if (c.hasError('minlength')) return this.tr('contact.errors.name_minlength');
-    if (c.hasError('pattern'))   return this.tr('contact.errors.name_pattern');
+    if (c.hasError('required')) return this.tr('contact.errors.name_required');
+    if (c.hasError('minlength'))
+      return this.tr('contact.errors.name_minlength');
+    if (c.hasError('pattern')) return this.tr('contact.errors.name_pattern');
     return this.tr('contact.errors.name_required');
   }
 
-  // EMAIL
   onEmailFocus() {
     this.emailFocused = true;
   }
@@ -180,11 +176,10 @@ export class ContactComponent extends ScrollableSection {
   emailErrorText(): string {
     const c = this.emailCtrl;
     if (c.hasError('required')) return this.tr('contact.errors.email_required');
-    if (c.hasError('pattern'))  return this.tr('contact.errors.email_pattern');
+    if (c.hasError('pattern')) return this.tr('contact.errors.email_pattern');
     return this.tr('contact.errors.email_required');
   }
 
-  // MESSAGE
   onMessageFocus() {
     this.messageFocused = true;
   }
@@ -201,19 +196,15 @@ export class ContactComponent extends ScrollableSection {
 
   messageErrorText(): string {
     const c = this.messageCtrl;
-
     if (c.hasError('required')) {
       return this.tr('contact.errors.message_required');
     }
-
     if (c.hasError('minChars')) {
       return this.tr('contact.errors.message_minchars');
     }
-
     return this.tr('contact.errors.message_required');
   }
 
-  // PRIVACY
   showPrivacyError(): boolean {
     const c = this.privacyCtrl;
     return c.touched && c.invalid;

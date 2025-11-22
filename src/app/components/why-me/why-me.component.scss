@@ -38,7 +38,7 @@
   padding-inline-start: 62px;
   margin-block-start: 21px;
   margin-block-end: 0;
-
+  cursor: pointer;
   li {
     display: flex;
     align-items: center;
@@ -46,18 +46,21 @@
     justify-content: space-between;
     gap: 8px;
   }
-
   ul {
     padding-inline-start: 58px;
+  }
+  p {
+    margin-block-end: 0;
+  }
+  .location-icon:hover,
+  .remote-icon:hover,
+  .relocation-icon:hover {
+    color: var(--accent);
   }
 }
 
 p {
   margin-block-start: 0;
-}
-
-.badges p {
-  margin-block-end: 0;
 }
 
 .next-arrow {
@@ -67,28 +70,21 @@ p {
   pointer-events: auto;
   cursor: pointer;
   z-index: 1;
-}
-
-.next-arrow:hover,
-.next-arrow:focus-visible {
-  filter: drop-shadow(0 0 12px rgba(181, 233, 59, 0.9));
-}
-
-.next-arrow:focus-visible {
-  outline: 2px solid rgba(181, 233, 59, 1);
-  outline-offset: 4px;
+  transition: filter 100ms ease, transform 100ms ease;
+  &:hover,
+  &:focus-visible {
+    filter: drop-shadow(0 0 12px rgba(181, 233, 59, 0.9));
+  }
+  &:focus-visible {
+    outline: 2px solid rgba(181, 233, 59, 1);
+    outline-offset: 4px;
+  }
 }
 
 .btn-pos {
   display: flex;
   justify-content: flex-end;
   padding-top: 52px;
-}
-
-.badges .location-icon:hover,
-.badges .remote-icon:hover,
-.badges .relocation-icon:hover {
-  color: var(--accent);
 }
 
 .hover {
@@ -137,10 +133,12 @@ p {
     margin-block-start: 0;
     padding-top: 0;
   }
+
   .badges {
     padding-inline-start: 0;
     flex-direction: column;
   }
+
   .why-text {
     height: auto;
   }

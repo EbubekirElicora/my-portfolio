@@ -33,7 +33,6 @@ import { PrivacyComponent } from '../../privacy/privacy.component';
     ReferencesComponent,
     ContactComponent,
     LegalComponent,
-    PrivacyComponent,
   ],
   templateUrl: './portfolio-page.component.html',
   styleUrls: ['./portfolio-page.component.scss'],

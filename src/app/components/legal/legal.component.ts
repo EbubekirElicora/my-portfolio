@@ -4,7 +4,6 @@ import { SideNavComponent } from '../side-nav/side-nav.component';
 import { TranslationPipe } from '../../shared/translation.pipe';
 import { Router, RouterLink } from '@angular/router';
 
-
 @Component({
   selector: 'app-legal',
   standalone: true,
@@ -15,7 +14,7 @@ import { Router, RouterLink } from '@angular/router';
 export class LegalComponent {
   isRight = false;
 
-  constructor(private router: Router) {} // ⬅ Router injizieren
+  constructor(private router: Router) {}
 
   goRight() {
     this.isRight = true;
@@ -53,12 +52,12 @@ export class LegalComponent {
       this.goLeft();
     }
   }
-  
+
   scrollToTopMobile() {
     const topSection = document.querySelector('.legal') as HTMLElement | null;
     topSection?.scrollIntoView({
       behavior: 'smooth',
-      block: 'start', // möglichst weit nach oben
+      block: 'start',
       inline: 'nearest',
     });
   }
