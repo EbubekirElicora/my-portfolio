@@ -13,6 +13,7 @@ import { Router, RouterLink } from '@angular/router';
 })
 export class LegalComponent {
   isRight = false;
+  today = new Date();
 
   constructor(private router: Router) {}
 

@@ -8,7 +8,6 @@ import {
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-
 import { SideNavComponent } from '../side-nav/side-nav.component';
 import { WhyMeComponent } from '../why-me/why-me.component';
 import { SkillsComponent } from '../skills/skills.component';
@@ -17,7 +16,6 @@ import { ReferencesComponent } from '../references/references.component';
 import { ContactComponent } from '../contact/contact.component';
 import { LegalComponent } from '../legal/legal.component';
 import { AboutComponent } from '../about/about.component';
-import { PrivacyComponent } from '../../privacy/privacy.component';
 
 @Component({
   selector: 'app-portfolio-page',
@@ -41,13 +39,22 @@ export class PortfolioPageComponent implements AfterViewInit, OnDestroy {
   @ViewChild('sectionsContainer', { static: true })
   sectionsContainer!: ElementRef<HTMLDivElement>;
   private removeListeners: Array<() => void> = [];
-
   constructor(private host: ElementRef<HTMLElement>, private r: Renderer2) {}
 
   ngAfterViewInit(): void {
     const container = this.sectionsContainer.nativeElement;
+    this.initWheelScroll(container);
+    this.initNavLinks(container);
+    this.initArrows(container);
+    this.initScrollSync(container);
+  }
 
-    // Mausrad -> horizontal scrollen
+  ngOnDestroy(): void {
+    this.removeListeners.forEach((off) => off());
+    this.removeListeners = [];
+  }
+
+  private initWheelScroll(container: HTMLDivElement): void {
     const onWheel = (ev: WheelEvent) => {
       ev.preventDefault();
       container.scrollBy({ left: ev.deltaY, behavior: 'auto' });
@@ -56,31 +63,27 @@ export class PortfolioPageComponent implements AfterViewInit, OnDestroy {
     this.removeListeners.push(() =>
       container.removeEventListener('wheel', onWheel)
     );
+  }
 
-    // SideNav-Verlinkungen (anchors mit .nav-link)
+  private initNavLinks(container: HTMLDivElement): void {
     const navLinks = this.host.nativeElement.querySelectorAll(
       '.side-nav .nav-link'
     ) as NodeListOf<HTMLAnchorElement>;
-    navLinks.forEach((a) => {
-      const off = this.r.listen(a, 'click', (e: Event) => {
-        e.preventDefault();
-        const id = a.getAttribute('href')?.slice(1);
+    navLinks.forEach((link) => {
+      const off = this.r.listen(link, 'click', (event: Event) => {
+        event.preventDefault();
+        const href = link.getAttribute('href');
+        if (!href) return;
+        const id = href.slice(1);
         if (!id) return;
-        const target = this.host.nativeElement.querySelector<HTMLElement>(
-          '#' + id
-        );
-        if (target)
-          container.scrollTo({
-            left: target.offsetLeft,
-            top: 0,
-            behavior: 'smooth',
-          });
-        this.updateActive(a.getAttribute('href')!);
+        this.scrollToSectionById(id, container);
+        this.updateActive(href); 
       });
       this.removeListeners.push(off);
     });
+  }
 
-    // Pfeile .next-arrow data-target="#id"
+  private initArrows(container: HTMLDivElement): void {
     const arrows = this.host.nativeElement.querySelectorAll(
       '.next-arrow'
     ) as NodeListOf<HTMLElement>;
@@ -88,56 +91,71 @@ export class PortfolioPageComponent implements AfterViewInit, OnDestroy {
       const off = this.r.listen(btn, 'click', () => {
         const id = btn.getAttribute('data-target')?.slice(1);
         if (!id) return;
-        const target = this.host.nativeElement.querySelector<HTMLElement>(
-          '#' + id
-        );
-        if (target)
-          container.scrollTo({
-            left: target.offsetLeft,
-            top: 0,
-            behavior: 'smooth',
-          });
+        this.scrollToSectionById(id, container);
       });
       this.removeListeners.push(off);
     });
+  }
 
-    // aktiver Navpunkt beim Scrollen
-    const onScroll = () => this.syncActiveLink();
+  private initScrollSync(container: HTMLDivElement): void {
+    const onScroll = () => this.syncActiveLink(container.scrollLeft);
     container.addEventListener('scroll', onScroll);
     this.removeListeners.push(() =>
       container.removeEventListener('scroll', onScroll)
     );
   }
 
-  ngOnDestroy(): void {
-    this.removeListeners.forEach((off) => off());
-    this.removeListeners = [];
+  private scrollToSectionById(id: string, container: HTMLDivElement): void {
+    const target = this.getSectionById(id);
+    if (!target) return;
+    container.scrollTo({
+      left: target.offsetLeft,
+      top: 0,
+      behavior: 'smooth',
+    });
   }
 
-  private syncActiveLink() {
-    const container = this.sectionsContainer.nativeElement;
-    const sections = Array.from(
+  private getSectionById(id: string): HTMLElement | null {
+    return this.host.nativeElement.querySelector<HTMLElement>('#' + id);
+  }
+
+  private getSections(): HTMLElement[] {
+    return Array.from(
       this.host.nativeElement.querySelectorAll<HTMLElement>('.section')
     );
-    const x = container.scrollLeft;
-    let bestId = sections[0]?.id;
-    let best = Number.POSITIVE_INFINITY;
-    for (const s of sections) {
-      const d = Math.abs(s.offsetLeft - x);
-      if (d < best) {
-        best = d;
-        bestId = s.id;
-      }
-    }
-    if (bestId) this.updateActive('#' + bestId);
   }
 
-  private updateActive(hash: string) {
+  private syncActiveLink(scrollLeft: number): void {
+    const sections = this.getSections();
+    const bestId = this.findClosestSectionId(sections, scrollLeft);
+    if (bestId) {
+      this.updateActive('#' + bestId);
+    }
+  }
+
+  private findClosestSectionId(
+    sections: HTMLElement[],
+    scrollLeft: number
+  ): string | undefined {
+    let bestId: string | undefined = sections[0]?.id;
+    let bestDistance = Number.POSITIVE_INFINITY;
+    for (const section of sections) {
+      const distance = Math.abs(section.offsetLeft - scrollLeft);
+      if (distance < bestDistance) {
+        bestDistance = distance;
+        bestId = section.id;
+      }
+    }
+    return bestId;
+  }
+
+  private updateActive(hash: string): void {
     const links = this.host.nativeElement.querySelectorAll(
       '.side-nav .nav-link'
     ) as NodeListOf<HTMLAnchorElement>;
-    links.forEach((a) =>
-      a.classList.toggle('active', a.getAttribute('href') === hash)
-    );
+    links.forEach((link) => {
+      const isActive = link.getAttribute('href') === hash;
+      link.classList.toggle('active', isActive);
+    });
   }
 }

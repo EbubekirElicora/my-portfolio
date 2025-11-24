@@ -37,10 +37,6 @@ export class ReferencesComponent
 
   ngAfterViewInit(): void {
     const el = this.scrollContainer.nativeElement;
-    console.log('refs-scroll sizes:', {
-      clientWidth: el.clientWidth,
-      scrollWidth: el.scrollWidth,
-    });
   }
 
   onRefsScroll(event: Event): void {

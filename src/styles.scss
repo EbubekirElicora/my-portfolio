@@ -54,6 +54,7 @@ p {
 a {
   text-decoration: none;
   line-height: 1.2;
+  cursor: pointer;
 }
 
 .btn {
@@ -95,7 +96,6 @@ img {
 
 }
 
-/* Roboto Mono – 400 normal */
 @font-face {
   font-family: "Roboto Mono";
   src: url("assets/fonts/roboto-mono-v31-latin-regular.woff2") format("woff2");
@@ -104,7 +104,6 @@ img {
   font-display: swap;
 }
 
-/* Roboto Mono – 700 normal */
 @font-face {
   font-family: "Roboto Mono";
   src: url("assets/fonts/roboto-mono-v31-latin-700.woff2") format("woff2");
@@ -113,7 +112,6 @@ img {
   font-display: swap;
 }
 
-/* Roboto Mono – 400 italic */
 @font-face {
   font-family: "Roboto Mono";
   src: url("assets/fonts/roboto-mono-v31-latin-italic.woff2") format("woff2");
@@ -122,7 +120,6 @@ img {
   font-display: swap;
 }
 
-/* Roboto Mono – 700 italic */
 @font-face {
   font-family: "Roboto Mono";
   src: url("assets/fonts/roboto-mono-v31-latin-700italic.woff2") format("woff2");
@@ -131,7 +128,6 @@ img {
   font-display: swap;
 }
 
-/* Quantico (keine Variable-Version) – nur die 2 Schnitte, die du brauchst */
 @font-face {
   font-family: "Quantico";
   src: url("assets/fonts/quantico-v19-latin-regular.woff2") format("woff2");

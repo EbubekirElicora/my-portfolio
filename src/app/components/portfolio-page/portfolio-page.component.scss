@@ -14,6 +14,13 @@
   scroll-behavior: smooth;
   background: transparent;
   z-index: 10;
+
+  @media (max-width: 799px) {
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100vh;
+  }
 }
 
 .section {
@@ -22,6 +29,14 @@
   scroll-snap-align: start;
   position: relative;
   background: transparent;
+
+  @media (max-width: 799px) {
+    flex: 0 0 auto;
+    height: auto;
+    min-height: 100vh;
+    scroll-snap-align: start;
+    padding-inline: 20px;
+  }
 }
 
 app-legal {
@@ -31,21 +46,6 @@ app-legal {
 }
 
 @media (max-width: 799px) {
-  .sections {
-    flex-direction: column;
-    overflow-x: hidden;
-    overflow-y: auto;
-    height: 100vh;
-  }
-
-  .section {
-    flex: 0 0 auto;
-    height: auto;
-    min-height: 100vh;
-    scroll-snap-align: start;
-    padding-inline: 20px;
-  }
-
   .side-nav {
     width: 100%;
   }
@@ -64,8 +64,8 @@ app-legal {
     padding-top: 88px;
   }
 
-    #skills.section {
-    padding-inline: 0;  // Skills selbst kümmert sich um den Rand
+  #skills.section {
+    padding-inline: 0;
   }
 }
 

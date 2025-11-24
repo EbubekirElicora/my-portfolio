@@ -9,11 +9,11 @@
   "legal": {
     "title": "Impressum",
     "imprint": "Impressum",
-    "names_list": "[Liste der Studierenden]",
-    "address": "[Adresse des JOIN-Betreibers – z. B. eine/r der Studierenden]",
-    "postcode_city": "[PLZ und Ort]",
-    "exploring": "Exploring the Board",
-    "email_label": "E-Mail: [E-Mail-Adresse]",
+    "names_list": "Ebubekir Elicora",
+    "address": "Kolberger Str. 4",
+    "postcode_city": "44649 Herne",
+    "exploring": "Erkundung der Tafel",
+    "email_label": "ebubekir.elicora@gmx.de",
     "acceptance": "Nutzungsbedingungen",
     "acceptance_text": "Durch den Zugriff auf und die Nutzung von Portfolio (Produkt) erkennen Sie die folgenden Bedingungen sowie etwaige Richtlinien oder Ergänzungen an. Wir, die aufgeführten Studierenden, können die Bedingungen von Zeit zu Zeit ohne Ankündigung ändern.",
     "scope": "Geltungsbereich und Eigentum am Produkt",
@@ -27,8 +27,8 @@
     "disclaimer_text": "Portfolio wird „wie besehen“ ohne jegliche ausdrückliche oder stillschweigende Gewährleistung bereitgestellt, einschließlich, aber nicht beschränkt auf die stillschweigenden Gewährleistungen der Marktgängigkeit, Eignung für einen bestimmten Zweck und Nichtverletzung von Rechten Dritter. Eine Haftung der aufgeführten Studierenden oder der Developer Akademie GmbH für direkte oder indirekte Schäden ist ausgeschlossen, soweit gesetzlich zulässig.",
     "indemnity": "Freistellung",
     "indemnity_text": "Sie stellen uns, die aufgeführten Studierenden, die Developer Akademie GmbH sowie unsere Partner und Mitarbeitenden von allen Ansprüchen frei, die aus Ihrer Nutzung von Portfolio oder der Verletzung dieses Impressums entstehen.",
-    "contact_line": "Bei Fragen oder Hinweisen kontaktieren Sie uns unter [Kontakt-E-Mail].",
-    "date": "Datum: 04. Juli 2025",
+    "contact_line": "Bei Fragen oder Hinweisen kontaktieren Sie uns unter ebubekir.elicora@gmx.de.",
+    "date": "Datum: {{date}}",
     "footer_legal": "Impressum",
     "footer_privacy": "Datenschutz"
   },
@@ -44,7 +44,7 @@
   },
   "why": {
     "headline": "Warum ich",
-    "intro": "Ich arbeite gerne in der IT, weil mich klar strukturierte Probleme und durchdachte Lösungen schon immer angezogen haben. Programmieren gibt mir die Möglichkeit, Ideen präzise umzusetzen und gleichzeitig kreativ zu bleiben.\nWas mich antreibt, ist der Wunsch, jeden Tag ein Stück besser zu werden — nicht aus Pflichtgefühl, sondern aus echter Neugier. Neue Technologien, saubere Code-Patterns und gut gelöste Projekte anderer Entwickler inspirieren mich, meine eigenen Fähigkeiten weiter zu schärfen.\nMir ist wichtig, zuverlässig zu arbeiten, Dinge wirklich zu verstehen und Verantwortung für das Ergebnis zu übernehmen. Ich möchte nicht nur Code schreiben, sondern dazu beitragen, dass Projekte langfristig stabil, verständlich und wartbar sind.",
+    "intro": "Ich arbeite gerne in der IT, weil mich klar strukturierte Probleme und durchdachte Lösungen schon immer angezogen haben. Programmieren gibt mir die Möglichkeit, Ideen präzise umzusetzen und gleichzeitig kreativ zu bleiben.\nWas mich antreibt, ist der Wunsch, jeden Tag ein Stück besser zu werden, nicht aus Pflichtgefühl, sondern aus echter Neugier. Neue Technologien, saubere Code-Patterns und gut gelöste Projekte anderer Entwickler inspirieren mich, meine eigenen Fähigkeiten weiter zu schärfen.\nMir ist wichtig, zuverlässig zu arbeiten, Dinge wirklich zu verstehen und Verantwortung für das Ergebnis zu übernehmen. Ich möchte nicht nur Code schreiben, sondern dazu beitragen, dass Projekte langfristig stabil, verständlich und wartbar sind.",
     "title": "Ich bin:",
     "located": "Ansässig in Herne",
     "remote": "Offen für Remote-Arbeit",
@@ -53,7 +53,7 @@
   },
   "skills": {
     "headline": "Meine Fähigkeiten",
-    "intro": "Ich habe an unterschiedlichen Projekten gearbeitet und dabei moderne Frontend-Technologien wie Angular, TypeScript, JavaScript, HTML und CSS eingesetzt. Durch diese vielfältigen Erfahrungen habe ich gelernt, strukturiert, sauber und lösungsorientiert zu entwickeln. Gleichzeitig habe ich in mehreren Projekten auch Backend-Aufgaben übernommen – unter anderem mit Python, Django, Flask, SQL und Firebase – was mir hilft, Anwendungen ganzheitlich zu verstehen. Neue Technologien motivieren mich, und ich eigne sie mir schnell und offen an, um meine Fähigkeiten kontinuierlich zu erweitern und mich flexibel an neue Anforderungen anzupassen."
+    "intro": "Ich habe an unterschiedlichen Projekten gearbeitet und dabei moderne Frontend-Technologien wie Angular, TypeScript, JavaScript, HTML und CSS eingesetzt. Durch diese vielfältigen Erfahrungen habe ich gelernt, strukturiert, sauber und lösungsorientiert zu entwickeln. Gleichzeitig habe ich in mehreren Projekten auch Backend-Aufgaben übernommen, unter anderem mit Python, Django, Flask, SQL und Firebase, was mir hilft, Anwendungen ganzheitlich zu verstehen. Neue Technologien motivieren mich, und ich eigne sie mir schnell und offen an, um meine Fähigkeiten kontinuierlich zu erweitern und mich flexibel an neue Anforderungen anzupassen."
   },
   "work": {
     "mobile": {
@@ -75,7 +75,7 @@
       "tech": "Technologien, die ich verwendet habe",
       "tech_list": "Angular, TypeScript, HTML, CSS, Firebase",
       "team": "Meine Teamarbeitserfahrung",
-      "team_text": "Vielleicht hast du eine bestimmte Technologie zum ersten Mal verwendet? Hast du gelernt, deinen Code sauber zu halten oder Komponenten besser zu organisieren?"
+      "team_text": "Die Teamarbeit an Join hat mir gezeigt, wie man effektiv in einem echten Entwicklungsprozess zusammenarbeitet. Wir haben Aufgaben wie Drag-and-Drop-Funktionen, User-Zuordnung und die Kanban-Logik untereinander aufgeteilt, was klare Kommunikation und eine saubere Struktur nötig machte. Durch regelmäßige Git-Commits, Pull Requests und Code-Reviews habe ich gelernt, eine gemeinsame TypeScript-Codebasis sauber und wartbar zu halten. Ich habe geübt, Merge-Konflikte zu lösen, Komponenten wiederverwendbar zu gestalten und Logik so zu schreiben, dass sie für das gesamte Team verständlich bleibt. Das Projekt hat mich in puncto Teamwork, Code-Organisation und professioneller Zusammenarbeit deutlich weitergebracht."
     },
 
     "project2": {
@@ -85,7 +85,7 @@
       "tech": "Technologien, die ich verwendet habe",
       "tech_list": "JavaScript, HTML, CSS",
       "learned": "Was ich gelernt habe",
-      "learned_text": "Vielleicht hast du eine Technologie zum ersten Mal genutzt? Hast du mehr darüber gelernt, deinen Code sauber zu halten oder Projekte besser zu strukturieren?"
+      "learned_text": "Durch die Arbeit an El Pollo Loco habe ich meine JavaScript-Kenntnisse auf ein neues Level gebracht. Ich habe eine vollständige Spielarchitektur selbst aufgebaut, mit objektorientiertem Programmieren, sauber getrennten Klassen und einem klar strukturierten Update-Zyklus. Dabei habe ich gelernt, Komponenten logisch zu trennen und den Game-Loop stabil zu halten, auch wenn das Projekt komplexer wurde. Dieses Projekt hat meine Fähigkeit geschärft, systematisch zu denken, wartbaren Code zu schreiben und Ideen in ein funktionierendes Produkt zu verwandeln, genau die Fähigkeiten, die ich in echten Entwickler-Teams einbringen kann."
     },
 
     "project3": {
@@ -95,7 +95,7 @@
       "tech": "Technologien, die ich verwendet habe",
       "tech_list": "Angular, TypeScript, HTML, CSS, Firebase",
       "team": "Meine Teamarbeitserfahrung",
-      "team_text": "Wie viele Personen waren im Team und was war deine Rolle? Beschreibe deine Aufgaben in 1–2 Sätzen. Gute Zusammenarbeit sollte erwähnt werden."
+      "team_text": "Fortsetzung folgt..."
     },
 
     "project4": {
@@ -153,7 +153,7 @@
     },
     "info": {
       "lead": "Lass uns zusammenarbeiten.",
-      "muted": "Ich freue mich über jede Nachricht von Menschen, die mit einem engagierten Entwickler zusammenarbeiten möchten. Besonders interessiere ich mich für eine Rolle im Full-Stack-Bereich, in der ich mein Wissen einbringen und gleichzeitig weiter ausbauen kann. Durch meine Begeisterung für Technik, meine Lernbereitschaft und meinen Anspruch an saubere Lösungen bin ich überzeugt, ein wertvoller Teil eines Teams zu sein. Wenn dich meine Arbeit anspricht, melde dich gern – ich freue mich auf den Austausch."
+      "muted": "Ich freue mich über jede Nachricht von Menschen, die mit einem engagierten Entwickler zusammenarbeiten möchten. Besonders interessiere ich mich für eine Rolle im Full-Stack-Bereich, in der ich mein Wissen einbringen und gleichzeitig weiter ausbauen kann. Durch meine Begeisterung für Technik, meine Lernbereitschaft und meinen Anspruch an saubere Lösungen bin ich überzeugt, ein wertvoller Teil eines Teams zu sein. Wenn dich meine Arbeit anspricht, melde dich gern, ich freue mich auf den Austausch."
     },
     "footer": {
       "legal": "Impressum",

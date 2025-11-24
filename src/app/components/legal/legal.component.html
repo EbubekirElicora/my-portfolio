@@ -99,7 +99,10 @@
           </div>
           <p>
             {{ "legal.contact_line" | translate }}<br /><br />
-            {{ "legal.date" | translate }}
+            {{
+              "legal.date"
+                | translate : { date: (today | date : "dd. MMMM yyyy") }
+            }}
           </p>
         </div>
       </div>

@@ -64,7 +64,7 @@ input:-webkit-autofill,
 input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0 40px transparent inset;
+  -webkit-box-shadow: 0 0 0 1000px var(--bg) inset;
   -webkit-text-fill-color: var(--text);
   transition: background-color 5000s ease-in-out 0s;
 }
@@ -437,8 +437,8 @@ a,
   }
 
   p,
-  .email-container span,
-  .phone-container span {
+  .email-container a,
+  .phone-container a {
     font-size: 16px !important;
   }
 

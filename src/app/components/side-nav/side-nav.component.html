@@ -26,7 +26,6 @@
     </svg>
     <h1>EE</h1>
   </div>
-
   <a
     class="nav-link"
     href="#why-me"
@@ -48,7 +47,6 @@
   <a class="nav-link" href="#contact" (click)="onNav('contact')">
     {{ "nav.contact" | translate }}
   </a>
-
   <button
     #burgerBtn
     class="burger-btn"
@@ -69,14 +67,12 @@
   >
     <img src="assets/img/icons/burger_menu/burgerMenu_close.svg" alt="" />
   </button>
-
   <a
     class="mobile-menu__link"
     href="#why-me"
     (click)="onNav('why-me')"
     [innerHTML]="'nav.why_me' | translate"
   ></a>
-
   <a
     class="mobile-menu__link"
     href="#skills"
@@ -89,7 +85,6 @@
     (click)="onNav('my-work')"
     [innerHTML]="'nav.my_work' | translate"
   ></a>
-
   <a
     class="mobile-menu__link"
     href="#contact"
@@ -97,7 +92,6 @@
     [innerHTML]="'nav.contact_mobile' | translate"
   >
   </a>
-
   <div class="mobile-menu__langs">
     <a
       class="de"

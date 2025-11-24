@@ -9,11 +9,11 @@
   "legal": {
     "title": "Legal Notice",
     "imprint": "Imprint",
-    "names_list": "[Student Names List]",
-    "address": "[Address of the JOIN operator – e.g. one of the students]",
-    "postcode_city": "[Postcode and city]",
+    "names_list": "Ebubekir Elicora",
+    "address": "Kolberger Str. 4",
+    "postcode_city": "44649 Herne",
     "exploring": "Exploring the Board",
-    "email_label": "Email: [Email]",
+    "email_label": "ebubekir.elicora@gmx.de",
     "acceptance": "Acceptance of terms",
     "acceptance_text": "By accessing and using Portfolio (Product), you acknowledge and agree to the following terms and conditions, and any policies or amendments that may be presented to you from time to time. We, the listed students, may update or change the terms and conditions without notice.",
     "scope": "Scope and ownership of the product",
@@ -27,8 +27,8 @@
     "disclaimer_text": "Portfolio is provided “as is” without any warranty of any kind, whether express or implied, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event shall we, the listed students, or Developer Akademie GmbH be liable for any direct or indirect damages to the extent permitted by law.",
     "indemnity": "Indemnity",
     "indemnity_text": "You agree to indemnify, defend, and hold harmless us, the listed students, Developer Akademie GmbH, and our affiliates and employees from any claims arising out of your use of Portfolio or your breach of this Legal Notice.",
-    "contact_line": "For any questions or notices, please contact us at [contact email].",
-    "date": "Date: July 04, 2025",
+    "contact_line": "For any questions or notices, please contact us at ebubekir.elicora@gmx.de.",
+    "date": "Date: {{date}}",
     "footer_legal": "Legal notice",
     "footer_privacy": "Privacy policy"
   },
@@ -44,7 +44,7 @@
   },
   "why": {
     "headline": "Why me",
-    "intro": "I enjoy working in IT because clearly structured problems and well-thought-out solutions have always attracted me. Programming gives me the opportunity to implement ideas precisely while staying creative at the same time. What drives me is the desire to become a little better every day — not out of obligation, but out of genuine curiosity. New technologies, clean code patterns and well-executed projects by other developers inspire me to keep sharpening my own skills. It matters to me to work reliably, to truly understand things and to take responsibility for the outcome. I don’t just want to write code, but contribute to making projects stable, understandable and maintainable in the long run.",
+    "intro": "I enjoy working in IT because clearly structured problems and well-thought-out solutions have always attracted me. Programming gives me the opportunity to implement ideas precisely while staying creative at the same time. What drives me is the desire to become a little better every day, not out of obligation, but out of genuine curiosity. New technologies, clean code patterns and well-executed projects by other developers inspire me to keep sharpening my own skills. It matters to me to work reliably, to truly understand things and to take responsibility for the outcome. I don’t just want to write code, but contribute to making projects stable, understandable and maintainable in the long run.",
     "title": "I am:",
     "located": "Located in Herne",
     "remote": "Open to work remote",
@@ -53,7 +53,7 @@
   },
   "skills": {
     "headline": "My Skill Set",
-    "intro": "I have worked on different projects where I used modern frontend technologies such as Angular, TypeScript, JavaScript, HTML and CSS. Through these diverse experiences, I learned to develop in a structured, clean and solution-oriented way. At the same time, I also took on backend tasks in several projects — including Python, Django, Flask, SQL and Firebase — which helps me understand applications as a whole. New technologies motivate me, and I adopt them quickly and openly in order to continuously expand my skills and adapt flexibly to new requirements."
+    "intro": "I have worked on different projects where I used modern frontend technologies such as Angular, TypeScript, JavaScript, HTML and CSS. Through these diverse experiences, I learned to develop in a structured, clean and solution-oriented way. At the same time, I also took on backend tasks in several projects, including Python, Django, Flask, SQL and Firebase, which helps me understand applications as a whole. New technologies motivate me, and I adopt them quickly and openly in order to continuously expand my skills and adapt flexibly to new requirements."
   },
   "work": {
     "mobile": {
@@ -75,7 +75,7 @@
       "tech": "Technologies I have used",
       "tech_list": "Angular, TypeScript, HTML, CSS, Firebase",
       "team": "My team work experience",
-      "team_text": "Maybe you used a certain technology for the first time? Have you learnt more about how to keep your code clean or how to organise the components in your projects?"
+      "team_text": "Working on Join in a team environment taught me how to collaborate efficiently in a real development workflow. We split responsibilities for features like drag-and-drop tasks, user assignment and the Kanban board logic, which required clean communication and aligned structure. Through regular Git commits, pull requests and code reviews I learned how to keep a shared TypeScript codebase maintainable. The project strengthened my ability to solve merge conflicts, organize reusable components and write logic that stays understandable for the whole team. It gave me hands-on experience with professional teamwork, shared ownership and building features that integrate smoothly with others."
     },
 
     "project2": {
@@ -85,7 +85,7 @@
       "tech": "Technologies I have used",
       "tech_list": "JavaScript, HTML, CSS",
       "learned": "What I have learned",
-      "learned_text": "Maybe you used a certain technology for the first time? Have you learnt more about how to keep your code clean or how to organise the components in your projects?"
+      "learned_text": "Working on El Pollo Loco helped me grow far beyond basic JavaScript skills. I built a complete game architecture from scratch, using object-oriented programming, class-based modules and a structured update cycle. I learned how to design clean components, separate responsibilities clearly and keep the game loop stable even as the project became more complex. This project strengthened my ability to think in systems, write maintainable code and turn ideas into a fully working digital product, skills I can apply directly in real development teams."
     },
 
     "project3": {
@@ -95,7 +95,7 @@
       "tech": "Technologies I have used",
       "tech_list": "Angular, TypeScript, HTML, CSS, Firebase",
       "team": "My team work experience",
-      "team_text": "How many people were in the team and what was your role? Describe your tasks in 1-2 sentences. It is nice to mention good teamwork and cooperation."
+      "team_text": "Sequel follows..."
     },
 
     "project4": {
@@ -152,7 +152,7 @@
     },
     "info": {
       "lead": "Let us work together.",
-      "muted": "I am happy to receive any message from people who would like to collaborate with a dedicated developer. I am particularly interested in a full-stack role where I can contribute my knowledge and continue to grow at the same time. Through my enthusiasm for technology, my willingness to learn and my commitment to clean solutions, I am confident that I can be a valuable part of a team. If my work appeals to you, feel free to contact me — I look forward to hearing from you."
+      "muted": "I am happy to receive any message from people who would like to collaborate with a dedicated developer. I am particularly interested in a full-stack role where I can contribute my knowledge and continue to grow at the same time. Through my enthusiasm for technology, my willingness to learn and my commitment to clean solutions, I am confident that I can be a valuable part of a team. If my work appeals to you, feel free to contact me, i look forward to hearing from you."
     },
     "footer": {
       "legal": "Legal notice",

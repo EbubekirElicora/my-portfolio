@@ -21,10 +21,18 @@ export class TranslationPipe implements PipeTransform, OnDestroy {
     });
   }
 
-  transform(key: string): string {
-    const cacheKey = `${this.currentLang}:${key}`;
+  transform(key: string, params?: Record<string, any>): string {
+    const paramsKey = params ? JSON.stringify(params) : '';
+    const cacheKey = `${this.currentLang}:${key}:${paramsKey}`;
     if (!this.cache.has(cacheKey)) {
-      this.cache.set(cacheKey, this.lang.translateSync(key));
+      let value = this.lang.translateSync(key);
+      if (params) {
+        for (const [name, val] of Object.entries(params)) {
+          const pattern = new RegExp(`{{\\s*${name}\\s*}}`, 'g');
+          value = value.replace(pattern, String(val));
+        }
+      }
+      this.cache.set(cacheKey, value);
     }
     return this.cache.get(cacheKey)!;
   }
