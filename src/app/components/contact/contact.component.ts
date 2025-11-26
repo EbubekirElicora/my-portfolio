@@ -11,12 +11,41 @@ import { ScrollableSection } from '../../shared/scrollable-section.base';
 import { ScrollService } from '../../services/scroll.service';
 import { TranslationPipe } from '../../shared/translation.pipe';
 import { LanguageService } from '../../services/language.service';
-import { Router, RouterLink } from '@angular/router';
+import { RouterLink } from '@angular/router';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
+const NAME_PATTERN = /^[A-Za-zÄÖÜäöüß'\-\s]+$/;
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[A-Za-z]{2,}$/;
+const NAME_VALIDATORS = [
+  Validators.required,
+  Validators.minLength(5),
+  Validators.pattern(NAME_PATTERN),
+];
+const EMAIL_VALIDATORS = [
+  Validators.required,
+  Validators.pattern(EMAIL_PATTERN),
+];
+const MESSAGE_VALIDATORS = [Validators.required, minChars(20)];
+
+function minChars(min: number) {
+  return (control: AbstractControl): ValidationErrors | null => {
+    const text = ((control.value || '') as string).trim();
+    return text.length >= min
+      ? null
+      : { minChars: { required: min, actual: text.length } };
+  };
+}
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, TranslationPipe, RouterLink],
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    TranslationPipe,
+    RouterLink,
+    HttpClientModule,
+  ],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
 })
@@ -29,65 +58,44 @@ export class ContactComponent extends ScrollableSection {
   nameFocused = false;
   emailFocused = false;
   success = false;
+  mailTest = false;
   error = '';
+
+  private readonly mailConfig = {
+    endPoint: '/sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: { 'Content-Type': 'text/plain' as const },
+      responseType: 'text' as const,
+    },
+  };
 
   constructor(
     scroll: ScrollService,
     private fb: FormBuilder,
-    private lang: LanguageService
+    private lang: LanguageService,
+    private http: HttpClient
   ) {
     super(scroll);
   }
 
-  private static namePattern = /^[A-Za-zÄÖÜäöüß'\-\s]+$/;
-  private static minChars(min: number) {
-    return (control: AbstractControl): ValidationErrors | null => {
-      const text = ((control.value || '') as string).trim();
-      return text.length >= min
-        ? null
-        : { minChars: { required: min, actual: text.length } };
-    };
-  }
-
-  private static emailPattern = /^[^\s@]+@[^\s@]+\.[A-Za-z]{2,}$/;
   private tr(key: string): string {
     return this.lang.translateSync(key);
   }
 
-  contactForm = this.fb.group({
-    name: [
-      '',
-      {
-        validators: [
-          Validators.required,
-          Validators.minLength(5),
-          Validators.pattern(ContactComponent.namePattern),
-        ],
-        updateOn: 'blur',
-      },
-    ],
-    email: [
-      '',
-      {
-        validators: [
-          Validators.required,
-          Validators.pattern(ContactComponent.emailPattern),
-        ],
-        updateOn: 'blur',
-      },
-    ],
-    message: [
-      '',
-      {
-        validators: [Validators.required, ContactComponent.minChars(20)],
-        updateOn: 'blur',
-      },
-    ],
-    privacy: [
-      false,
-      { validators: [Validators.requiredTrue], updateOn: 'change' },
-    ],
-  });
+  contactForm = this.createContactForm();
+
+  private createContactForm() {
+    return this.fb.group({
+      name: ['', { validators: NAME_VALIDATORS, updateOn: 'blur' }],
+      email: ['', { validators: EMAIL_VALIDATORS, updateOn: 'blur' }],
+      message: ['', { validators: MESSAGE_VALIDATORS, updateOn: 'blur' }],
+      privacy: [
+        false,
+        { validators: [Validators.requiredTrue], updateOn: 'change' },
+      ],
+    });
+  }
 
   get nameCtrl() {
     return this.contactForm.get('name')!;
@@ -105,6 +113,7 @@ export class ContactComponent extends ScrollableSection {
   isFieldValid(ctrl: AbstractControl | null) {
     return !!ctrl && ctrl.touched && ctrl.valid;
   }
+
   isFieldInvalid(ctrl: AbstractControl | null) {
     return !!ctrl && ctrl.touched && ctrl.invalid;
   }
@@ -114,9 +123,50 @@ export class ContactComponent extends ScrollableSection {
     this.contactForm.updateValueAndValidity();
   }
 
-  private async sendForm() {
+  private buildPayload() {
+    return {
+      name: this.nameCtrl.value,
+      email: this.emailCtrl.value,
+      message: this.messageCtrl.value,
+    };
+  }
+
+  private async simulateSuccess(): Promise<void> {
+    await new Promise((resolve) => setTimeout(resolve, 400));
     this.success = true;
     this.contactForm.reset();
+  }
+
+  private sendMail(payload: any): Promise<void> {
+    return new Promise<void>((resolve, reject) => {
+      this.http
+        .post(
+          this.mailConfig.endPoint,
+          this.mailConfig.body(payload),
+          this.mailConfig.options
+        )
+        .subscribe({
+          next: () => {
+            this.success = true;
+            this.contactForm.reset();
+            resolve();
+          },
+          error: (err) => {
+            console.error('Mail send error', err);
+            this.error = 'Fehler beim Senden der Nachricht.';
+            reject(err);
+          },
+        });
+    });
+  }
+
+  private async sendForm(): Promise<void> {
+    const payload = this.buildPayload();
+    if (this.mailTest) {
+      await this.simulateSuccess();
+      return;
+    }
+    await this.sendMail(payload);
   }
 
   async onSubmit(): Promise<void> {
