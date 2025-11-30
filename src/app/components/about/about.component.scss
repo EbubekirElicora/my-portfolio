@@ -39,7 +39,8 @@
 }
 
 .portrait {
-  height: 100vh;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 
@@ -77,11 +78,11 @@
     height: auto;
     width: 100%;
     inset: auto;
-    top: 116px;
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    margin-bottom: 148px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     object-fit: contain;
   }
 
@@ -121,7 +122,6 @@
   }
 
   .portrait {
-    width: 100%;
     height: auto;
     max-height: 500px;
     object-fit: contain;

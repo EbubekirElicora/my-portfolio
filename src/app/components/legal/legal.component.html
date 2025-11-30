@@ -1,6 +1,6 @@
 <app-side-nav class="container-size"></app-side-nav>
 
-<main>
+<section class="legal-page">
   <section [class.is-right]="isRight">
     <img
       class="mobile-back-to-main"
@@ -148,17 +148,16 @@
 
         <div class="container-legal-notice">
           <div class="legal-notice-pos">
-            <a class="legal-a" href="/legal">{{
+            <a class="legal-a" routerLink="/legal">{{
               "legal.footer_legal" | translate
             }}</a>
-            <a class="policy-a" href="/legal">{{
+            <a class="policy-a" routerLink="/legal">{{
               "legal.footer_privacy" | translate
             }}</a>
             <p>&copy; Ebubekir Elicora 2025</p>
           </div>
         </div>
       </section>
-
       <div class="legal-accent-layer">
         <div class="accent-bar" aria-hidden="true"></div>
       </div>
@@ -283,4 +282,4 @@
       </div>
     </section>
   </section>
-</main>
+</section>

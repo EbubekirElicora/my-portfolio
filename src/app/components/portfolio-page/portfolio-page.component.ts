@@ -14,7 +14,6 @@ import { SkillsComponent } from '../skills/skills.component';
 import { MyProjectsComponent } from '../my-projects/my-projects.component';
 import { ReferencesComponent } from '../references/references.component';
 import { ContactComponent } from '../contact/contact.component';
-import { LegalComponent } from '../legal/legal.component';
 import { AboutComponent } from '../about/about.component';
 
 @Component({
@@ -30,7 +29,6 @@ import { AboutComponent } from '../about/about.component';
     MyProjectsComponent,
     ReferencesComponent,
     ContactComponent,
-    LegalComponent,
   ],
   templateUrl: './portfolio-page.component.html',
   styleUrls: ['./portfolio-page.component.scss'],
@@ -55,14 +53,23 @@ export class PortfolioPageComponent implements AfterViewInit, OnDestroy {
   }
 
   private initWheelScroll(container: HTMLDivElement): void {
-    const onWheel = (ev: WheelEvent) => {
-      ev.preventDefault();
-      container.scrollBy({ left: ev.deltaY, behavior: 'auto' });
-    };
+    const onWheel = this.createWheelHandler(container);
     container.addEventListener('wheel', onWheel, { passive: false });
     this.removeListeners.push(() =>
       container.removeEventListener('wheel', onWheel)
     );
+  }
+
+  private createWheelHandler(container: HTMLDivElement) {
+    const speedFactor = 2.5;
+    return (ev: WheelEvent) => {
+      if (window.innerWidth <= 799) return;
+      ev.preventDefault();
+      container.scrollBy({
+        left: ev.deltaY * speedFactor,
+        behavior: 'auto',
+      });
+    };
   }
 
   private initNavLinks(container: HTMLDivElement): void {
@@ -77,7 +84,7 @@ export class PortfolioPageComponent implements AfterViewInit, OnDestroy {
         const id = href.slice(1);
         if (!id) return;
         this.scrollToSectionById(id, container);
-        this.updateActive(href); 
+        this.updateActive(href);
       });
       this.removeListeners.push(off);
     });

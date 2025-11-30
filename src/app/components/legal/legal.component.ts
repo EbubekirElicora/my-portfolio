@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SideNavComponent } from '../side-nav/side-nav.component';
 import { TranslationPipe } from '../../shared/translation.pipe';
 import { Router, RouterLink } from '@angular/router';
+import { ScrollService } from '../../services/scroll.service';
 
 @Component({
   selector: 'app-legal',
@@ -14,52 +15,23 @@ import { Router, RouterLink } from '@angular/router';
 export class LegalComponent {
   isRight = false;
   today = new Date();
-
-  constructor(private router: Router) {}
+  constructor(private router: Router, private scroll: ScrollService) {}
 
   goRight() {
     this.isRight = true;
-    document.getElementById('legal-right')?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'nearest',
-      inline: 'start',
-    });
+    this.scroll.scrollTo('legal-right');
   }
 
   goLeft() {
     this.isRight = false;
-    document.getElementById('legal-left')?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'nearest',
-      inline: 'start',
-    });
+    this.scroll.scrollTo('legal-left');
+  }
+
+  scrollToTopMobile() {
+    this.scroll.scrollTo('legal-left');
   }
 
   backToMain() {
     this.router.navigate(['/'], { fragment: 'about' });
-  }
-
-  onKeyNext(ev: KeyboardEvent) {
-    const k = ev.key;
-    if (k === 'Enter' || k === ' ' || k === 'Spacebar') {
-      ev.preventDefault();
-      this.goRight();
-    }
-  }
-  onKeyBack(ev: KeyboardEvent) {
-    const k = ev.key;
-    if (k === 'Enter' || k === ' ' || k === 'Spacebar') {
-      ev.preventDefault();
-      this.goLeft();
-    }
-  }
-
-  scrollToTopMobile() {
-    const topSection = document.querySelector('.legal') as HTMLElement | null;
-    topSection?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-      inline: 'nearest',
-    });
   }
 }

@@ -9,17 +9,21 @@
 
 .sections {
   display: flex;
-  overflow-x: auto;
   overflow-y: hidden;
   scroll-behavior: smooth;
   background: transparent;
+  height: 100vh;
+  margin-left: 172px;
+  width: calc(100vw - 172px);
   z-index: 10;
 
   @media (max-width: 799px) {
     flex-direction: column;
     overflow-x: hidden;
     overflow-y: auto;
-    height: 100vh;
+    height: calc(100vh - 72px);
+    margin-left: 0;
+    width: auto;
   }
 }
 
@@ -61,7 +65,8 @@ app-legal {
 
   #references.section {
     min-height: auto;
-    padding-top: 88px;
+    padding-top: 56px;
+    padding-bottom: 56px;
   }
 
   #skills.section {

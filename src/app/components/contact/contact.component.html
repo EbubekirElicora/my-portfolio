@@ -3,7 +3,6 @@
     <div class="contact-txt">
       <h1 class="header-txt">{{ "contact.headline" | translate }}</h1>
     </div>
-
     <div class="info-side mobile">
       <p class="lead">{{ "contact.info.lead" | translate }}</p>
       <p class="muted">{{ "contact.info.muted" | translate }}</p>
@@ -32,11 +31,11 @@
         </li>
       </ul>
     </div>
-
     <div class="form-side">
       <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-        <div class="input-wrapper">
+        <div class="input-wrapper" [class.has-error]="showNameError()">
           <input
+            #nameInput
             formControlName="name"
             [placeholder]="
               showNameError() ? '' : ('contact.form.name' | translate)
@@ -50,17 +49,23 @@
             alt=""
             *ngIf="isFieldValid(nameCtrl)"
           />
+          <div
+            class="field-error"
+            *ngIf="showNameError()"
+            (click)="focusNameInput()"
+          >
+            <span class="field-error__text">{{ nameErrorText() }}</span>
+            <img
+              class="field-error__icon"
+              src="assets/img/icons/contact/error.svg"
+              alt=""
+            />
+          </div>
         </div>
-        <div class="field-error" *ngIf="showNameError()">
-          <span class="field-error__text">{{ nameErrorText() }}</span>
-          <img
-            class="field-error__icon"
-            src="assets/img/icons/contact/error.svg"
-            alt=""
-          />
-        </div>
-        <div class="input-wrapper">
+        <div class="input-wrapper" [class.has-error]="showEmailError()">
           <input
+            #emailInput
+            type="email"
             formControlName="email"
             [placeholder]="
               showEmailError() ? '' : ('contact.form.email' | translate)
@@ -74,14 +79,18 @@
             alt=""
             *ngIf="isFieldValid(emailCtrl)"
           />
-        </div>
-        <div class="field-error" *ngIf="showEmailError()">
-          <span class="field-error__text">{{ emailErrorText() }}</span>
-          <img
-            class="field-error__icon"
-            src="assets/img/icons/contact/error.svg"
-            alt=""
-          />
+          <div
+            class="field-error"
+            *ngIf="showEmailError()"
+            (click)="focusEmailInput()"
+          >
+            <span class="field-error__text">{{ emailErrorText() }}</span>
+            <img
+              class="field-error__icon"
+              src="assets/img/icons/contact/error.svg"
+              alt=""
+            />
+          </div>
         </div>
         <div
           class="input-wrapper textarea-wrapper"

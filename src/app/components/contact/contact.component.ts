@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   ReactiveFormsModule,
@@ -15,10 +15,11 @@ import { RouterLink } from '@angular/router';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 const NAME_PATTERN = /^[A-Za-zÄÖÜäöüß'\-\s]+$/;
-const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[A-Za-z]{2,}$/;
+const EMAIL_PATTERN =
+  /^(?!.*\.\.)[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,}$/;
 const NAME_VALIDATORS = [
   Validators.required,
-  Validators.minLength(5),
+  trimMinLength(5),
   Validators.pattern(NAME_PATTERN),
 ];
 const EMAIL_VALIDATORS = [
@@ -26,13 +27,22 @@ const EMAIL_VALIDATORS = [
   Validators.pattern(EMAIL_PATTERN),
 ];
 const MESSAGE_VALIDATORS = [Validators.required, minChars(20)];
-
 function minChars(min: number) {
   return (control: AbstractControl): ValidationErrors | null => {
     const text = ((control.value || '') as string).trim();
     return text.length >= min
       ? null
       : { minChars: { required: min, actual: text.length } };
+  };
+}
+function trimMinLength(min: number) {
+  return (control: AbstractControl): ValidationErrors | null => {
+    const text = ((control.value || '') as string).trim();
+    return text.length >= min
+      ? null
+      : {
+          minlengthTrimmed: { requiredLength: min, actualLength: text.length },
+        };
   };
 }
 
@@ -50,6 +60,8 @@ function minChars(min: number) {
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent extends ScrollableSection {
+  @ViewChild('nameInput') nameInput!: ElementRef<HTMLInputElement>;
+  @ViewChild('emailInput') emailInput!: ElementRef<HTMLInputElement>;
   override nextSectionId = '';
   protected override backTargetId = 'about';
 
@@ -125,12 +137,11 @@ export class ContactComponent extends ScrollableSection {
 
   private buildPayload() {
     return {
-      name: this.nameCtrl.value,
-      email: this.emailCtrl.value,
-      message: this.messageCtrl.value,
+      name: (this.nameCtrl.value || '').trim(),
+      email: (this.emailCtrl.value || '').trim(),
+      message: (this.messageCtrl.value || '').trim(),
     };
   }
-
   private async simulateSuccess(): Promise<void> {
     await new Promise((resolve) => setTimeout(resolve, 400));
     this.success = true;
@@ -200,15 +211,18 @@ export class ContactComponent extends ScrollableSection {
     return c.touched && c.invalid && !this.nameFocused;
   }
 
+  focusNameInput() {
+    this.nameInput.nativeElement.focus();
+  }
+
   nameErrorText(): string {
     const c = this.nameCtrl;
     if (c.hasError('required')) return this.tr('contact.errors.name_required');
-    if (c.hasError('minlength'))
+    if (c.hasError('minlength') || c.hasError('minlengthTrimmed'))
       return this.tr('contact.errors.name_minlength');
     if (c.hasError('pattern')) return this.tr('contact.errors.name_pattern');
     return this.tr('contact.errors.name_required');
   }
-
   onEmailFocus() {
     this.emailFocused = true;
   }
@@ -221,6 +235,10 @@ export class ContactComponent extends ScrollableSection {
   showEmailError(): boolean {
     const c = this.emailCtrl;
     return c.touched && c.invalid && !this.emailFocused;
+  }
+
+  focusEmailInput() {
+    this.emailInput.nativeElement.focus();
   }
 
   emailErrorText(): string {
