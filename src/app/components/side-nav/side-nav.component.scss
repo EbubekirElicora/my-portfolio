@@ -95,15 +95,20 @@
   color: rgba(74, 74, 74, 1);
   text-align: center;
   cursor: pointer;
-  transition: color 100ms ease, -webkit-text-stroke 100ms ease;
+  transition: color 100ms ease, -webkit-text-stroke 100ms ease,
+    transform 100ms ease, opacity 100ms ease;
   &.active,
   &.active:hover {
     -webkit-text-stroke: 1.2px rgba(74, 74, 74, 1) !important;
     color: transparent !important;
     font-weight: 700;
+    transform: rotate(180deg);
+    opacity: 1;
   }
   &:hover:not(.active) {
     color: rgba(255, 253, 253, 1);
+    opacity: 1;
+    transform: rotate(180deg) translatex(3px);
   }
 }
 
@@ -183,6 +188,7 @@
     padding: 0;
     cursor: pointer;
     z-index: 1010;
+    box-shadow: none !important;
     img {
       transition: transform 100ms ease, filter 100ms ease;
     }
@@ -227,6 +233,7 @@
     border: none;
     padding: 0;
     cursor: pointer;
+    box-shadow: none !important;
   }
 
   .mobile-menu__link {
@@ -236,9 +243,11 @@
     text-decoration: none;
     color: var(--text-burger);
     text-align: center;
-    transition: color 100ms ease;
+    transition: color 120ms ease, transform 120ms ease,
+      letter-spacing 120ms ease;
+
     &:hover {
-      cursor: pointer;
+      transform: translateY(-3px);
     }
   }
 
@@ -268,7 +277,6 @@
     font-family: "Quantico";
     font-size: 20px;
     font-weight: 400;
-
     &:hover {
       cursor: pointer;
     }

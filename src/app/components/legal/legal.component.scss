@@ -13,6 +13,37 @@ section {
 }
 
 .legal-page {
+  scrollbar-width: thin;
+  scrollbar-color: #323232 #000000;
+}
+
+.legal-page::-webkit-scrollbar {
+  height: 8px;
+}
+
+.legal-page::-webkit-scrollbar-track {
+  background: linear-gradient(
+    88.66deg,
+    #000000 11.41%,
+    #2c2b2b 22.29%,
+    #0b0a0a 37.32%,
+    #323232 58.54%,
+    #0b0a0a 70.03%
+  );
+  border-radius: 999px;
+}
+
+.legal-page::-webkit-scrollbar-thumb {
+  background: #323232;
+  border-radius: 999px;
+  border: 1px solid #0b0a0a;
+}
+
+.legal-page::-webkit-scrollbar-thumb:hover {
+  background: #4a4a4a;
+}
+
+.legal-page {
   overflow: hidden;
   overflow-x: auto;
 
@@ -109,10 +140,15 @@ section {
 }
 
 .next-arrow:hover,
-.next-arrow:focus-visible,
+.next-arrow:focus-visible {
+  filter: drop-shadow(0 0 12px rgba(181, 233, 59, 0.9));
+  transform: translateX(3px);
+}
+
 .back-arrow:hover,
 .back-arrow:focus-visible {
   filter: drop-shadow(0 0 12px rgba(181, 233, 59, 0.9));
+  transform: translateX(-3px);
 }
 
 .next-arrow:focus-visible,
@@ -441,6 +477,9 @@ a,
     cursor: pointer;
     z-index: 1;
     transition: filter 100ms ease, transform 100ms ease;
+    &:hover {
+      transform: translateX(-3px);
+    }
   }
 
   .mobile-arrow {
@@ -464,10 +503,12 @@ a,
   .back-arrow-mobile {
     position: static;
     transform: rotate(90deg);
+    transition: filter 100ms ease, transform 100ms ease;
 
     &:hover,
     &:focus-visible {
       filter: drop-shadow(0 0 12px rgba(181, 233, 59, 0.9));
+      transform: rotate(90deg) translateX(-3px); // Rotation + Bewegung kombinieren
     }
 
     &:focus-visible {
@@ -498,13 +539,12 @@ a,
     display: flex;
     align-items: center;
     gap: 16px;
-
+    transition: transform 120ms ease;
     .icon {
       position: relative;
       display: inline-block;
       width: 30px;
       height: 30px;
-
       img {
         position: absolute;
         inset: 0;
@@ -512,7 +552,6 @@ a,
         height: 100%;
         z-index: 500;
         transition: filter 100ms ease, transform 100ms ease;
-
         &.base {
           opacity: 1;
         }
@@ -521,15 +560,14 @@ a,
           opacity: 0;
         }
       }
-
       &:hover img.base,
       &:focus-visible img.base {
         opacity: 0;
       }
-
       &:hover img.hover,
       &:focus-visible img.hover {
         opacity: 1;
+        transform: translateY(-3px);
       }
     }
   }

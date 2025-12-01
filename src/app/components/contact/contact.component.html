@@ -134,11 +134,11 @@
                   {{ "contact.form.policy_link" | translate }}
                 </a>
                 {{ "contact.form.policy_suffix" | translate }}
+                <p class="privacy-error-text" *ngIf="showPrivacyError()">
+                  {{ "contact.errors.privacy_required" | translate }}
+                </p>
               </span>
             </div>
-            <p class="privacy-error-text" *ngIf="showPrivacyError()">
-              {{ "contact.errors.privacy_required" | translate }}
-            </p>
             <div class="btn-pos">
               <button
                 type="submit"

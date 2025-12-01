@@ -74,6 +74,7 @@ p {
   &:hover,
   &:focus-visible {
     filter: drop-shadow(0 0 12px rgba(181, 233, 59, 0.9));
+    transform: translateX(3px);
   }
   &:focus-visible {
     outline: 2px solid rgba(181, 233, 59, 1);

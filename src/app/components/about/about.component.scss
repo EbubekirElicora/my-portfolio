@@ -4,6 +4,14 @@
   left: 324px;
   width: 824px;
   top: 32px;
+  opacity: 0;
+  transform: translateX(-48px);
+  transition: opacity 500ms ease, transform 500ms ease;
+}
+
+.hero.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .name_sub_container {
@@ -55,6 +63,7 @@
   &:hover,
   &:focus-visible {
     filter: drop-shadow(0 0 12px rgba(181, 233, 59, 0.9));
+    transform: translateX(3px);
   }
   &:focus-visible {
     outline: 2px solid rgba(181, 233, 59, 1);
@@ -84,6 +93,8 @@
     margin-top: 40px;
     margin-bottom: 40px;
     object-fit: contain;
+    opacity: 1;
+    transform: none;
   }
 
   .copy {
