@@ -70,7 +70,7 @@ export class ContactComponent extends ScrollableSection {
   nameFocused = false;
   emailFocused = false;
   success = false;
-  mailTest = false;
+  mailTest = true;
   error = '';
 
   private readonly mailConfig = {
@@ -146,6 +146,9 @@ export class ContactComponent extends ScrollableSection {
     await new Promise((resolve) => setTimeout(resolve, 400));
     this.success = true;
     this.contactForm.reset();
+    setTimeout(() => {
+      this.success = false;
+    }, 3000);
   }
 
   private sendMail(payload: any): Promise<void> {
@@ -157,18 +160,30 @@ export class ContactComponent extends ScrollableSection {
           this.mailConfig.options
         )
         .subscribe({
-          next: () => {
-            this.success = true;
-            this.contactForm.reset();
-            resolve();
-          },
-          error: (err) => {
-            console.error('Mail send error', err);
-            this.error = 'Fehler beim Senden der Nachricht.';
-            reject(err);
-          },
+          next: () => this.handleMailSuccess(resolve),
+          error: (err) => this.handleMailError(err, reject),
         });
     });
+  }
+
+  private handleMailSuccess(resolve: () => void): void {
+    this.success = true;
+    this.error = '';
+    this.contactForm.reset();
+    setTimeout(() => {
+      this.success = false;
+    }, 3000);
+    resolve();
+  }
+
+  private handleMailError(err: any, reject: (reason?: any) => void): void {
+    console.error('Mail send error', err);
+    this.success = false;
+    this.error = 'Fehler beim Senden der Nachricht.';
+    setTimeout(() => {
+      this.error = '';
+    }, 5000);
+    reject(err);
   }
 
   private async sendForm(): Promise<void> {
@@ -181,20 +196,36 @@ export class ContactComponent extends ScrollableSection {
   }
 
   async onSubmit(): Promise<void> {
-    this.success = false;
-    this.error = '';
+    this.resetStatus();
     if (this.contactForm.invalid) {
       this.markFormInvalid();
       return;
     }
+    await this.submitFormSafely();
+  }
+
+  private resetStatus(): void {
+    this.success = false;
+    this.error = '';
+  }
+
+  private async submitFormSafely(): Promise<void> {
     this.submitting = true;
     try {
       await this.sendForm();
     } catch (err: any) {
-      this.error = err?.message ?? 'Fehler beim Senden';
+      this.handleSubmitError(err);
     } finally {
       this.submitting = false;
     }
+  }
+
+  private handleSubmitError(err: any): void {
+    if (this.error) return;
+    this.error = err?.message ?? 'Fehler beim Senden';
+    setTimeout(() => {
+      this.error = '';
+    }, 5000);
   }
 
   onNameFocus() {

@@ -152,12 +152,6 @@
               >
                 {{ "contact.form.send" | translate }}
               </button>
-              <p *ngIf="success" class="ok">
-                {{ "contact.form.success" | translate }}
-              </p>
-              <p *ngIf="error" class="err">
-                {{ "contact.form.error" | translate }}
-              </p>
             </div>
           </div>
         </div>
@@ -285,6 +279,22 @@
   </div>
   <div class="contact-accent-layer">
     <div class="accent-bar" aria-hidden="true"></div>
+  </div>
+  <div class="contact-overlay" *ngIf="success || error">
+    <div class="contact-overlay__backdrop"></div>
+    <div
+      class="contact-overlay__card"
+      [ngClass]="{ 'contact-overlay__card--error': error }"
+    >
+      <p class="contact-overlay__title">
+        <ng-container *ngIf="success && !error">
+          {{ "contact.form.success" | translate }}
+        </ng-container>
+        <ng-container *ngIf="error">
+          {{ "contact.form.error" | translate }}
+        </ng-container>
+      </p>
+    </div>
   </div>
 </section>
 

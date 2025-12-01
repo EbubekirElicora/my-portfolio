@@ -1,3 +1,14 @@
+@keyframes overlayIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 .contact {
   position: relative;
   display: flex;
@@ -43,6 +54,57 @@
     flex-direction: column;
     gap: 16px;
   }
+}
+
+.form-side--dimmed {
+  filter: blur(2px) brightness(0.6);
+  pointer-events: none;
+  transition: filter 200ms ease;
+}
+
+.contact-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
+}
+
+.contact-overlay__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+}
+
+.contact-overlay__card {
+  position: relative;
+  background: rgba(11, 10, 10, 0.96);
+  border: 1px solid var(--accent);
+  border-radius: 30px;
+  padding: 32px 40px;
+  width: 640px;
+  text-align: center;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.8);
+  animation: overlayIn 240ms ease-out;
+}
+
+.contact-overlay__card--error {
+  border-color: rgba(253, 46, 18, 1);
+}
+
+.contact-overlay__title {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-size: 32px;
+}
+
+.contact-overlay__card--error .contact-overlay__title {
+  color: rgba(253, 46, 18, 1);
 }
 
 input,
@@ -408,6 +470,14 @@ a,
 
   .btn-pos {
     padding-top: 56px;
+  }
+
+  .contact-overlay__card {
+    margin-inline: 20px;
+  }
+
+  .contact-overlay__title {
+    font-size: 18px;
   }
 
   .form-container {
