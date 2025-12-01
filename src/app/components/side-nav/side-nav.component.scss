@@ -56,7 +56,11 @@
   width: 128px;
   height: 110px;
   margin: 0 auto;
-
+  transition: transform 120ms ease, filter 120ms ease;
+  &:hover {
+    transform: translateY(-2px);
+    filter: drop-shadow(0 0 8px rgba(181, 233, 59, 0.35));
+  }
   h1 {
     position: absolute;
     left: 50%;
@@ -77,12 +81,22 @@
   inset: 0;
   display: block;
   pointer-events: none;
+  transition: transform 120ms ease, filter 120ms ease;
   text {
     font-family: "Quantico";
     font-size: 18px;
     fill: rgba(74, 74, 74, 1);
     font-weight: 400;
   }
+}
+
+.brand:hover .brand-arc {
+  transform: translateY(-1px) scale(1.01);
+  filter: drop-shadow(0 0 6px rgba(181, 233, 59, 0.25));
+}
+
+.brand:hover .brand-arc path {
+  stroke: rgba(181, 233, 59, 0.9);
 }
 
 .nav-link {
@@ -165,6 +179,9 @@
     width: 128px;
     height: 60px;
     margin: 0;
+    &:hover {
+      transform: translateY(-1px);
+    }
     h1 {
       left: 52%;
       top: 58%;
