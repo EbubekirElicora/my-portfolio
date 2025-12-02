@@ -97,7 +97,36 @@ p {
   top: 630px;
 }
 
-@media (max-width: 799px) {
+@media (min-width: 901px) and (max-width: 1439px) {
+  .why {
+    position: relative;
+    width: min(835px, calc(100vw - 216px - 64px));
+    left: 0;
+    top: clamp(155px, 12vh, 200px);
+    margin-left: 216px;
+    gap: clamp(32px, 4vw, 52px);
+  }
+
+  .badges {
+    padding-inline-start: 0;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .btn-pos {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1300px) {
+  .next-arrow {
+    position: absolute;
+    left: calc(100vw - 160px);
+    top: clamp(840px, 60vh, 480px) !important;
+  }
+}
+
+@media (max-width: 900px) {
   .why {
     display: flex;
     flex-direction: column;

@@ -17,7 +17,7 @@
   width: calc(100vw - 172px);
   z-index: 10;
 
-  @media (max-width: 799px) {
+  @media (max-width: 900px) {
     flex-direction: column;
     overflow-x: hidden;
     overflow-y: auto;
@@ -34,7 +34,7 @@
   position: relative;
   background: transparent;
 
-  @media (max-width: 799px) {
+  @media (max-width: 900px) {
     flex: 0 0 auto;
     height: auto;
     min-height: 100vh;
@@ -74,7 +74,7 @@
   background: #4a4a4a;
 }
 
-@media (max-width: 799px) {
+@media (max-width: 900px) {
   .side-nav {
     width: 100%;
   }

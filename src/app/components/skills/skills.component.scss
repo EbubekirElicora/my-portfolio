@@ -96,7 +96,40 @@
   display: none !important;
 }
 
-@media (max-width: 799px) {
+@media (min-width: 900px) and (max-width: 1439px) {
+  .skills {
+    position: relative;
+    top: clamp(155px, 12vh, 200px);
+    width: min(971px, calc(100vw - 216px - 64px));
+    left: 0;
+    margin-left: 216px;
+    height: auto;
+  }
+
+  .p-pos {
+    width: 100%;
+  }
+
+  .grid {
+    width: 100%;
+    column-gap: clamp(20px, 4vw, 40px);
+  }
+
+  .skill p {
+    display: none;
+  }
+
+  .skill-challenge p {
+    display: block !important;
+  }
+
+  .next-arrow {
+    left: calc(100vw - 160px);
+    top: clamp(840px, 30vh, 346px);
+  }
+}
+
+@media (max-width: 900px) {
   .skills {
     position: relative;
     display: flex;

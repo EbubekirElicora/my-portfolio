@@ -23,7 +23,7 @@ export class ScrollService {
   }
 
   private isMobile(): boolean {
-    return window.innerWidth <= 799;
+    return window.innerWidth <= 900;
   }
 
   private get container(): HTMLElement | null {

@@ -17,10 +17,6 @@ header span {
   font-weight: 400;
   font-size: 54px;
   color: var(--accent);
-
-  @media (max-width: 799px) {
-    font-size: 24px !important;
-  }
 }
 
 .span-last {
@@ -49,12 +45,6 @@ span {
   grid-template-columns:
     minmax(980px, 1fr) minmax(980px, 1fr) minmax(980px, 1fr)
     minmax(280px, 1fr);
-
-  @media (max-width: 799px) {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-  }
 }
 
 .card {
@@ -88,10 +78,6 @@ span {
     border-radius: 30px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
     transition: filter 100ms ease, transform 100ms ease, box-shadow 100ms ease;
-
-    @media (max-width: 499px) {
-      width: 85%;
-    }
   }
 
   .cta {
@@ -100,27 +86,6 @@ span {
     align-items: center;
     flex-direction: column;
     padding-right: 40px;
-  }
-
-  @media (max-width: 799px) {
-    width: 100%;
-    height: 100%;
-    padding-bottom: 40px;
-    padding-top: 16px;
-
-    header {
-      padding-left: 10px;
-      gap: 10px;
-      padding-bottom: 16px;
-    }
-
-    .no {
-      font-size: 40px !important;
-    }
-
-    &.card--collapsed .project-details {
-      display: none !important;
-    }
   }
 }
 
@@ -153,18 +118,6 @@ span {
     align-items: center;
     width: 100%;
   }
-
-  @media (max-width: 799px) {
-    width: 100%;
-
-    .btn-container {
-      display: none;
-    }
-
-    .no {
-      font-size: 40px !important;
-    }
-  }
 }
 
 .project-span {
@@ -175,11 +128,6 @@ span {
   display: flex;
   gap: 21px;
   align-items: center;
-
-  @media (max-width: 799px) {
-    font-size: 22px;
-    word-break: break-word;
-  }
 }
 
 .btn-container {
@@ -190,14 +138,6 @@ span {
 .header-txt {
   padding-left: 40px;
   padding-bottom: 16px;
-
-  @media (max-width: 799px) {
-    writing-mode: initial;
-    transform: unset;
-    padding: 0;
-    font-size: 32px;
-    -webkit-text-stroke: 1px var(--accent);
-  }
 }
 
 .first-project {
@@ -217,11 +157,6 @@ span {
 
 .project-container {
   padding-inline-end: 54px;
-
-  @media (max-width: 799px) {
-    padding-right: 16px;
-    padding-left: 16px;
-  }
 }
 
 p {
@@ -229,22 +164,12 @@ p {
   margin-block-end: 24px;
   padding-left: 30px;
   line-height: 1.3;
-
-  @media (max-width: 799px) {
-    font-size: 16px;
-    margin-block-end: 16px;
-  }
 }
 
 .last-txt,
 .last-txt-second,
 .last-txt-third {
   padding-right: 40px;
-
-  @media (max-width: 799px) {
-    padding-right: 16px !important;
-    padding-left: 16px !important;
-  }
 }
 
 .last-txt {
@@ -278,28 +203,103 @@ p {
     outline: 2px solid rgba(181, 233, 59, 1);
     outline-offset: 4px;
   }
-
-  @media (max-width: 799px) {
-    display: none;
-  }
 }
 
 .mobile {
   display: none !important;
+}
 
-  @media (max-width: 799px) {
+.project-toggle {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  header span {
+    font-size: 24px !important;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .card {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 40px;
+    padding-top: 16px;
+
+    header {
+      padding-left: 10px;
+      gap: 10px;
+      padding-bottom: 16px;
+    }
+
+    .no {
+      font-size: 40px !important;
+    }
+
+    &.card--collapsed .project-details {
+      display: none !important;
+    }
+  }
+
+  .last-card {
+    width: 100%;
+
+    .btn-container {
+      display: none;
+    }
+
+    .no {
+      font-size: 40px !important;
+    }
+  }
+
+  .project-span {
+    font-size: 22px;
+    word-break: break-word;
+  }
+
+  .header-txt {
+    writing-mode: initial;
+    transform: unset;
+    padding: 0;
+    font-size: 32px;
+    -webkit-text-stroke: 1px var(--accent);
+  }
+
+  .project-container {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  p {
+    font-size: 16px;
+    margin-block-end: 16px;
+  }
+
+  .last-txt,
+  .last-txt-second,
+  .last-txt-third {
+    padding-right: 16px !important;
+    padding-left: 16px !important;
+  }
+
+  .next-arrow {
+    display: none;
+  }
+
+  .mobile {
     display: flex !important;
     padding-right: 0 !important;
     width: 100%;
     gap: 32px !important;
     margin-top: 16px;
   }
-}
 
-.project-toggle {
-  display: none;
-
-  @media (max-width: 799px) {
+  .project-toggle {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -333,9 +333,7 @@ p {
       box-shadow: none;
     }
   }
-}
 
-@media (max-width: 799px) {
   .work {
     position: relative;
     display: flex;
@@ -361,5 +359,11 @@ p {
 
   .cta:not(.mobile) {
     display: none !important;
+  }
+}
+
+@media (max-width: 499px) {
+  .shot {
+    width: 85% !important;
   }
 }

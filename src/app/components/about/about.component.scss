@@ -81,7 +81,15 @@
   display: none;
 }
 
-@media (max-width: 799px) {
+@media (min-width: 901px) and (max-width: 1439px) {
+  .hero {
+    /* bleibt absolute, aber “flexibler” */
+    left: clamp(40px, 10vw, 260px);
+    width: min(824px, calc(100vw - 40px - 40px)); 
+  }
+}
+
+@media (max-width: 900px) {
   .hero {
     position: relative;
     height: auto;

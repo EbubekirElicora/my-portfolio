@@ -63,7 +63,7 @@ export class PortfolioPageComponent implements AfterViewInit, OnDestroy {
   private createWheelHandler(container: HTMLDivElement) {
     const speedFactor = 2.5;
     return (ev: WheelEvent) => {
-      if (window.innerWidth <= 799) return;
+      if (window.innerWidth <= 900) return;
       ev.preventDefault();
       container.scrollBy({
         left: ev.deltaY * speedFactor,
