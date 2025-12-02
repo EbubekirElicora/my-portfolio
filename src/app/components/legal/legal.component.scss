@@ -35,10 +35,10 @@ section {
   background: linear-gradient(
     88.66deg,
     #000000 11.41%,
-    #2C2B2B 22.29%,
-    #0B0A0A 37.32%,
+    #2c2b2b 22.29%,
+    #0b0a0a 37.32%,
     #323232 58.54%,
-    #0B0A0A 70.03%
+    #0b0a0a 70.03%
   );
   border-radius: 999px;
 }
@@ -148,6 +148,7 @@ section {
 .back-arrow:hover,
 .back-arrow:focus-visible {
   filter: drop-shadow(0 0 12px rgba(181, 233, 59, 0.9));
+  transform: translateX(-3px);
 }
 
 .next-arrow:focus-visible,
@@ -438,6 +439,21 @@ a,
     width: 128px;
     height: 60px;
     margin: 0;
+    transition: transform 120ms ease, filter 120ms ease;
+
+    h1 {
+      position: absolute;
+      left: 52%;
+      top: 58%;
+      transform: translate(-50%, -50%);
+      margin: 0;
+      font-weight: 700;
+      font-size: 32px;
+      letter-spacing: -4px;
+      color: transparent;
+      pointer-events: none;
+      -webkit-text-stroke: 2px rgba(74, 74, 74, 1);
+    }
   }
 
   .brand-arc {
@@ -445,6 +461,7 @@ a,
     inset: 0;
     display: block;
     pointer-events: none;
+    transition: transform 120ms ease, filter 120ms ease;
 
     text {
       font-family: "Quantico";
@@ -454,18 +471,18 @@ a,
     }
   }
 
-  .brand h1 {
-    position: absolute;
-    left: 52%;
-    top: 58%;
-    transform: translate(-50%, -50%);
-    margin: 0;
-    font-weight: 700;
-    font-size: 32px;
-    letter-spacing: -4px;
-    color: transparent;
-    pointer-events: none;
-    -webkit-text-stroke: 2px rgba(74, 74, 74, 1);
+  .brand:hover {
+    transform: translateY(-2px);
+    filter: drop-shadow(0 0 8px rgba(181, 233, 59, 0.35));
+  }
+
+  .brand:hover .brand-arc {
+    transform: translateY(-1px) scale(1.01);
+    filter: drop-shadow(0 0 6px rgba(181, 233, 59, 0.25));
+  }
+
+  .brand:hover .brand-arc path {
+    stroke: rgba(181, 233, 59, 0.9);
   }
 
   .mobile-back-to-main {

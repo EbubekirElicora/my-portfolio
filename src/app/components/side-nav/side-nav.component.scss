@@ -206,13 +206,34 @@
     cursor: pointer;
     z-index: 1010;
     box-shadow: none !important;
-    img {
-      transition: transform 100ms ease, filter 100ms ease;
-    }
-    &:focus-visible {
-      outline: 2px solid #ffffff;
-      outline-offset: 4px;
-    }
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .burger-btn,
+  .mobile-menu__close {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .burger-img-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+
+  .burger-btn:hover .burger-img-default,
+  .mobile-menu__close:hover .burger-img-default {
+    opacity: 0;
+  }
+
+  .burger-btn:hover .burger-img-hover,
+  .mobile-menu__close:hover .burger-img-hover {
+    opacity: 1;
   }
 
   .mobile-menu-backdrop {
@@ -251,6 +272,8 @@
     padding: 0;
     cursor: pointer;
     box-shadow: none !important;
+    transition: none !important;
+    transform: none !important;
   }
 
   .mobile-menu__link {

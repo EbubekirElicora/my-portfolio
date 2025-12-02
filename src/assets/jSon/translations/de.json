@@ -57,7 +57,7 @@
   },
   "work": {
     "mobile": {
-      "intro": "Ich liebe es, mich weiterzuentwickeln und neue Technologien direkt in der Praxis auszuprobieren. Wenn ich etwas verbessern kann, mache ich es – ohne Umwege. Innovation ist für mich kein Schlagwort, sondern meine Arbeitsweise: Lösungen finden, die smarter, schneller und stabiler sind. Ich halte mich ständig technisch auf dem neuesten Stand, weil Stillstand für mich keine Option ist."
+      "intro": "Ich liebe es, mich weiterzuentwickeln und neue Technologien direkt in der Praxis auszuprobieren. Wenn ich etwas verbessern kann, mache ich es ohne Umwege. Innovation ist für mich kein Schlagwort, sondern meine Arbeitsweise: Lösungen finden, die smarter, schneller und stabiler sind. Ich halte mich ständig technisch auf dem neuesten Stand, weil Stillstand für mich keine Option ist."
     },
     "headline": "Meine Projekte",
     "toggle": {
@@ -74,7 +74,7 @@
       "about_text": "Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktion, weise Benutzer und Kategorien zu.",
       "tech": "Technologien, die ich verwendet habe",
       "tech_list": "Angular, TypeScript, HTML, CSS, Firebase",
-      "team": "Meine Teamarbeitserfahrung",
+      "team": "Meine Erfahrung in der Teamarbeit",
       "team_text": "Die Teamarbeit an Join hat mir gezeigt, wie man effektiv in einem echten Entwicklungsprozess zusammenarbeitet. Wir haben Aufgaben wie Drag-and-Drop-Funktionen, User-Zuordnung und die Kanban-Logik untereinander aufgeteilt, was klare Kommunikation und eine saubere Struktur nötig machte. Durch regelmäßige Git-Commits, Pull Requests und Code-Reviews habe ich gelernt, eine gemeinsame TypeScript-Codebasis sauber und wartbar zu halten. Ich habe geübt, Merge-Konflikte zu lösen, Komponenten wiederverwendbar zu gestalten und Logik so zu schreiben, dass sie für das gesamte Team verständlich bleibt. Das Projekt hat mich in puncto Teamwork, Code-Organisation und professioneller Zusammenarbeit deutlich weitergebracht."
     },
 
@@ -94,7 +94,7 @@
       "about_text": "Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktion, weise Benutzer und Kategorien zu.",
       "tech": "Technologien, die ich verwendet habe",
       "tech_list": "Angular, TypeScript, HTML, CSS, Firebase",
-      "team": "Meine Teamarbeitserfahrung",
+      "team": "Meine Erfahrung in der Teamarbeit",
       "team_text": "Fortsetzung folgt..."
     },
 
