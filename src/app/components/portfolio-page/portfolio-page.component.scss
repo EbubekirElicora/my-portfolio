@@ -1,10 +1,14 @@
 #why-me,
 #skills {
-  flex: 0 0 1156px;
+  flex: 0 0 clamp(700px, calc(100vw - 220px), 1156px);
 }
 
 #references {
-  flex: 0 0 1104px;
+  flex: 0 0 clamp(880px, calc(100vw - 240px), 1104px);
+}
+
+#about {
+  flex: 0 0 clamp(700px, calc(100vw - 172px), 1224px);
 }
 
 .sections {
@@ -28,7 +32,7 @@
 }
 
 .section {
-  flex: 0 0 1224px;
+  flex: 0 0 clamp(900px, calc(100vw - 172px), 1224px);
   height: 100vh;
   scroll-snap-align: start;
   position: relative;
@@ -56,10 +60,10 @@
   background: linear-gradient(
     88.66deg,
     #000000 11.41%,
-    #2C2B2B 22.29%,
-    #0B0A0A 37.32%,
+    #2c2b2b 22.29%,
+    #0b0a0a 37.32%,
     #323232 58.54%,
-    #0B0A0A 70.03%
+    #0b0a0a 70.03%
   );
   border-radius: 999px;
 }
@@ -67,7 +71,7 @@
 .sections::-webkit-scrollbar-thumb {
   background: #323232;
   border-radius: 999px;
-  border: 1px solid #0B0A0A;
+  border: 1px solid #0b0a0a;
 }
 
 .sections::-webkit-scrollbar-thumb:hover {
@@ -102,5 +106,20 @@
 @media (max-width: 400px) {
   #about.section {
     padding-inline: 0;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1439px) {
+  .sections {
+    margin-left: clamp(0px, 12vw, 172px);
+    width: auto;
+  }
+
+  #contact {
+    flex: 0 0 clamp(920px, calc(100vw - 172px), 1224px);
+  }
+
+  #references {
+    flex: 0 0 clamp(1000px, calc(100vw - 100px), 1104px);
   }
 }

@@ -161,7 +161,7 @@
 
   <div class="social-container mobile-arrow">
     <img
-      class="next-arrow"
+      class="next-arrow-mobile"
       src="assets/img/icons/arrows/arrow_left.png"
       alt="Zurück"
       role="button"
@@ -231,52 +231,58 @@
   <div class="info-side">
     <p class="lead">{{ "contact.info.lead" | translate }}</p>
     <p class="muted">{{ "contact.info.muted" | translate }}</p>
-    <ul class="contacts">
-      <li>
-        <div class="email-container">
-          <img
-            class="emailImg"
-            src="assets/img/icons/contact/eMail_contact.svg"
-            alt="E-Mail Icon"
-          />
-          <a class="emailLink" href="mailto:ebubekir.elicora@gmx.de"
-            >E-Mail: ebubekir.elicora&#64;gmx.de</a
-          >
+
+    <div class="mobile_contacts">
+      <ul class="contacts">
+        <li>
+          <div class="email-container">
+            <img
+              class="emailImg"
+              src="assets/img/icons/contact/eMail_contact.svg"
+              alt="E-Mail Icon"
+            />
+            <a class="emailLink" href="mailto:ebubekir.elicora@gmx.de"
+              >E-Mail: ebubekir.elicora&#64;gmx.de</a
+            >
+          </div>
+        </li>
+        <li>
+          <div class="phone-container">
+            <img
+              class="phoneImg"
+              src="assets/img/icons/contact/phone_contact.svg"
+              alt="Telefon Icon"
+            />
+            <a class="phoneLink" href="tel:+491714155340">Tel: 0171 4155340 </a>
+          </div>
+        </li>
+      </ul>
+
+      <div class="container-legal-notice">
+        <div class="legal-notice-pos">
+          <a class="legal-a" routerLink="/legal">{{
+            "contact.footer.legal" | translate
+          }}</a>
+          <a class="policy-a" routerLink="/legal">{{
+            "contact.footer.policy" | translate
+          }}</a>
+          <p>&copy; Ebubekir Elicora 2025</p>
         </div>
-      </li>
-      <li>
-        <div class="phone-container">
-          <img
-            class="phoneImg"
-            src="assets/img/icons/contact/phone_contact.svg"
-            alt="Telefon Icon"
-          />
-          <a class="phoneLink" href="tel:+491714155340">Tel: 0171 4155340 </a>
-        </div>
-      </li>
-    </ul>
-    <img
-      class="next-arrow"
-      src="assets/img/icons/arrows/arrow_left.png"
-      alt="Zurück"
-      role="button"
-      tabindex="0"
-      (click)="onBack()"
-      (keydown.enter)="onBack()"
-      (keydown.space)="onBack()"
-    />
-    <div class="container-legal-notice">
-      <div class="legal-notice-pos">
-        <a class="legal-a" routerLink="/legal">{{
-          "contact.footer.legal" | translate
-        }}</a>
-        <a class="policy-a" routerLink="/legal">{{
-          "contact.footer.policy" | translate
-        }}</a>
-        <p>&copy; Ebubekir Elicora 2025</p>
       </div>
     </div>
   </div>
+
+  <img
+    class="next-arrow"
+    src="assets/img/icons/arrows/arrow_left.png"
+    alt="Zurück"
+    role="button"
+    tabindex="0"
+    (click)="onBack()"
+    (keydown.enter)="onBack()"
+    (keydown.space)="onBack()"
+  />
+
   <div class="contact-accent-layer">
     <div class="accent-bar" aria-hidden="true"></div>
   </div>

@@ -130,6 +130,16 @@
   display: none;
 }
 
+@media (min-width: 901px) and (max-width: 1439px) {
+  .side {
+    gap: 48px;
+  }
+
+  :host-context(html[lang="de"]) .side {
+    gap: 40px;
+  }
+}
+
 @media (max-width: 900px) {
   :host {
     position: static;
@@ -249,11 +259,7 @@
     left: 0;
     right: 0;
     z-index: 1100;
-    background: linear-gradient(
-      160.33deg,
-      rgba(181, 233, 59, 0.96) 49.55%,
-      rgba(84, 120, 0, 0.96) 119.53%
-    );
+    background: linear-gradient(162.05deg, #b5e93b 45.64%, #547800 119.01%);
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
     padding: 88px 40px 32px;

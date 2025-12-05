@@ -83,9 +83,63 @@
 
 @media (min-width: 901px) and (max-width: 1439px) {
   .hero {
-    /* bleibt absolute, aber “flexibler” */
     left: clamp(40px, 10vw, 260px);
-    width: min(824px, calc(100vw - 40px - 40px)); 
+    width: min(824px, calc(100vw - 40px - 40px));
+    top: 0;
+  }
+
+  .copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    h1 {
+      font-size: clamp(80px, 5.5vw, 100px);
+    }
+    .subtitle {
+      font-size: clamp(40px, 2.8vw, 48px);
+    }
+  }
+
+  .mobile-pos {
+    height: auto;
+    padding-top: clamp(12px, calc(260px - 17.2vw), 105px);
+  }
+
+  .portrait-wrap {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .portrait {
+    height: auto;
+    width: clamp(80%, 55vw, 90%);
+    object-fit: contain;
+  }
+
+  .name_sub_container {
+    top: 628px;
+  }
+
+  .next-arrow {
+    position: absolute;
+    left: calc(100vw - 360px) !important;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1436px) {
+  .mobile-pos {
+    padding-top: clamp(175px, 203px - 15.2vw, 200px) !important;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+  .next-arrow {
+    left: calc(100vw - 260px) !important;
+  }
+
+  .mobile-pos {
+    padding-top: 176px;
   }
 }
 
@@ -137,6 +191,7 @@
     }
     .subtitle {
       order: 1;
+      margin-block-start: 8px;
     }
   }
 

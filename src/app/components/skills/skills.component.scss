@@ -99,7 +99,7 @@
 @media (min-width: 900px) and (max-width: 1439px) {
   .skills {
     position: relative;
-    top: clamp(155px, 12vh, 200px);
+    top: clamp(88px, 12vh, 200px);
     width: min(971px, calc(100vw - 216px - 64px));
     left: 0;
     margin-left: 216px;
@@ -125,7 +125,7 @@
 
   .next-arrow {
     left: calc(100vw - 160px);
-    top: clamp(840px, 30vh, 346px);
+    top: clamp(768px, 30vh, 346px) !important;
   }
 }
 

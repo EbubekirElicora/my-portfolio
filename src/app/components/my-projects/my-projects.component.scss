@@ -213,6 +213,23 @@ p {
   display: none;
 }
 
+@media (min-width: 901px) and (max-width: 1439px) {
+  .next-arrow {
+    position: absolute;
+    top: 768px;
+  }
+
+  .work {
+    top: clamp(88px, 12vh, 200px);
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+  .card {
+    height: 656px;
+  }
+}
+
 @media (max-width: 900px) {
   header span {
     font-size: 24px !important;

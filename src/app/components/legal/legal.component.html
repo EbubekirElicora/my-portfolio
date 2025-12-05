@@ -134,18 +134,6 @@
             </div>
           </li>
         </ul>
-
-        <img
-          class="back-arrow"
-          src="assets/img/icons/arrows/arrow_left.png"
-          alt="Zurück"
-          role="button"
-          tabindex="0"
-          (click)="goLeft()"
-          (keydown.enter)="goLeft()"
-          (keydown.space)="goLeft()"
-        />
-
         <div class="container-legal-notice">
           <div class="legal-notice-pos">
             <a class="legal-a" routerLink="/legal">{{
@@ -158,11 +146,20 @@
           </div>
         </div>
       </section>
+      <img
+        class="back-arrow"
+        src="assets/img/icons/arrows/arrow_left.png"
+        alt="Zurück"
+        role="button"
+        tabindex="0"
+        (click)="goLeft()"
+        (keydown.enter)="goLeft()"
+        (keydown.space)="goLeft()"
+      />
       <div class="legal-accent-layer">
         <div class="accent-bar" aria-hidden="true"></div>
       </div>
     </section>
-
     <section class="legal-bottom-section mobile-container">
       <div class="mobile-size">
         <div class="social-container mobile-arrow">
@@ -177,7 +174,6 @@
             (keydown.space)="scrollToTopMobile()"
           />
         </div>
-
         <nav class="mobile-social" aria-label="social">
           <div class="top-links">
             <a

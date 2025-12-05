@@ -101,6 +101,33 @@ h2 {
   display: none;
 }
 
+@media (min-width: 901px) and (max-width: 1439px) {
+  .refs {
+    top: clamp(88px, 12vh, 200px);
+  }
+  .header-txt {
+    text-align: end !important;
+  }
+
+  .next-arrow {
+        top: 760px !important;
+
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+  .next-arrow {
+    position: absolute;
+    left: calc(100vw - 260px);
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1000px) {
+  .next-arrow {
+    left: calc(100vw - 160px);
+  }
+}
+
 @media (max-width: 900px) {
   .header-txt {
     display: none;

@@ -102,7 +102,7 @@ p {
     position: relative;
     width: min(835px, calc(100vw - 216px - 64px));
     left: 0;
-    top: clamp(155px, 12vh, 200px);
+    top: clamp(88px, 12vh, 200px);
     margin-left: 216px;
     gap: clamp(32px, 4vw, 52px);
   }
@@ -122,7 +122,7 @@ p {
   .next-arrow {
     position: absolute;
     left: calc(100vw - 160px);
-    top: clamp(840px, 60vh, 480px) !important;
+    top: clamp(768px, 60vh, 480px) !important;
   }
 }
 

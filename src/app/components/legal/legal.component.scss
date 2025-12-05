@@ -15,7 +15,6 @@ section {
 .legal-page {
   overflow: hidden;
   overflow-x: auto;
-
   > section {
     display: flex;
     scroll-behavior: smooth;
@@ -76,13 +75,11 @@ section {
 
 .legal-section {
   margin-bottom: 16px;
-
   h2 {
     font-size: 18px;
     color: var(--accent);
     margin-bottom: 16px;
   }
-
   ul {
     font-family: "Quantico";
     font-weight: 400;
@@ -91,17 +88,15 @@ section {
     margin: 0;
     padding: 0;
   }
-
   li {
     position: relative;
     padding-left: 20px;
     line-height: 1.2;
-
     &::before {
       content: "";
       position: absolute;
       left: 2px;
-      top: 50%; /* Mitte des li */
+      top: 50%;
       transform: translateY(-50%);
       width: 8px;
       height: 8px;
@@ -109,7 +104,6 @@ section {
       background: var(--text);
     }
   }
-
   p {
     color: var(--text);
   }
@@ -135,8 +129,8 @@ section {
 }
 
 .back-arrow {
-  top: 296px;
-  left: 294px;
+  top: 452px;
+  left: 1025px;
 }
 
 .next-arrow:hover,
@@ -182,7 +176,6 @@ p {
   text-align: right;
   gap: 24px;
   justify-content: flex-start;
-
   .contacts {
     list-style: none;
     padding: 0;
@@ -191,7 +184,6 @@ p {
     display: flex;
     flex-direction: column;
     gap: 12px;
-
     li {
       display: flex;
       align-items: center;
@@ -210,7 +202,6 @@ p {
   height: 100vh;
   pointer-events: none;
   z-index: 2000;
-
   .accent-bar {
     position: absolute;
     top: 0;
@@ -227,7 +218,6 @@ p {
   width: 100%;
   padding-top: 504px;
   gap: 16px;
-
   .legal-a:hover,
   .policy-a:hover {
     color: var(--accent-weak);
@@ -280,6 +270,62 @@ a,
 .mobile-container,
 .mobile-back-to-main {
   display: none;
+}
+
+@media (min-width: 901px) and (max-width: 1439px) {
+  :host {
+    padding-left: 172px;
+  }
+
+  .legal-page > section {
+    flex: 0 0 clamp(960px, calc(100vw - 172px), 1268px);
+  }
+  .legal-position {
+    left: clamp(24px, calc(13.75vw - 100px), 98px);
+    width: clamp(640px, calc(41.6vw + 265px), 864px);
+    top: clamp(88px, 12vh, 200px);
+  }
+
+  .legal-notice-pos {
+    padding-top: 0;
+  }
+
+  .legal-position-right {
+    top: clamp(88px, 12vh, 200px);
+    left: clamp(32px, calc(7vw - 30px), 68px);
+    width: clamp(560px, calc(34vw + 110px), 749px);
+  }
+
+  .next-arrow {
+    left: calc(100vw - 320px);
+    top: clamp(768px, 50vh, 452px);
+  }
+
+  .info-side {
+    top: 648px;
+    left: auto;
+    right: clamp(40px, 12vw, 164px);
+    width: auto;
+    height: auto;
+    gap: 8px;
+  }
+
+  .back-arrow {
+    top: clamp(552px, 92.5vh, 768px);
+    right: auto;
+    left: clamp(40px, 5vw, 440px);
+  }
+
+  section.legal {
+    flex: 0 0 clamp(700px, calc(100vw - 172px), 1268px);
+  }
+}
+
+@media (max-width: 1200px) {
+  .email-container a,
+  .phone-container a {
+    font-size: 14px !important;
+  }
 }
 
 @media (max-width: 900px) {
@@ -339,7 +385,6 @@ a,
     height: calc(100vh - 72px);
     overflow-y: auto;
     overflow-x: hidden;
-
     > section {
       display: block;
       scroll-behavior: smooth;
@@ -402,7 +447,6 @@ a,
     padding-bottom: 32px;
     padding-top: 16px;
     background: linear-gradient(160.33deg, #b5e93b 50.78%, #547800 133.54%);
-
     .legal-notice-pos {
       width: 100%;
       display: flex;
@@ -426,7 +470,6 @@ a,
     background: transparent;
     border: 0;
     cursor: pointer;
-
     &:focus-visible {
       outline: 2px solid var(--accent);
       outline-offset: 4px;
@@ -462,7 +505,6 @@ a,
     display: block;
     pointer-events: none;
     transition: transform 120ms ease, filter 120ms ease;
-
     text {
       font-family: "Quantico";
       font-size: 18px;
@@ -508,7 +550,6 @@ a,
     pointer-events: auto;
     padding-top: 160px;
     transition: filter 100ms ease, transform 100ms ease;
-
     .back-arrow-mobile {
       cursor: pointer;
       width: clamp(80px, 16vw, 150px);
@@ -520,13 +561,11 @@ a,
     position: static;
     transform: rotate(90deg);
     transition: filter 100ms ease, transform 100ms ease;
-
     &:hover,
     &:focus-visible {
       filter: drop-shadow(0 0 12px rgba(181, 233, 59, 0.9));
       transform: rotate(90deg) translateX(-3px); // Rotation + Bewegung kombinieren
     }
-
     &:focus-visible {
       outline: 2px solid rgba(181, 233, 59, 1);
       outline-offset: 4px;
@@ -571,7 +610,6 @@ a,
         &.base {
           opacity: 1;
         }
-
         &.hover {
           opacity: 0;
         }
