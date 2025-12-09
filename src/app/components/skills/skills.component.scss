@@ -98,7 +98,7 @@
 
 @media (min-width: 1440px) and (max-width: 1920px) {
   .skills {
-    width: 1200px;
+    width: clamp(950px, 62.5vw, 1200px);
     top: 400px;
   }
 
@@ -108,12 +108,12 @@
   }
 
   .next-arrow {
-    left: 1645px;
-    top: 448px;
+    left: calc(100vw - 172px - 80px);
+    top: 449px;
   }
 
-   :host-context(html[lang="de"]) .next-arrow {
-    top: 608px;
+  :host-context(html[lang="de"]) .next-arrow {
+    top: 609px;
   }
 }
 

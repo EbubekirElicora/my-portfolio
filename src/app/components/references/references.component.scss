@@ -100,22 +100,23 @@ h2 {
 .text-mobile {
   display: none;
 }
+
 @media (min-width: 1440px) and (max-width: 1920px) {
   .refs {
     top: 312px;
   }
 
   .ref {
-    width: 1000px;
+    width: clamp(500px, 50vw, 1000px);
   }
 
   .next-arrow {
-    left: 1645px;
-    top: 512px;
+    left: calc(100vw - 172px - 120px);
+    top: 458px;
   }
 
   :host-context(html[lang="de"]) .next-arrow {
-    top: 660px;
+    top: 606px;
   }
 }
 

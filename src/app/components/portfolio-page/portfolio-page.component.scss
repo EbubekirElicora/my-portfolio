@@ -1,14 +1,12 @@
-#why-me,
-#skills {
-  flex: 0 0 clamp(700px, calc(100vw - 220px), 1156px);
-}
-
-#references {
-  flex: 0 0 clamp(880px, calc(100vw - 240px), 1104px);
-}
-
 #about {
-  flex: 0 0 clamp(700px, calc(100vw - 172px), 1224px);
+  min-height: 700px;
+}
+#skills,
+#why {
+  min-height: 700px;
+}
+#references {
+  min-height: 880px;
 }
 
 .sections {
@@ -62,27 +60,45 @@
 }
 
 @media (min-width: 1440px) and (max-width: 1920px) {
+  /* Basis-Breite aller Sections:
+     - wächst mit dem Viewport
+     - ist NIE breiter als der Container (100vw - 172px)
+  */
   .section {
-    flex: 0 0 clamp(1441px, calc(100vw - 172px), 1650px);
+    flex: 0 0 clamp(1100px, calc(100vw - 172px), 1650px);
   }
 
-  #why-me,
-  #skills {
-    flex: 0 0 clamp(1174px, 100vw - 220px, 1630px);
+  /* About / Skills / Why: sollen "ungefähr" bei ~1630 landen */
+  #about,
+  #skills,
+  #why-me {
+    flex: 0 0 clamp(
+      1100px,              /* Minimumbreite */
+      calc(100vw - 300px), /* dynamisch mitlaufen */
+      1630px               /* Zielbreite bei großen Screens */
+    );
   }
 
+  /* References: du willst sehr breit (~2280),
+     wir gehen so breit wie der Container erlaubt */
   #references {
-    flex: 0 0 clamp(1850px, 100vw - 220px, 2280px);
+    flex: 0 0 clamp(
+      1100px,                  /* Minimumbreite */
+      calc(100vw - 90px),     /* dynamisch */
+      calc(100vw - 80px)      /* hart an der Container-Grenze */
+    );
   }
 
-  #about {
-    flex: 0 0 clamp(1150px, 100vw - 172px, 1630px);
-  }
-
+  /* Contact: etwas größer als Standard-Section (~1720) */
   #contact {
-    flex: 0 0 clamp(1441px, calc(100vw - 172px), 1720px);
+    flex: 0 0 clamp(
+      1100px,
+      calc(100vw - 172px),
+      1720px
+    );
   }
 }
+
 
 @media (max-width: 900px) {
   .side-nav {

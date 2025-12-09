@@ -456,31 +456,34 @@ a,
 
 @media (min-width: 1440px) and (max-width: 1920px) {
   .info-side {
-    width: 600px;
-    left: 990px;
-    top: 255px;
+    position: absolute;
+    right: clamp(80px, 12vw, 136px);
+    left: auto;
+    top: clamp(200px, 18vh, 255px);
+    width: clamp(415px, 32vw, 600px);
   }
 
   .form-container {
-    top: 255px;
-    width: 720px;
+    top: clamp(200px, 18vh, 255px);
+    width: clamp(560px, 41vw, 720px);
   }
 
   .container-size {
-    width: 560px;
+    width: clamp(410px, 22vw, 560px);
   }
 
   .next-arrow {
-    left: 1475px;
+    right: clamp(80px, 12vw, 136px);
+    left: auto;
     top: 640px !important;
   }
 
   :host-context(html[lang="en"]) .legal-notice-pos {
-    padding-top: 300px;
+    padding-top: clamp(240px, calc(240px + (100vw - 1440px) * 0.125), 300px);
   }
 
   .legal-notice-pos {
-    padding-top: 280px;
+    padding-top: clamp(280px, calc(280px + (100vw - 1440px) * 0.0417), 300px);
   }
 }
 
@@ -562,7 +565,6 @@ a,
 
   .form-container {
     top: clamp(88px, 12vh, 200px);
-
     gap: 16px;
   }
 

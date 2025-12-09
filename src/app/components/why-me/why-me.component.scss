@@ -99,20 +99,19 @@ p {
 
 @media (min-width: 1440px) and (max-width: 1920px) {
   .why {
-    width: 1200px;
+    width: clamp(900px, 62.5vw, 1200px);
     top: 255px;
   }
 
   .next-arrow {
-    left: 1645px;
+    left: calc(100vw - 172px - 120px);
     top: 668px;
   }
 
   :host-context(html[lang="de"]) .next-arrow {
-    top: 830px;
+    top: 828px;
   }
 }
-
 
 @media (min-width: 901px) and (max-width: 1439px) {
   .why {

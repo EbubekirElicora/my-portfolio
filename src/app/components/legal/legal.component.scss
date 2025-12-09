@@ -272,6 +272,57 @@ a,
   display: none;
 }
 
+@media (min-width: 1440px) and (max-width: 1920px) {
+  :host {
+    padding-left: 172px;
+  }
+
+  .legal-page > section {
+    flex: 0 0 clamp(984px, 74.5vw, 1430px);
+    height: 100vh;
+  }
+
+  section.legal {
+    flex: 0 0 clamp(1268px, calc(100vw - 172px), 2000px);
+  }
+
+  .legal-position {
+    left: clamp(80px, 10vw, 120px);
+    width: clamp(864px, 67vw, 1284px);
+    top: clamp(200px, 16vh, 255px);
+    gap: clamp(32px, 4vw, 52px);
+  }
+
+  .legal-position-right {
+    left: clamp(60px, 8vw, 90px);
+    width: clamp(640px, 44vw, 900px);
+    top: clamp(200px, 16vh, 255px);
+  }
+
+  .info-side {
+    position: absolute;
+    right: clamp(80px, 12vw, 136px);
+    left: auto;
+    top: clamp(200px, 16vh, 255px);
+    width: clamp(415px, 32vw, 600px);
+    height: auto;
+  }
+
+  .next-arrow {
+    top: clamp(452px, 45vh, 520px);
+    left: calc(100vw - 172px - 160px);
+  }
+
+  .back-arrow {
+    top: clamp(452px, 45vh, 520px);
+    left: calc(100vw - 172px - 260px);
+  }
+
+  .legal-notice-pos {
+    padding-top: clamp(420px, 55vh, 504px);
+  }
+}
+
 @media (min-width: 901px) and (max-width: 1439px) {
   :host {
     padding-left: 172px;
@@ -304,7 +355,7 @@ a,
   .info-side {
     top: 648px;
     left: auto;
-    right: clamp(40px, 12vw, 164px);
+    right: clamp(100px, 14vw, 136px);
     width: auto;
     height: auto;
     gap: 8px;
