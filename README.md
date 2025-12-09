@@ -1,27 +1,85 @@
 # MyPortfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.6.
+Personal Fullstack Developer Portfolio built with Angular, focused on clean architecture, responsive design, and modern web technologies.
 
-## Development server
+## Overview
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+This project represents my personal developer portfolio.  
+It showcases completed projects, architectural decisions, and practical fullstack development skills across frontend and backend.
 
-## Code scaffolding
+The application is implemented as a Single Page Application (SPA) with a strong focus on:
+- clean and consistent UI/UX
+- responsive layouts across multiple screen sizes
+- structured and maintainable component architecture
+- real-world development standards instead of demo patterns
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Purpose
 
-## Build
+This portfolio serves as a technical overview for:
+- recruiters
+- development teams
+- technical decision-makers
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+It demonstrates real implementations rather than isolated code examples.
 
-## Running unit tests
+## Tech Stack
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Frontend
+- Angular 17
+- TypeScript
+- SCSS
+- RxJS
+- Angular Router
+- Responsive layouts using `clamp()` and viewport-based calculations
+- Mobile- and desktop-optimized navigation
 
-## Running end-to-end tests
+### Backend
+- Node.js
+- RESTful API structure
+- Clear separation of routes, business logic, and services
+- Input validation and error handling
+- Foundations of authentication and data processing
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Tooling
+- Angular CLI
+- Git & GitHub
+- npm
 
-## Further help
+## Architecture
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Modular project structure
+- Clear separation of concerns between frontend and backend
+- Reusable components and services
+- Focus on scalability and extensibility
+- Maintainability prioritized over unnecessary abstraction
+
+## Features
+
+- Portfolio overview
+- Project detail pages
+- Contact form
+- Legal pages (Imprint, Privacy Policy)
+- Internationalization (i18n)
+- Accessible navigation and interactions
+- Smooth transitions and animations
+- Responsive behavior for desktop, tablet, and mobile
+
+## Development Approach
+
+- Readable and predictable code instead of overengineering
+- Intentional use of modern web technologies
+- Practical architectural decisions inspired by real projects
+- Emphasis on long-term maintainability
+
+## Getting Started
+
+### Prerequisites
+- Node.js (recommended LTS version)
+- Angular CLI
+
+### Installation
+
+```bash
+git clone <repository-url>
+cd my-portfolio
+npm install
