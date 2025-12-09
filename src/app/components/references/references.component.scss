@@ -100,6 +100,24 @@ h2 {
 .text-mobile {
   display: none;
 }
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .refs {
+    top: 312px;
+  }
+
+  .ref {
+    width: 1000px;
+  }
+
+  .next-arrow {
+    left: 1645px;
+    top: 512px;
+  }
+
+  :host-context(html[lang="de"]) .next-arrow {
+    top: 660px;
+  }
+}
 
 @media (min-width: 901px) and (max-width: 1439px) {
   .refs {
@@ -110,8 +128,7 @@ h2 {
   }
 
   .next-arrow {
-        top: 760px !important;
-
+    top: 760px !important;
   }
 }
 

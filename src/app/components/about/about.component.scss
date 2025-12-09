@@ -81,6 +81,29 @@
   display: none;
 }
 
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .next-arrow {
+    left: 1645px;
+    top: 426px;
+  }
+
+  .hero {
+    width: 968px;
+    top: 8px;
+    left: 524px;
+  }
+
+  .name_sub_container {
+    top: 728px;
+  }
+
+  :host-context(html[lang="de"]) {
+    .next-arrow {
+      top: 484px;
+    }
+  }
+}
+
 @media (min-width: 901px) and (max-width: 1439px) {
   .hero {
     left: clamp(40px, 10vw, 260px);

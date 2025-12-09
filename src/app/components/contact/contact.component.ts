@@ -70,7 +70,7 @@ export class ContactComponent extends ScrollableSection {
   nameFocused = false;
   emailFocused = false;
   success = false;
-  mailTest = true;
+  mailTest = false;
   error = '';
 
   private readonly mailConfig = {

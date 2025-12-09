@@ -97,6 +97,23 @@ p {
   top: 630px;
 }
 
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .why {
+    width: 1200px;
+    top: 255px;
+  }
+
+  .next-arrow {
+    left: 1645px;
+    top: 668px;
+  }
+
+  :host-context(html[lang="de"]) .next-arrow {
+    top: 830px;
+  }
+}
+
+
 @media (min-width: 901px) and (max-width: 1439px) {
   .why {
     position: relative;

@@ -213,6 +213,32 @@ p {
   display: none;
 }
 
+@media (min-width: 1440px) and (max-width: 1920px){
+  .cards {
+      grid-template-columns:
+    minmax(1300px, 1fr) minmax(1300px, 1fr) minmax(1300px, 1fr)
+    minmax(340px, 1fr);
+  }
+
+  .card {
+    width: 1200px;
+    height: 640px;
+  }
+
+  .work {
+    top: 255px;
+  }
+
+  .next-arrow {
+    left: 4355px;
+    top: 850px;
+  }
+  
+   :host-context(html[lang="de"]) .next-arrow {
+    top: 850px;
+  }
+}
+
 @media (min-width: 901px) and (max-width: 1439px) {
   .next-arrow {
     position: absolute;

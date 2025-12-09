@@ -129,6 +129,11 @@
 .burger-btn {
   display: none;
 }
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .side {
+    gap: 64px;
+  }
+}
 
 @media (min-width: 901px) and (max-width: 1439px) {
   .side {

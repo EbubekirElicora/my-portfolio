@@ -96,6 +96,27 @@
   display: none !important;
 }
 
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .skills {
+    width: 1200px;
+    top: 400px;
+  }
+
+  .p-pos,
+  .grid {
+    width: 100%;
+  }
+
+  .next-arrow {
+    left: 1645px;
+    top: 448px;
+  }
+
+   :host-context(html[lang="de"]) .next-arrow {
+    top: 608px;
+  }
+}
+
 @media (min-width: 900px) and (max-width: 1439px) {
   .skills {
     position: relative;

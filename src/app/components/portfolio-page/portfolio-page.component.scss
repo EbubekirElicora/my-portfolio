@@ -20,15 +20,6 @@
   margin-left: 172px;
   width: calc(100vw - 172px);
   z-index: 10;
-
-  @media (max-width: 900px) {
-    flex-direction: column;
-    overflow-x: hidden;
-    overflow-y: auto;
-    height: calc(100vh - 72px);
-    margin-left: 0;
-    width: auto;
-  }
 }
 
 .section {
@@ -37,14 +28,6 @@
   scroll-snap-align: start;
   position: relative;
   background: transparent;
-
-  @media (max-width: 900px) {
-    flex: 0 0 auto;
-    height: auto;
-    min-height: 100vh;
-    scroll-snap-align: start;
-    padding-inline: 20px;
-  }
 }
 
 .sections {
@@ -78,6 +61,29 @@
   background: #4a4a4a;
 }
 
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .section {
+    flex: 0 0 clamp(1441px, calc(100vw - 172px), 1650px);
+  }
+
+  #why-me,
+  #skills {
+    flex: 0 0 clamp(1174px, 100vw - 220px, 1630px);
+  }
+
+  #references {
+    flex: 0 0 clamp(1850px, 100vw - 220px, 2280px);
+  }
+
+  #about {
+    flex: 0 0 clamp(1150px, 100vw - 172px, 1630px);
+  }
+
+  #contact {
+    flex: 0 0 clamp(1441px, calc(100vw - 172px), 1720px);
+  }
+}
+
 @media (max-width: 900px) {
   .side-nav {
     width: 100%;
@@ -100,6 +106,23 @@
 
   #skills.section {
     padding-inline: 0;
+  }
+
+  .sections {
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: calc(100vh - 72px);
+    margin-left: 0;
+    width: auto;
+  }
+
+  .section {
+    flex: 0 0 auto;
+    height: auto;
+    min-height: 100vh;
+    scroll-snap-align: start;
+    padding-inline: 20px;
   }
 }
 

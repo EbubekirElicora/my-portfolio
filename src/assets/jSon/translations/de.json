@@ -162,5 +162,109 @@
   },
   "about": {
     "subtitle": "Full-Stack Entwickler"
+  },
+  "privacy": {
+    "title": "Datenschutzerklärung",
+
+    "preamble_heading": "Präambel",
+    "preamble_p1": "Mit der folgenden Datenschutzerklärung möchten wir Sie darüber aufklären, welche Arten Ihrer personenbezogenen Daten (nachfolgend auch kurz als „Daten“ bezeichnet) wir zu welchen Zwecken und in welchem Umfang verarbeiten. Die Datenschutzerklärung gilt für alle von uns durchgeführten Verarbeitungen personenbezogener Daten, sowohl im Rahmen der Erbringung unserer Leistungen als auch insbesondere auf unseren Webseiten, in mobilen Applikationen sowie innerhalb externer Onlinepräsenzen, wie z. B. unserer Social-Media-Profile (nachfolgend zusammenfassend bezeichnet als „Onlineangebot“).",
+    "preamble_p2": "Die verwendeten Begriffe sind nicht geschlechtsspezifisch.",
+    "preamble_status": "Stand: 7. Dezember 2025",
+
+    "overview_heading": "Übersicht der Verarbeitungen",
+    "overview_intro": "Die nachfolgende Übersicht fasst die Arten der verarbeiteten Daten und die Zwecke ihrer Verarbeitung zusammen und verweist auf die betroffenen Personen.",
+    "overview_types_heading": "Arten der verarbeiteten Daten",
+    "overview_types_1": "Bestandsdaten.",
+    "overview_types_2": "Beschäftigtendaten.",
+    "overview_types_3": "Kontaktdaten.",
+    "overview_types_4": "Inhaltsdaten.",
+    "overview_types_5": "Nutzungsdaten.",
+    "overview_types_6": "Meta-, Kommunikations- und Verfahrensdaten.",
+
+    "overview_subjects_heading": "Kategorien betroffener Personen",
+    "overview_subjects_1": "Beschäftigte.",
+    "overview_subjects_2": "Kommunikationspartner.",
+    "overview_subjects_3": "Nutzer.",
+    "overview_subjects_4": "Dritte Personen.",
+    "overview_subjects_5": "Hinweisgeber.",
+
+    "overview_purposes_heading": "Zwecke der Verarbeitung",
+    "overview_purposes_1": "Kommunikation.",
+    "overview_purposes_2": "Organisations- und Verwaltungsverfahren.",
+    "overview_purposes_3": "Feedback.",
+    "overview_purposes_4": "Bereitstellung unseres Onlineangebotes und Nutzerfreundlichkeit.",
+    "overview_purposes_5": "Hinweisgeberschutz.",
+    "overview_purposes_6": "Öffentlichkeitsarbeit.",
+
+    "controller_heading": "Verantwortlicher",
+    "controller_name": "Ebubekir Elicora",
+    "controller_street": "Kolberger Str. 4",
+    "controller_city": "44649 Herne",
+    "controller_email_label": "E-Mail-Adresse:",
+    "controller_email": "ebubekir.elicora@gmx.de",
+
+    "legal_basis_heading": "Maßgebliche Rechtsgrundlagen",
+    "legal_basis_intro": "Im Folgenden erhalten Sie eine Übersicht der Rechtsgrundlagen der DSGVO, auf deren Basis wir personenbezogene Daten verarbeiten. Bitte nehmen Sie zur Kenntnis, dass neben den Regelungen der DSGVO nationale Datenschutzvorgaben in Ihrem bzw. unserem Wohn- oder Sitzland gelten können. Sollten im Einzelfall speziellere Rechtsgrundlagen maßgeblich sein, teilen wir Ihnen diese in der Datenschutzerklärung mit.",
+    "legal_basis_1": "Einwilligung (Art. 6 Abs. 1 S. 1 lit. a DSGVO) – Die betroffene Person hat ihre Einwilligung in die Verarbeitung der sie betreffenden personenbezogenen Daten für einen spezifischen Zweck oder mehrere bestimmte Zwecke gegeben.",
+    "legal_basis_2": "Vertragserfüllung und vorvertragliche Anfragen (Art. 6 Abs. 1 S. 1 lit. b DSGVO) – Die Verarbeitung ist für die Erfüllung eines Vertrags erforderlich, dessen Vertragspartei die betroffene Person ist, oder zur Durchführung vorvertraglicher Maßnahmen, die auf Anfrage der betroffenen Person erfolgen.",
+    "legal_basis_3": "Rechtliche Verpflichtung (Art. 6 Abs. 1 S. 1 lit. c DSGVO) – Die Verarbeitung ist zur Erfüllung einer rechtlichen Verpflichtung erforderlich, der der Verantwortliche unterliegt.",
+    "legal_basis_4": "Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f DSGVO) – Die Verarbeitung ist zur Wahrung der berechtigten Interessen des Verantwortlichen oder eines Dritten notwendig, sofern nicht die Interessen oder Grundrechte und Grundfreiheiten der betroffenen Person überwiegen.",
+    "legal_basis_national": "Zusätzlich zu den Datenschutzregelungen der DSGVO gelten nationale Regelungen zum Datenschutz in Deutschland, insbesondere das Bundesdatenschutzgesetz (BDSG). Das BDSG enthält Spezialregelungen zum Recht auf Auskunft, zum Recht auf Löschung, zum Widerspruchsrecht, zur Verarbeitung besonderer Kategorien personenbezogener Daten, zur Verarbeitung für andere Zwecke und zur Übermittlung sowie automatisierten Entscheidungsfindung im Einzelfall einschließlich Profiling. Ferner können Landesdatenschutzgesetze der einzelnen Bundesländer zur Anwendung gelangen.",
+
+    "security_heading": "Sicherheitsmaßnahmen",
+    "security_p1": "Wir treffen nach Maßgabe der gesetzlichen Vorgaben unter Berücksichtigung des Stands der Technik, der Implementierungskosten und der Art, des Umfangs, der Umstände und der Zwecke der Verarbeitung sowie der unterschiedlichen Eintrittswahrscheinlichkeiten und des Ausmaßes der Bedrohung der Rechte und Freiheiten natürlicher Personen geeignete technische und organisatorische Maßnahmen, um ein dem Risiko angemessenes Schutzniveau zu gewährleisten.",
+    "security_p2": "Zu den Maßnahmen gehören insbesondere die Sicherung der Vertraulichkeit, Integrität und Verfügbarkeit von Daten durch Kontrolle des physischen und elektronischen Zugangs zu den Daten, der sie betreffenden Zugriffe, der Eingabe, Weitergabe, Sicherung der Verfügbarkeit und ihrer Trennung. Des Weiteren haben wir Verfahren eingerichtet, die eine Wahrnehmung von Betroffenenrechten, die Löschung von Daten und Reaktionen auf die Gefährdung der Daten gewährleisten. Ferner berücksichtigen wir den Schutz personenbezogener Daten bereits bei der Entwicklung bzw. Auswahl von Hardware, Software sowie Verfahren entsprechend dem Prinzip des Datenschutzes durch Technikgestaltung und datenschutzfreundliche Voreinstellungen.",
+    "security_tls": "Um die Daten der Nutzer, die über unsere Online-Dienste übertragen werden, vor unerlaubten Zugriffen zu schützen, setzen wir auf TLS-/SSL-Verschlüsselungstechnologie (HTTPS). SSL und TLS verschlüsseln die Informationen, die zwischen der Website und dem Browser des Nutzers übertragen werden. Eine gesicherte Verbindung erkennen Sie an der in der Adresszeile beginnenden Bezeichnung „https://“.",
+
+    "intl_heading": "Internationale Datentransfers",
+    "intl_p1": "Sofern wir Daten in ein Drittland (das heißt außerhalb der Europäischen Union oder des Europäischen Wirtschaftsraums) übermitteln oder dies im Rahmen der Nutzung von Diensten Dritter oder der Offenlegung bzw. Übermittlung von Daten an andere Personen, Stellen oder Unternehmen geschieht, erfolgt dies stets im Einklang mit den gesetzlichen Vorgaben.",
+    "intl_p2": "Für Datenübermittlungen in die USA stützen wir uns vorrangig auf das Data Privacy Framework (DPF), das durch einen Angemessenheitsbeschluss der EU-Kommission vom 10.07.2023 anerkannt wurde. Zusätzlich können Standardvertragsklauseln oder Einwilligungen eingesetzt werden.",
+    "intl_p3": "Informationen zum Data Privacy Framework sowie eine Liste zertifizierter Unternehmen finden Sie unter https://www.dataprivacyframework.gov/. Informationen zu Drittlandtransfers und Angemessenheitsbeschlüssen stellt die EU-Kommission auf ihrer Website bereit.",
+
+    "storage_heading": "Allgemeine Informationen zur Datenspeicherung und Löschung",
+    "storage_p1": "Wir löschen personenbezogene Daten, die wir verarbeiten, gemäß den gesetzlichen Bestimmungen, sobald die zugrundeliegenden Einwilligungen widerrufen werden oder keine weiteren rechtlichen Grundlagen für die Verarbeitung bestehen. Dies betrifft insbesondere Fälle, in denen der ursprüngliche Verarbeitungszweck entfällt oder die Daten nicht mehr benötigt werden.",
+    "storage_p2": "Ausnahmen bestehen, wenn gesetzliche Pflichten oder besondere Interessen eine längere Aufbewahrung erfordern, etwa handels- oder steuerrechtliche Aufbewahrungspflichten oder die Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen.",
+    "storage_p3": "Unsere Datenschutzhinweise können zusätzliche Informationen zur Aufbewahrung und Löschung von Daten enthalten, die speziell für bestimmte Verarbeitungsprozesse gelten.",
+
+    "rights_heading": "Rechte der betroffenen Personen",
+    "rights_intro": "Ihnen stehen als betroffene Person nach der DSGVO verschiedene Rechte zu, insbesondere nach Art. 15 bis 21 DSGVO:",
+    "rights_1": "Widerspruchsrecht: Sie haben das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit gegen die Verarbeitung der Sie betreffenden personenbezogenen Daten, die aufgrund von Art. 6 Abs. 1 lit. e oder f DSGVO erfolgt, Widerspruch einzulegen. Dies gilt auch für ein auf diese Bestimmungen gestütztes Profiling. Werden personenbezogene Daten zum Zwecke der Direktwerbung verarbeitet, haben Sie das Recht, jederzeit Widerspruch gegen die Verarbeitung zum Zwecke solcher Werbung einzulegen.",
+    "rights_2": "Widerrufsrecht bei Einwilligungen: Sie haben das Recht, erteilte Einwilligungen jederzeit mit Wirkung für die Zukunft zu widerrufen.",
+    "rights_3": "Auskunftsrecht: Sie haben das Recht, eine Bestätigung darüber zu verlangen, ob betreffende Daten verarbeitet werden, sowie auf Auskunft über diese Daten und weitere Informationen entsprechend den gesetzlichen Vorgaben.",
+    "rights_4": "Recht auf Berichtigung: Sie haben das Recht, die Berichtigung unrichtiger Daten oder die Vervollständigung unvollständiger Daten zu verlangen.",
+    "rights_5": "Recht auf Löschung und Einschränkung der Verarbeitung: Sie haben das Recht, die unverzügliche Löschung bzw. alternativ die Einschränkung der Verarbeitung nach Maßgabe der gesetzlichen Vorgaben zu verlangen.",
+    "rights_6": "Recht auf Datenübertragbarkeit: Sie haben das Recht, Sie betreffende Daten, die Sie uns bereitgestellt haben, in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten oder an einen anderen Verantwortlichen übertragen zu lassen.",
+    "rights_7": "Beschwerderecht bei einer Aufsichtsbehörde: Sie haben das Recht, sich bei einer zuständigen Datenschutz-Aufsichtsbehörde zu beschweren, wenn Sie der Ansicht sind, dass die Verarbeitung der Sie betreffenden personenbezogenen Daten gegen die DSGVO verstößt.",
+
+    "contact_heading": "Kontakt- und Anfrageverwaltung",
+    "contact_p1": "Bei der Kontaktaufnahme mit uns (z. B. per Post, Kontaktformular, E-Mail, Telefon oder über soziale Medien) sowie im Rahmen bestehender Nutzer- und Geschäftsbeziehungen verarbeiten wir die Angaben der anfragenden Personen, soweit dies zur Beantwortung der Kontaktanfragen und etwaiger angefragter Maßnahmen erforderlich ist.",
+    "contact_p2": "Verarbeitete Datenarten sind insbesondere Bestandsdaten, Kontaktdaten, Inhaltsdaten, Nutzungsdaten sowie Meta-, Kommunikations- und Verfahrensdaten.",
+    "contact_p3": "Die Verarbeitung erfolgt zur Kommunikation, Bearbeitung von Anfragen, Organisation und Verwaltung sowie zur Bereitstellung und Optimierung unseres Onlineangebotes. Rechtsgrundlagen sind Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung und vorvertragliche Maßnahmen) und Art. 6 Abs. 1 lit. f DSGVO (berechtigte Interessen).",
+
+    "social_heading": "Präsenzen in sozialen Netzwerken (Social Media)",
+    "social_p1": "Wir unterhalten Onlinepräsenzen innerhalb sozialer Netzwerke und verarbeiten in diesem Rahmen Daten der Nutzer, um mit den dort aktiven Nutzern zu kommunizieren oder Informationen über uns anzubieten.",
+    "social_p2": "Es kann dabei zu Verarbeitungen von Nutzerdaten außerhalb der Europäischen Union kommen, wodurch sich Risiken für die Nutzer ergeben können (z. B. erschwerte Durchsetzung von Betroffenenrechten).",
+    "social_p3": "Die Daten der Nutzer werden in sozialen Netzwerken im Regelfall zu Marktforschungs- und Werbezwecken verarbeitet. Aus dem Nutzungsverhalten und sich daraus ergebenden Interessen können Nutzungsprofile erstellt werden, um beispielsweise interessenbezogene Werbung innerhalb und außerhalb der Netzwerke zu schalten.",
+    "social_p4": "Für Details zu den jeweiligen Verarbeitungsformen, Widerspruchsmöglichkeiten (Opt-out) und Ihren Rechten verweisen wir auf die Datenschutzerklärungen und Angaben der jeweiligen Netzwerkbetreiber.",
+
+    "whistle_heading": "Datenschutzinformationen für Hinweisgeber",
+    "whistle_p1": "Sofern uns Hinweise auf mögliches Fehlverhalten über geeignete Meldewege übermittelt werden, verarbeiten wir die dabei mitgeteilten personenbezogenen Daten ausschließlich zum Zweck der Entgegennahme, Prüfung und Bearbeitung des jeweiligen Hinweises.",
+    "whistle_p2": "Je nach Inhalt des Hinweises können hiervon auch besondere Kategorien personenbezogener Daten betroffen sein. Die Verarbeitung erfolgt auf Grundlage gesetzlicher Pflichten, berechtigter Interessen an der Aufklärung und Verfolgung von Rechtsverstößen sowie gegebenenfalls erteilter Einwilligungen.",
+
+    "changes_heading": "Änderung und Aktualisierung",
+    "changes_p1": "Wir bitten Sie, sich regelmäßig über den Inhalt dieser Datenschutzerklärung zu informieren. Wir passen die Datenschutzerklärung an, sobald Änderungen der von uns durchgeführten Datenverarbeitungen oder der Rechtslage dies erforderlich machen.",
+    "changes_p2": "Sofern durch die Änderungen eine Mitwirkungshandlung Ihrerseits (z. B. Einwilligung) oder eine individuelle Benachrichtigung erforderlich wird, informieren wir Sie gesondert.",
+
+    "definitions_heading": "Begriffsdefinitionen",
+    "definitions_intro": "In diesem Abschnitt erhalten Sie eine Übersicht über einige der in dieser Datenschutzerklärung verwendeten Begrifflichkeiten. Soweit die Begrifflichkeiten gesetzlich definiert sind, gelten deren gesetzlichen Definitionen. Die nachfolgenden Erläuterungen dienen dem Verständnis:",
+    "definitions_1": "Personenbezogene Daten: Alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person beziehen.",
+    "definitions_2": "Verarbeitung: Jeder Vorgang im Zusammenhang mit personenbezogenen Daten, z. B. das Erheben, das Erfassen, die Organisation, Speicherung, Anpassung, Auswertung, Übermittlung oder Löschung.",
+    "definitions_3": "Verantwortlicher: Die natürliche oder juristische Person, Behörde, Einrichtung oder andere Stelle, die über Zwecke und Mittel der Verarbeitung von personenbezogenen Daten entscheidet.",
+    "definitions_4": "Betroffene Person: Die identifizierte oder identifizierbare natürliche Person, deren personenbezogene Daten verarbeitet werden.",
+    "definitions_5": "Nutzungsdaten: Daten, die angeben, wie Personen Onlineangebote nutzen, z. B. aufgerufene Seiten, Verweildauer oder Interaktionen.",
+    "definitions_6": "Meta-, Kommunikations- und Verfahrensdaten: Daten, die im Rahmen administrativer und technischer Abläufe anfallen, z. B. IP-Adressen, Zeitangaben oder Protokolle von Systemereignissen.",
+
+    "seal_text": "Erstellt mit kostenlosem Datenschutz-Generator.de von Dr. Thomas Schwenke",
+    "seal_link": "https://datenschutz-generator.de/"
   }
 }

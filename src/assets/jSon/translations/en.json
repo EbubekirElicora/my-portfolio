@@ -161,5 +161,109 @@
   },
   "about": {
     "subtitle": "Full-Stack Developer"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+
+    "preamble_heading": "Preamble",
+    "preamble_p1": "With this privacy policy, we would like to inform you about which types of your personal data (hereinafter also referred to as “data”) we process, for which purposes and to what extent. This privacy policy applies to all processing of personal data carried out by us, in particular on our website, in mobile applications and within external online presences such as our social media profiles (collectively referred to as the “online offer”).",
+    "preamble_p2": "All terms used are to be understood as gender-neutral.",
+    "preamble_status": "Last updated: 7 December 2025",
+
+    "overview_heading": "Overview of Processing Activities",
+    "overview_intro": "The following overview summarises the categories of data we process, the purposes of processing and the categories of data subjects.",
+    "overview_types_heading": "Types of data processed",
+    "overview_types_1": "Inventory data.",
+    "overview_types_2": "Employee data.",
+    "overview_types_3": "Contact data.",
+    "overview_types_4": "Content data.",
+    "overview_types_5": "Usage data.",
+    "overview_types_6": "Meta, communication and procedural data.",
+
+    "overview_subjects_heading": "Categories of data subjects",
+    "overview_subjects_1": "Employees.",
+    "overview_subjects_2": "Communication partners.",
+    "overview_subjects_3": "Users.",
+    "overview_subjects_4": "Third parties.",
+    "overview_subjects_5": "Whistleblowers.",
+
+    "overview_purposes_heading": "Purposes of processing",
+    "overview_purposes_1": "Communication.",
+    "overview_purposes_2": "Organisational and administrative purposes.",
+    "overview_purposes_3": "Feedback.",
+    "overview_purposes_4": "Provision and optimisation of our online offer and user experience.",
+    "overview_purposes_5": "Whistleblower protection.",
+    "overview_purposes_6": "Public relations.",
+
+    "controller_heading": "Controller",
+    "controller_name": "Ebubekir Elicora",
+    "controller_street": "Kolberger Str. 4",
+    "controller_city": "44649 Herne",
+    "controller_email_label": "Email address:",
+    "controller_email": "ebubekir.elicora@gmx.de",
+
+    "legal_basis_heading": "Relevant legal bases",
+    "legal_basis_intro": "Below you will find an overview of the legal bases of the GDPR on which we process personal data. Please note that, in addition to the provisions of the GDPR, national data protection regulations may apply in your or our country of residence or domicile.",
+    "legal_basis_1": "Consent (Art. 6(1)(a) GDPR) – The data subject has given consent to the processing of their personal data for one or more specific purposes.",
+    "legal_basis_2": "Performance of a contract and pre-contractual enquiries (Art. 6(1)(b) GDPR) – Processing is necessary for the performance of a contract to which the data subject is party or in order to take steps at the request of the data subject prior to entering into a contract.",
+    "legal_basis_3": "Legal obligation (Art. 6(1)(c) GDPR) – Processing is necessary for compliance with a legal obligation to which the controller is subject.",
+    "legal_basis_4": "Legitimate interests (Art. 6(1)(f) GDPR) – Processing is necessary for the purposes of the legitimate interests pursued by the controller or by a third party, except where such interests are overridden by the interests or fundamental rights and freedoms of the data subject.",
+    "legal_basis_national": "In addition to the GDPR, the German Federal Data Protection Act (BDSG) and, where applicable, the data protection acts of the federal states apply. These contain specific provisions, for example on the right of access, deletion, objection, processing of special categories of data and processing for other purposes.",
+
+    "security_heading": "Security measures",
+    "security_p1": "We take appropriate technical and organisational measures in accordance with the legal requirements to ensure a level of security appropriate to the risk, taking into account the state of the art, implementation costs and the nature, scope, context and purposes of processing, as well as the varying likelihood and severity of risks to the rights and freedoms of natural persons.",
+    "security_p2": "These measures in particular include safeguarding the confidentiality, integrity and availability of data by controlling physical and electronic access to the data, access rights, input, transfer, availability and separation of data. We have also implemented procedures to ensure the exercise of data subject rights, deletion of data and response to data incidents. Furthermore, we take privacy into account in the development or selection of hardware, software and procedures according to the principles of privacy by design and by default.",
+    "security_tls": "To protect users' data transmitted via our online services from unauthorised access, we use TLS/SSL encryption technology (HTTPS). You can recognise an encrypted connection by the “https://” in the address bar of your browser.",
+
+    "intl_heading": "International data transfers",
+    "intl_p1": "If we transfer data to a country outside the European Union (EU) or the European Economic Area (EEA), or this occurs in the context of using third-party services or disclosing data to other persons or companies, this is always done in accordance with the legal requirements.",
+    "intl_p2": "For data transfers to the USA, we primarily rely on the Data Privacy Framework (DPF) and, where necessary, on standard contractual clauses or consent.",
+    "intl_p3": "Further information on the Data Privacy Framework can be found at https://www.dataprivacyframework.gov/. Information on international data transfers and adequacy decisions can be found on the website of the European Commission.",
+
+    "storage_heading": "Storage and deletion of data",
+    "storage_p1": "We delete personal data in accordance with the legal requirements as soon as the consents on which processing is based are revoked or there is no other legal basis for processing. This particularly applies when the original purpose of processing no longer applies or the data is no longer required.",
+    "storage_p2": "Data must be retained for a longer period where we are obliged to do so by law (for example, commercial or tax law) or where it is necessary for the assertion, exercise or defence of legal claims.",
+    "storage_p3": "Where we provide additional information on storage and deletion periods in this privacy policy, these details apply in particular to the respective processing activities.",
+
+    "rights_heading": "Rights of data subjects",
+    "rights_intro": "Under the GDPR, you as a data subject have various rights, in particular under Articles 15 to 21 GDPR:",
+    "rights_1": "Right to object: You have the right to object at any time, on grounds relating to your particular situation, to the processing of your personal data which is based on Art. 6(1)(e) or (f) GDPR; this also applies to profiling based on these provisions. Where your personal data are processed for direct marketing purposes, you have the right to object at any time to such processing.",
+    "rights_2": "Right to withdraw consent: You have the right to withdraw any consent you have given at any time with effect for the future.",
+    "rights_3": "Right of access: You have the right to obtain confirmation as to whether or not personal data concerning you are being processed and, where that is the case, access to this data and further information.",
+    "rights_4": "Right to rectification: You have the right to obtain the rectification of inaccurate data concerning you and to have incomplete data completed.",
+    "rights_5": "Right to erasure and restriction of processing: You have the right to obtain the erasure of data concerning you or, alternatively, the restriction of processing in accordance with the legal requirements.",
+    "rights_6": "Right to data portability: You have the right to receive the data concerning you which you have provided to us in a structured, commonly used and machine-readable format or to have those data transmitted to another controller.",
+    "rights_7": "Right to lodge a complaint: You have the right to lodge a complaint with a competent data protection supervisory authority if you consider that the processing of personal data relating to you infringes the GDPR.",
+
+    "contact_heading": "Contact and enquiry management",
+    "contact_p1": "When you contact us (for example by post, contact form, email, telephone or via social media) and in the context of existing user or business relationships, we process the information you provide insofar as this is necessary to respond to the enquiry and any requested measures.",
+    "contact_p2": "The categories of data processed may include in particular inventory data, contact data, content data, usage data as well as meta, communication and procedural data.",
+    "contact_p3": "Processing takes place for communication purposes, handling enquiries, organisational and administrative purposes and to provide and improve our online offer. The legal bases are Art. 6(1)(b) GDPR (performance of a contract and pre-contractual measures) and Art. 6(1)(f) GDPR (legitimate interests).",
+
+    "social_heading": "Presence in social networks (social media)",
+    "social_p1": "We maintain online presences within social networks and process user data in this context in order to communicate with users active there or to provide information about us.",
+    "social_p2": "User data may be processed outside the European Union, which may entail risks for users (for example, difficulties in enforcing data subject rights).",
+    "social_p3": "User data in social networks is generally processed for market research and advertising purposes. Usage profiles can be created from the usage behaviour and the resulting interests of users in order to display interest-based advertising inside and outside the networks.",
+    "social_p4": "For details on the respective processing operations and the options to object (opt-out) as well as your rights, please refer to the privacy policies and information provided by the respective network operators.",
+
+    "whistle_heading": "Privacy information for whistleblowers",
+    "whistle_p1": "If we receive reports of potential misconduct via appropriate reporting channels, we process the personal data provided in this context solely for the purpose of receiving, examining and handling the respective report.",
+    "whistle_p2": "Depending on the content of the report, special categories of personal data may also be affected. Processing is based on legal obligations, our legitimate interests in clarifying and pursuing legal violations and, where applicable, on consent.",
+
+    "changes_heading": "Changes and updates",
+    "changes_p1": "We kindly ask you to check the content of this privacy policy on a regular basis. We will amend this privacy policy as soon as changes to the data processing carried out by us or changes in the legal situation make this necessary.",
+    "changes_p2": "If your cooperation (for example consent) or individual notification becomes necessary as a result of the changes, we will inform you separately.",
+
+    "definitions_heading": "Definitions",
+    "definitions_intro": "In this section you will find explanations of some of the terms used in this privacy policy. Where terms are defined by law, the legal definitions apply; the following explanations are intended to aid understanding:",
+    "definitions_1": "Personal data: Any information relating to an identified or identifiable natural person.",
+    "definitions_2": "Processing: Any operation performed on personal data, such as collection, recording, organisation, storage, adaptation, analysis, transmission or erasure.",
+    "definitions_3": "Controller: The natural or legal person, public authority, agency or other body which determines the purposes and means of the processing of personal data.",
+    "definitions_4": "Data subject: The identified or identifiable natural person whose personal data are processed.",
+    "definitions_5": "Usage data: Data indicating how people use online services, for example pages visited, dwell time or interactions.",
+    "definitions_6": "Meta, communication and procedural data: Data arising in the course of administrative and technical processes, such as IP addresses, timestamps or system logs.",
+
+    "seal_text": "Created with the free Datenschutz-Generator.de by Dr. Thomas Schwenke (German original version applies).",
+    "seal_link": "https://datenschutz-generator.de/"
   }
 }
