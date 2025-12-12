@@ -10,7 +10,10 @@ import { ScrollService } from '../services/scroll.service';
   standalone: true,
   imports: [CommonModule, SideNavComponent, TranslationPipe, RouterLink],
   templateUrl: './privacy-policy.component.html',
-  styleUrl: './privacy-policy.component.scss',
+  styleUrls: [
+    './privacy-policy.component.scss',
+    './privacy-policy.component.responsive.scss',
+  ],
 })
 export class PrivacyPolicyComponent {
   isRight = false;

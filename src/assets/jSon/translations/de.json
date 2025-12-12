@@ -89,13 +89,13 @@
     },
 
     "project3": {
-      "title": "Projekt DA Bubble",
+      "title": "Projekt Ring of Fire",
       "about": "Über das Projekt",
-      "about_text": "Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktion, weise Benutzer und Kategorien zu.",
+      "about_text": "Digitale Umsetzung des bekannten Party-Kartenspiels Ring of Fire. Spieler ziehen Karten mit unterschiedlichen Regeln und Aktionen, umgesetzt mit reaktivem UI und zentralem Spielzustand.",
       "tech": "Technologien, die ich verwendet habe",
-      "tech_list": "Angular, TypeScript, HTML, CSS, Firebase",
-      "team": "Meine Erfahrung in der Teamarbeit",
-      "team_text": "Fortsetzung folgt..."
+      "tech_list": "Angular, TypeScript, HTML, SCSS, Firebase",
+      "team": "Was ich gelernt habe",
+      "team_text": "Die Entwicklung von Ring of Fire hat meine Fähigkeiten im Aufbau interaktiver Anwendungen mit klar strukturierter, ereignisbasierter Logik erweitert. Ich habe die gesamte Spielearchitektur eigenständig entworfen und UI, Spielregeln und Datenfluss in gut wartbare Module getrennt. Durch Firebase habe ich ein tieferes Verständnis für Echtzeit-Updates und asynchrone Zustände gewonnen. Das Projekt hat meinen TypeScript-Code sauberer, meine Architektur konsequenter und komplexe Abläufe stabil und skalierbar gemacht."
     },
 
     "project4": {
@@ -125,7 +125,7 @@
     "ref3": {
       "text": "„Ebubekir übernimmt Verantwortung und liefert Ergebnisse, auf die man sich verlassen kann. Technisch wie menschlich eine echte Bereicherung.“",
       "author": "Noah Mueller",
-      "project": "Projekt DA Bubble"
+      "project": "Projekt Ring of Fire"
     }
   },
   "contact": {

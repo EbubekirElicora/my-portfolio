@@ -2,7 +2,6 @@
 
 <section class="privacy-page">
   <section [class.is-right]="isRight">
-    <!-- Mobile back button -->
     <img
       class="mobile-back-to-main"
       src="assets/img/icons/contact/mobile_arrow_back.svg"
@@ -13,24 +12,18 @@
       (keydown.enter)="backToMain()"
       (keydown.space)="backToMain()"
     />
-
-    <!-- LEFT SIDE: erste Hälfte der Datenschutzerklärung -->
     <section class="privacy" id="privacy-left">
       <div class="privacy-position">
         <div class="privacy-sideline-container">
           <h1 class="header-txt">{{ "privacy.title" | translate }}</h1>
         </div>
-
         <div class="privacy-txt-container">
-          <!-- Präambel -->
           <div class="privacy-section">
             <h2>{{ "privacy.preamble_heading" | translate }}</h2>
             <p>{{ "privacy.preamble_p1" | translate }}</p>
             <p>{{ "privacy.preamble_p2" | translate }}</p>
             <p>{{ "privacy.preamble_status" | translate }}</p>
           </div>
-
-          <!-- Verantwortlicher -->
           <div class="privacy-section">
             <h2>{{ "privacy.controller_heading" | translate }}</h2>
             <p>
@@ -40,12 +33,9 @@
             </p>
             <p>E-Mail: ebubekir.elicora&#64;gmx.de</p>
           </div>
-
-          <!-- Übersicht der Verarbeitungen -->
           <div class="privacy-section">
             <h2>{{ "privacy.overview_heading" | translate }}</h2>
             <p>{{ "privacy.overview_intro" | translate }}</p>
-
             <h3>{{ "privacy.overview_types_heading" | translate }}</h3>
             <ul>
               <li>{{ "privacy.overview_types_1" | translate }}</li>
@@ -55,7 +45,6 @@
               <li>{{ "privacy.overview_types_5" | translate }}</li>
               <li>{{ "privacy.overview_types_6" | translate }}</li>
             </ul>
-
             <h3>{{ "privacy.overview_subjects_heading" | translate }}</h3>
             <ul>
               <li>{{ "privacy.overview_subjects_1" | translate }}</li>
@@ -64,7 +53,6 @@
               <li>{{ "privacy.overview_subjects_4" | translate }}</li>
               <li>{{ "privacy.overview_subjects_5" | translate }}</li>
             </ul>
-
             <h3>{{ "privacy.overview_purposes_heading" | translate }}</h3>
             <ul>
               <li>{{ "privacy.overview_purposes_1" | translate }}</li>
@@ -75,8 +63,6 @@
               <li>{{ "privacy.overview_purposes_6" | translate }}</li>
             </ul>
           </div>
-
-          <!-- Rechtsgrundlagen -->
           <div class="privacy-section">
             <h2>{{ "privacy.legal_basis_heading" | translate }}</h2>
             <p>{{ "privacy.legal_basis_intro" | translate }}</p>
@@ -88,8 +74,6 @@
             </ul>
             <p>{{ "privacy.legal_basis_national" | translate }}</p>
           </div>
-
-          <!-- Sicherheitsmaßnahmen -->
           <div class="privacy-section">
             <h2>{{ "privacy.security_heading" | translate }}</h2>
             <p>{{ "privacy.security_p1" | translate }}</p>
@@ -98,8 +82,6 @@
           </div>
         </div>
       </div>
-
-      <!-- Pfeil nach rechts -->
       <img
         class="next-arrow"
         src="assets/img/icons/arrows/arrow_right.png"
@@ -111,28 +93,21 @@
         (keydown.space)="goRight()"
       />
     </section>
-
-    <!-- RIGHT SIDE: zweite Hälfte der Datenschutzerklärung -->
     <section class="privacy privacy-right" id="privacy-right">
       <div class="privacy-position-right">
         <div class="privacy-txt-container">
-          <!-- Internationale Datentransfers -->
           <div class="privacy-section">
             <h2>{{ "privacy.intl_heading" | translate }}</h2>
             <p>{{ "privacy.intl_p1" | translate }}</p>
             <p>{{ "privacy.intl_p2" | translate }}</p>
             <p>{{ "privacy.intl_p3" | translate }}</p>
           </div>
-
-          <!-- Speicherfristen / Löschung -->
           <div class="privacy-section">
             <h2>{{ "privacy.storage_heading" | translate }}</h2>
             <p>{{ "privacy.storage_p1" | translate }}</p>
             <p>{{ "privacy.storage_p2" | translate }}</p>
             <p>{{ "privacy.storage_p3" | translate }}</p>
           </div>
-
-          <!-- Rechte der Betroffenen -->
           <div class="privacy-section">
             <h2>{{ "privacy.rights_heading" | translate }}</h2>
             <p>{{ "privacy.rights_intro" | translate }}</p>
@@ -146,16 +121,12 @@
               <li>{{ "privacy.rights_7" | translate }}</li>
             </ul>
           </div>
-
-          <!-- Kontakt / Anfragen -->
           <div class="privacy-section">
             <h2>{{ "privacy.contact_heading" | translate }}</h2>
             <p>{{ "privacy.contact_p1" | translate }}</p>
             <p>{{ "privacy.contact_p2" | translate }}</p>
             <p>{{ "privacy.contact_p3" | translate }}</p>
           </div>
-
-          <!-- Social Media -->
           <div class="privacy-section">
             <h2>{{ "privacy.social_heading" | translate }}</h2>
             <p>{{ "privacy.social_p1" | translate }}</p>
@@ -163,22 +134,16 @@
             <p>{{ "privacy.social_p3" | translate }}</p>
             <p>{{ "privacy.social_p4" | translate }}</p>
           </div>
-
-          <!-- Hinweisgeber (kurz) -->
           <div class="privacy-section">
             <h2>{{ "privacy.whistle_heading" | translate }}</h2>
             <p>{{ "privacy.whistle_p1" | translate }}</p>
             <p>{{ "privacy.whistle_p2" | translate }}</p>
           </div>
-
-          <!-- Änderungen -->
           <div class="privacy-section">
             <h2>{{ "privacy.changes_heading" | translate }}</h2>
             <p>{{ "privacy.changes_p1" | translate }}</p>
             <p>{{ "privacy.changes_p2" | translate }}</p>
           </div>
-
-          <!-- Begriffsdefinitionen -->
           <div class="privacy-section">
             <h2>{{ "privacy.definitions_heading" | translate }}</h2>
             <p>{{ "privacy.definitions_intro" | translate }}</p>
@@ -191,8 +156,6 @@
               <li>{{ "privacy.definitions_6" | translate }}</li>
             </ul>
           </div>
-
-          <!-- Generator-Siegel -->
           <p class="seal">
             <a
               [href]="'privacy.seal_link' | translate"
@@ -204,8 +167,6 @@
           </p>
         </div>
       </div>
-
-      <!-- Kontakt / Footer rechts wie bei Legal -->
       <section class="info-side">
         <ul class="contacts">
           <li>
@@ -250,8 +211,6 @@
           </div>
         </div>
       </section>
-
-      <!-- Pfeil zurück nach links -->
       <img
         class="back-arrow"
         src="assets/img/icons/arrows/arrow_left.png"
@@ -262,13 +221,10 @@
         (keydown.enter)="goLeft()"
         (keydown.space)="goLeft()"
       />
-
       <div class="privacy-accent-layer">
         <div class="accent-bar" aria-hidden="true"></div>
       </div>
     </section>
-
-    <!-- MOBILE Fußbereich -->
     <section class="privacy-bottom-section mobile-container">
       <div class="mobile-size">
         <div class="social-container mobile-arrow">
@@ -340,7 +296,6 @@
           </div>
         </nav>
       </div>
-
       <div class="container-privacy-notice mobile-privacy">
         <div class="brand">
           <a
@@ -373,7 +328,6 @@
           </svg>
           <h1>EE</h1>
         </div>
-
         <div class="privacy-notice-pos">
           <p>&copy; Ebubekir Elicora 2025</p>
           <div class="privacy-policy-mobile-container">

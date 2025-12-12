@@ -49,7 +49,6 @@ export class ScrollService {
 
   private scrollContainerToStartDesktop(): void {
     const container = this.container;
-
     if (container) {
       container.scrollTo({
         left: 0,

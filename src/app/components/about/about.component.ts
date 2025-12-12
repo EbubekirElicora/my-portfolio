@@ -1,4 +1,3 @@
-// src/app/sections/about/about.component.ts
 import {
   AfterViewInit,
   Component,
@@ -16,7 +15,7 @@ import { TranslationPipe } from '../../shared/translation.pipe';
   standalone: true,
   imports: [CommonModule, TranslationPipe],
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.scss'],
+  styleUrls: ['./about.component.scss', './about.component.responsive.scss'],
 })
 export class AboutComponent
   extends ScrollableSection
@@ -41,7 +40,7 @@ export class AboutComponent
           }
         });
       },
-      { threshold: 0.05}
+      { threshold: 0.05 }
     );
     if (this.heroSection?.nativeElement) {
       this.heroObserver.observe(this.heroSection.nativeElement);

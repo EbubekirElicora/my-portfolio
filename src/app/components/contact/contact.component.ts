@@ -57,7 +57,10 @@ function trimMinLength(min: number) {
     HttpClientModule,
   ],
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss'],
+  styleUrls: [
+    './contact.component.scss',
+    './contact.component.responsive.scss',
+  ],
 })
 export class ContactComponent extends ScrollableSection {
   @ViewChild('nameInput') nameInput!: ElementRef<HTMLInputElement>;

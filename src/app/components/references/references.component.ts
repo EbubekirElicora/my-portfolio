@@ -9,7 +9,10 @@ import { TranslationPipe } from '../../shared/translation.pipe';
   standalone: true,
   imports: [CommonModule, TranslationPipe],
   templateUrl: './references.component.html',
-  styleUrl: './references.component.scss',
+  styleUrls: [
+    './references.component.scss',
+    './references.component.responsive.scss',
+  ],
 })
 export class ReferencesComponent
   extends ScrollableSection

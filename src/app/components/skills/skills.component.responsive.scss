@@ -1,0 +1,139 @@
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .skills {
+    width: clamp(950px, 62.5vw, 1200px);
+    top: 400px;
+  }
+
+  .p-pos,
+  .grid {
+    width: 100%;
+  }
+
+  .next-arrow {
+    left: calc(100vw - 172px - 80px);
+    top: 449px;
+  }
+
+  :host-context(html[lang="de"]) .next-arrow {
+    top: 609px;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1439px) {
+  .skills {
+    position: relative;
+    top: clamp(88px, 12vh, 200px);
+    width: min(971px, calc(100vw - 216px - 64px));
+    left: 0;
+    margin-left: 216px;
+    height: auto;
+  }
+
+  .p-pos {
+    width: 100%;
+  }
+
+  .grid {
+    width: 100%;
+    column-gap: clamp(20px, 4vw, 40px);
+  }
+
+  .skill p {
+    display: none;
+  }
+
+  .skill-challenge p {
+    display: block !important;
+  }
+
+  .next-arrow {
+    left: calc(100vw - 160px);
+    top: clamp(768px, 30vh, 346px) !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .skills {
+    position: relative;
+    display: flex;
+    align-content: flex-start;
+    height: 100%;
+    width: 100%;
+    inset: 0;
+    gap: 40px;
+    flex-direction: column;
+    padding-top: 56px;
+    padding-bottom: 56px;
+    padding-inline: 20px;
+    box-sizing: border-box;
+  }
+
+  .header-txt {
+    writing-mode: initial;
+    transform: unset;
+    padding: 0;
+    font-size: 32px;
+    -webkit-text-stroke: 1px var(--accent);
+  }
+
+  .icons-container {
+    padding: 0;
+    width: 100%;
+  }
+
+  .skills-pos {
+    height: auto;
+  }
+
+  .p-pos {
+    width: auto;
+  }
+
+  .lead {
+    margin-block-end: 24px;
+  }
+
+  .mobile {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .next-arrow {
+    display: none;
+  }
+
+  .grid {
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(32px, 1fr));
+    column-gap: 72px;
+    .skill img {
+      height: 45px;
+      width: 45px;
+      object-fit: contain;
+    }
+  }
+
+  .skill {
+    p {
+      display: none;
+    }
+  }
+
+  .skill-challenge {
+    grid-column: 1 / -1;
+    justify-self: center;
+
+    p {
+      display: block;
+    }
+  }
+
+  p {
+    margin: 0;
+    font-size: 16px;
+  }
+
+  .mobile p {
+    margin-bottom: 40px;
+  }
+}

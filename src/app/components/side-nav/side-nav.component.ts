@@ -9,7 +9,10 @@ import { LanguageService } from '../../services/language.service';
   standalone: true,
   imports: [CommonModule, TranslationPipe],
   templateUrl: './side-nav.component.html',
-  styleUrls: ['./side-nav.component.scss'],
+  styleUrls: [
+    './side-nav.component.scss',
+    './side-nav.component.responsive.scss',
+  ],
 })
 export class SideNavComponent {
   activeLink = '';
@@ -20,7 +23,8 @@ export class SideNavComponent {
 
   constructor(
     private scroll: ScrollService,
-    private languageService: LanguageService) {}
+    private languageService: LanguageService
+  ) {}
 
   onNav(sectionId: string) {
     this.scroll.scrollTo(sectionId);

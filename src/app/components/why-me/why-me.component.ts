@@ -9,9 +9,11 @@ import { TranslationPipe } from '../../shared/translation.pipe';
   standalone: true,
   imports: [CommonModule, TranslationPipe],
   templateUrl: './why-me.component.html',
-  styleUrl: './why-me.component.scss'
+  styleUrls: ['./why-me.component.scss', './why-me.component.responsive.scss'],
 })
 export class WhyMeComponent extends ScrollableSection {
   override nextSectionId = 'skills';
-  constructor(scroll: ScrollService) { super(scroll); }
+  constructor(scroll: ScrollService) {
+    super(scroll);
+  }
 }

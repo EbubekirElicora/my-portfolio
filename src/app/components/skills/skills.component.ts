@@ -9,7 +9,7 @@ import { TranslationPipe } from '../../shared/translation.pipe';
   standalone: true,
   imports: [CommonModule, TranslationPipe],
   templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.scss'],
+  styleUrls: ['./skills.component.scss', './skills.component.responsive.scss'],
 })
 export class SkillsComponent extends ScrollableSection {
   override nextSectionId = 'my-work';

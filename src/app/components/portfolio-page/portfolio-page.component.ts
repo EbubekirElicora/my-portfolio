@@ -31,7 +31,10 @@ import { AboutComponent } from '../about/about.component';
     ContactComponent,
   ],
   templateUrl: './portfolio-page.component.html',
-  styleUrls: ['./portfolio-page.component.scss'],
+  styleUrls: [
+    './portfolio-page.component.scss',
+    './portfolio-page.component.responsive.scss',
+  ],
 })
 export class PortfolioPageComponent implements AfterViewInit, OnDestroy {
   @ViewChild('sectionsContainer', { static: true })

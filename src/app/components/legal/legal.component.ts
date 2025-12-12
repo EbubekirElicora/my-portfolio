@@ -10,7 +10,7 @@ import { ScrollService } from '../../services/scroll.service';
   standalone: true,
   imports: [CommonModule, SideNavComponent, TranslationPipe, RouterLink],
   templateUrl: './legal.component.html',
-  styleUrl: './legal.component.scss',
+  styleUrls: ['./legal.component.scss', './legal.component.responsive.scss'],
 })
 export class LegalComponent {
   isRight = false;
@@ -35,7 +35,7 @@ export class LegalComponent {
     this.router.navigate(['/'], { fragment: 'about' });
   }
 
-    onLegalClick(): void {
+  onLegalClick(): void {
     this.isRight = false;
     const page = document.querySelector('.legal-page') as HTMLElement | null;
     page?.scrollTo({ top: 0, behavior: 'smooth' });

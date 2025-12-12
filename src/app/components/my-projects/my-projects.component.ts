@@ -9,7 +9,10 @@ import { TranslationPipe } from '../../shared/translation.pipe';
   standalone: true,
   imports: [CommonModule, TranslationPipe],
   templateUrl: './my-projects.component.html',
-  styleUrl: './my-projects.component.scss',
+  styleUrls: [
+    './my-projects.component.scss',
+    './my-projects.component.responsive.scss',
+  ],
 })
 export class MyProjectsComponent extends ScrollableSection {
   override nextSectionId = 'references';
