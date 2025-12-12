@@ -77,9 +77,13 @@ It demonstrates real implementations rather than isolated code examples.
 - Node.js (recommended LTS version)
 - Angular CLI
 
-### Installation
+## Live Demo
+
+[Live Test](https://ebubekir-elicora.de/)
+
+### Running the Project Locally
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/EbubekirElicora/my-portfolio.git
 cd my-portfolio
 npm install
