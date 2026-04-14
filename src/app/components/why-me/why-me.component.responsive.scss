@@ -1,7 +1,13 @@
-@media (min-width: 1440px) and (max-width: 1920px) {
+@media (min-width: 1920px) {
+  .why {
+    width: 1320px !important;
+  }
+}
+
+@media (min-width: 1440px) {
   .why {
     width: clamp(900px, 62.5vw, 1200px);
-    top: 255px;
+    top: 224px;
   }
 
   .next-arrow {
@@ -105,5 +111,23 @@
 
   .relocation-icon {
     order: 1;
+  }
+}
+
+@media screen and (min-width: 900px) and (min-height: 600px) and (max-height: 700px) {
+  .next-arrow {
+    top: 540px !important;
+  }
+}
+
+@media screen and (min-width: 900px) and (min-height: 650px) and (max-height: 700px) {
+  .next-arrow {
+    top: 600px !important;
+  }
+}
+
+@media screen and (width: 1280px) and (height: 800px) {
+  .next-arrow {
+    top: clamp(746px, 60vh, 480px) !important;
   }
 }

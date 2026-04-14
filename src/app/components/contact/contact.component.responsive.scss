@@ -1,4 +1,14 @@
-@media (min-width: 1440px) and (max-width: 1920px) {
+@media (min-width: 1921px) {
+  .info-side {
+    width: 680px !important ;
+  }
+
+  .form-container {
+    width: 840px !important;
+  }
+}
+
+@media (min-width: 1440px) {
   .info-side {
     position: absolute;
     right: clamp(80px, 12vw, 136px);
@@ -303,7 +313,9 @@
     width: 128px;
     height: 60px;
     margin: 0;
-    transition: transform 120ms ease, filter 120ms ease;
+    transition:
+      transform 120ms ease,
+      filter 120ms ease;
 
     h1 {
       position: absolute;
@@ -325,7 +337,9 @@
     inset: 0;
     display: block;
     pointer-events: none;
-    transition: transform 120ms ease, filter 120ms ease;
+    transition:
+      transform 120ms ease,
+      filter 120ms ease;
 
     text {
       font-family: "Quantico";
@@ -361,7 +375,9 @@
       cursor: pointer;
       width: clamp(80px, 16vw, 150px);
       height: auto;
-      transition: filter 100ms ease, transform 100ms ease;
+      transition:
+        filter 100ms ease,
+        transform 100ms ease;
       &:hover,
       &:focus-visible {
         transform: rotate(90deg) translateX(-3px);
@@ -405,7 +421,9 @@
         height: 100%;
         z-index: 500;
         transform: translateY(0);
-        transition: opacity 120ms ease-out, transform 120ms ease-out;
+        transition:
+          opacity 120ms ease-out,
+          transform 120ms ease-out;
         &.base {
           opacity: 1;
         }
@@ -423,5 +441,71 @@
         transform: translateY(-2px);
       }
     }
+  }
+}
+
+@media screen and (min-width: 900px) and (min-height: 600px) and (max-height: 700px) {
+  .btn-pos {
+    padding-top: 32px;
+  }
+
+  :host-context(html[lang="de"]) .btn-pos {
+    padding-top: 24px;
+  }
+
+  :host-context(html[lang="de"]) .contacts {
+    top: 488px !important;
+    gap: 3px;
+  }
+
+  .contacts {
+    top: 456px !important;
+    gap: 6px;
+  }
+
+  .container-size {
+    width: 100% !important;
+  }
+
+  :host-context(html[lang="de"]) .container-size {
+    width: 100% !important;
+  }
+
+  .privacy-error-text {
+    width: 100% !important;
+  }
+
+  :host-context(html[lang="de"]) .legal-notice-pos {
+    padding-top: 80px !important;
+    display: block;
+  }
+
+  .legal-notice-pos {
+    padding-top: 110px !important;
+    display: block;
+  }
+
+  .legal-notice-pos p,
+  .legal-notice-pos a {
+    padding: 8px 0 8px 8px;
+  }
+
+  .phoneLink {
+    display: flex;
+    align-items: center;
+  }
+
+  .next-arrow {
+    top: 480px !important;
+  }
+
+  :host-context(html[lang="de"]) .next-arrow {
+    top: 528px !important;
+  }
+}
+
+@media screen and (width: 1280px) and (height: 800px) {
+  :host-context(html[lang="de"]) .legal-notice-pos {
+    padding-top: 140px !important;
   }
 }

@@ -1,6 +1,22 @@
+@media (min-width: 2201px) {
+  .side {
+    gap: 160px;
+  }
+}
+
+@media (min-width: 1921px) and (max-width: 2200px) {
+  .side {
+    gap: 120px;
+  }
+}
+
 @media (min-width: 1440px) and (max-width: 1920px) {
   .side {
     gap: 64px;
+  }
+
+  .side > .nav-link:first-of-type {
+    margin-top: -24px; /* kleinerer Abstand nach dem Logo */
   }
 }
 
@@ -163,7 +179,9 @@
     text-decoration: none;
     color: var(--text-burger);
     text-align: center;
-    transition: color 120ms ease, transform 120ms ease,
+    transition:
+      color 120ms ease,
+      transform 120ms ease,
       letter-spacing 120ms ease;
 
     &:hover {
@@ -200,5 +218,38 @@
     &:hover {
       cursor: pointer;
     }
+  }
+}
+
+@media screen and (min-width: 900px) and (min-height: 600px) and (max-height: 700px) {
+  .side {
+    gap: 32px !important;
+    padding-top: 16px;
+  }
+
+  .side > .brand {
+    margin-bottom: 24px;
+  }
+
+  :host-context(html[lang="de"]) .side {
+    gap: 24px !important;
+  }
+
+  .brand {
+    height: 64px;
+  }
+
+  .brand h1 {
+    top: 88%;
+  }
+
+  .nav-link {
+    font-size: 24px;
+  }
+}
+
+@media screen and (width: 1280px) and (height: 800px) {
+  .side > .nav-link:first-of-type {
+    margin-top: -24px;
   }
 }

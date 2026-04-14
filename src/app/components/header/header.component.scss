@@ -29,7 +29,9 @@
           height: 100%;
           z-index: 500;
           transform: translateY(0);
-          transition: opacity 120ms ease, transform 120ms ease;
+          transition:
+            opacity 120ms ease,
+            transform 120ms ease;
           &.base {
             opacity: 1;
           }
@@ -80,7 +82,9 @@
 
       a {
         color: var(--text);
-        transition: color 120ms ease, transform 120ms ease;
+        transition:
+          color 120ms ease,
+          transform 120ms ease;
 
         &.de:hover,
         &.de:focus-visible,
@@ -97,5 +101,11 @@
 @media (max-width: 900px) {
   .site-header {
     display: none;
+  }
+}
+
+@media screen and (min-width: 900px) and (min-height: 600px) and (max-height: 700px) {
+  .site-header {
+    height: 48px;
   }
 }

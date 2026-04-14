@@ -1,4 +1,22 @@
-@media (min-width: 1440px) and (max-width: 1920px) {
+@media (min-width: 1920px) {
+  .section {
+    flex: 0 0 clamp calc(100vw - 172px) !important;
+  }
+
+  #about,
+  #skills,
+  #why-me {
+    flex: 0 0 calc(100vw - 300px) !important;
+  }
+  #references {
+    flex: 0 0 calc(100vw - 90px) !important;
+  }
+  #contact {
+    flex: 0 0 calc(100vw - 172px) !important;
+  }
+}
+
+@media (min-width: 1440px) {
   .section {
     flex: 0 0 clamp(1100px, calc(100vw - 172px), 1650px);
   }
